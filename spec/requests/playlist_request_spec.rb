@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "playlist", type: :request do
   describe "GET /api/v1/themes/:theme_id/characters/:character_id/playlist?genre=hip-hop" do
 
-    it "returns to you 10 songs in a playlist" do 
+    it "returns to you 10 songs in a playlist", :vcr do 
       Theme.create(name: "lawyer")
       create_list(:question, 6, theme: Theme.all.first, good_evil_chaotic_lawful: 0)
       create_list(:question, 6, theme: Theme.all.first, good_evil_chaotic_lawful: 1)
@@ -23,9 +23,22 @@ RSpec.describe "playlist", type: :request do
       get "/chordsapi/v1/themes/#{Theme.first.id}/characters/#{jimmy.id}/playlists/show?genre=hip-hop"
 
       parsed_playlist = JSON.parse(response.body, symbolize_names: true)
+      require 'pry'; binding.pry
       expect(parsed_playlist).to be_a(Hash)
-
-
+      expect(parsed_playlist[:links]).to be_a(Hash)
+      expect(parsed_playlist[:links][:image]).to be_a(String)
+      expect(parsed_playlist[:data]).to be_a(Hash)
+      expect(parsed_playlist[:data][:type]).to eq("playlist")
+      expect(parsed_playlist[:data][:genre]).to be_a(String)
+      expect(parsed_playlist[:data][:attributes]).to be_a(Hash)
+      expect(parsed_playlist[:data][:attributes][:character_name]).to be_a(String)
+      expect(parsed_playlist[:data][:attributes][:quiz_theme]).to be_a(String)
+      expect(parsed_playlist[:data][:attributes][:character_alignment]).to be_a(String)
+      expect(parsed_playlist[:data][:attributes][:song_titles]).to be_a(Array)
+      expect(parsed_playlist[:data][:attributes][:song_titles].count).to eq(10)
+      parsed_playlist[:data][:attributes][:song_titles].each do |song|
+        expect(song).to be_a(String)
+      end
 
     end
   end 

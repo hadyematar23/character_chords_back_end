@@ -1,3 +1,5 @@
+require 'vcr'
+require 'webmock/rspec'
 require 'rspotify'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
@@ -65,4 +67,13 @@ end
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data('<SPOTIFY_CLIENT>') { ENV['SPOTIFY_CLIENT'] }
+  config.filter_sensitive_data('<SPOTIFY_SECRET>') { ENV['SPOTIFY_SECRET'] }
+  config.filter_sensitive_data('<Open_AI>') { ENV['Open_AI'] }
 end
