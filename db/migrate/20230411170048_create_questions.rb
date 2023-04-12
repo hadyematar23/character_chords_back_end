@@ -8,6 +8,8 @@ class CreateQuestions < ActiveRecord::Migration[7.0]
       t.string :answer_3
       t.string :answer_4
       t.string :answer_5
+      t.integer :good_evil_chaotic_lawful, default: 0
+
 
       t.timestamps
     end

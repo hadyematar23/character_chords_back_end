@@ -16,6 +16,7 @@ class QuestionSerializer
           attributes: {
             name: question.question,
             quiz: Theme.find(question.theme_id).name,
+            spectrum: question.good_evil_chaotic_lawful,
             answers: {
               A: { text: question.answer_1, value: 1 },
               B: { text: question.answer_2, value: 2 },
