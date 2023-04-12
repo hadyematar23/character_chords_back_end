@@ -27,5 +27,4 @@ class PlaylistService
   def connection 
     Faraday.new(url: "https://api.openai.com/v1/chat/completions")
   end
-
 end
