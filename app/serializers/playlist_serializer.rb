@@ -21,8 +21,8 @@ class PlaylistSerializer
 
   def return_array(playlist)
     playlist_content = playlist[:choices].first[:message][:content]
-      songs = playlist_content.split("\n").map do |song|
-        song.gsub(/^\d+\.\s*/, '').gsub(/\"/, '')
-      end
+    songs = playlist_content.split("\n").map do |song|
+      song.gsub(/^\d+\.\s*/, '').gsub(/\"/, '')
+    end
   end
 end

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
           resources :themes do
             resources :questions, only: [:index]
             resources :characters do 
-              resources :playlists, only: [:show]
+              resources :playlists, only: [:index]
             end
       end
     end 
