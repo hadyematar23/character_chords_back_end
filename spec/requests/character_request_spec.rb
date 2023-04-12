@@ -20,7 +20,7 @@ RSpec.describe "character", type: :request do
       Character.create!(name: "Michael Cohen", theme_id: Theme.first.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "cohenurl.com", alignment: 8)
       Character.create!(name: "John Milton", theme_id: Theme.first.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "url.com", alignment: 9)
             
-      get "/chordsapi/v1/themes/#{Theme.all.first.id}/characters/show?good_evil=0.23&lawful_chaotic=0.51"
+      get "/chordsapi/v1/themes/#{Theme.all.first.id}/characters?good_evil=0.23&lawful_chaotic=0.51"
       parsed_character = JSON.parse(response.body, symbolize_names: true)
       expect(parsed_character).to be_a(Hash)
       expect(parsed_character[:links]).to be_a(Hash)

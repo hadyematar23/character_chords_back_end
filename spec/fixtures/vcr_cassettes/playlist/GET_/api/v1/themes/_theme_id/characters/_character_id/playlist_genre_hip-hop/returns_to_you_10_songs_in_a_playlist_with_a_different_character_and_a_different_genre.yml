@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Generate
+        10 songs based on the DnD Alignment on an individual, a theme that matches
+        the personality type or occupation of the person providing the songs, and
+        the style of music that the person likes. I would like these to be real songs
+        that are on Spotify. Avoid any audiobooks, movies, documentaries, or TV shows.
+        The theme: lawyer, The person''s DnD alignment: Chaotic Evil, the person''s
+        Style of Music: reggaton, I would like these to be formatted like an array
+        of strings (ruby). Example: [''Song1'' by ''ArtistName'', ''Song2'' by ''ArtistName'',
+        ''Song3'' by ''ArtistName'', ''Song4'' by ''ArtistName'', up to 10.]"}],"temperature":0.7,"max_tokens":150}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <Open_AI>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 12 Apr 2023 21:35:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0301
+      Openai-Organization:
+      - user-kqrjmrw5h7tgplefrqlsdhz7
+      Openai-Processing-Ms:
+      - '5021'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Request-Id:
+      - d27ec9b6c0b36452a124665c57b01514
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7b6e994e1b8b2ccd-DFW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNoYXRjbXBsLTc0Y1BjdXFQVDdGMjdJUThkdmFuOHJPOWVQU0RuIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY3JlYXRlZCI6MTY4MTMzNTMyNCwibW9kZWwiOiJncHQtMy41LXR1cmJvLTAzMDEiLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoxNjIsImNvbXBsZXRpb25fdG9rZW5zIjoxNTAsInRvdGFsX3Rva2VucyI6MzEyfSwiY2hvaWNlcyI6W3sibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IltcbiAgJ01hbGEgeSBQZWxpZ3Jvc2EnIGJ5IFZpY3RvciBNYW51ZWxsZSBmdC4gQmFkIEJ1bm55LFxuICAnVGUgQm90w6kgUmVtaXgnIGJ5IE5pbyBHYXJjaWEgZnQuIENhc3BlciBNYWdpY28sIE96dW5hLCBEYXJlbGwsIE5pY2t5IEphbSwgQmFkIEJ1bm55LFxuICAnU2kgVMO6IExhIFZlcycgYnkgTmlja3kgSmFtIGZ0LiBXaXNpbixcbiAgJ0xvY28gQ29udGlnbycgYnkgREogU25ha2UsIEogQmFsdmluLCBUeWdhLFxuICAnUGEnIExhIFR1bWJhJyBieSBMYWxvIEVicmF0dCwgVHJhcGljYWwgTWluZHMsIFllcmEsXG4gICdUdXNhJyBieSBLYXJvbCBHLCBOaWNraSBNaW5haixcbiAgJ0JhaWxhIEJhaWxhIEJhaWxhJyBieSBPenVuYSxcbiAgJ1BhJyBRdWUgUmV0b3plbicgYnkgVGVnbyBDYWxkZXIifSwiZmluaXNoX3JlYXNvbiI6Imxlbmd0aCIsImluZGV4IjowfV19Cg==
+  recorded_at: Wed, 12 Apr 2023 21:35:28 GMT
+recorded_with: VCR 6.1.0
