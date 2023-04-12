@@ -5,7 +5,6 @@ class CharacterSerializer
   end
 
   def serialize_character
-    require 'pry'; binding.pry
     {
       links: {image: @info.url},
         data: {
