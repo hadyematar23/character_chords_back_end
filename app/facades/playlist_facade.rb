@@ -5,5 +5,4 @@ class PlaylistFacade
      playlist = PlaylistService.new.generate_playlists(info)
      PlaylistSerializer.new.generate_playlist(character, playlist, info[:genre])
   end
-
 end

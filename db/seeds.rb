@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-lawyer = Theme.create!(name: "lawyer")
+lawyer = Theme.create!(name: "lawyer", image_link: "www.coollawyerimage.com")
 
 Question.create(theme_id: 1,                                     question: "A high-profile client offers you a significant sum of money to represent them in a case where they are clearly guilty. What do you do?",
 answer_1: "Reject the case outright on moral grounds.",                     
