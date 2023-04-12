@@ -9,7 +9,9 @@ Rails.application.routes.draw do
         namespace :v1 do         
           resources :themes do
             resources :questions, only: [:index]
-            resources :characters, only: [:show]
+            resources :characters do 
+              resources :playlists, only: [:show]
+            end
       end
     end 
   end 
