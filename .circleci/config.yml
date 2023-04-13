@@ -32,6 +32,6 @@ workflows:
     jobs:
       - build_and_test
       - heroku/deploy:
-          app-name: <app_name>
+          app-name: cc_be
           requires:
             - build_and_test
