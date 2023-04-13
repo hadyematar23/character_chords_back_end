@@ -26,3 +26,10 @@ jobs:
       - checkout
       - run: bundle install --path vendor/bundle
       - run: bundle exec rspec
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - heroku/deploy-via-git:
+          post-steps:
+            - run: heroku run rake db:{drop,create,migrate,seed} --app frozen-savannah-58383 #example of a post-deployment step
