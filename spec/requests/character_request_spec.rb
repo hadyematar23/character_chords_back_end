@@ -4,7 +4,7 @@ RSpec.describe "character", type: :request do
   describe "GET /themes/:theme_id/characters?good_evil=0.23&lawful_chaotic=0.51" do
 
     it "gives you back the correct character based on the answers provided" do 
-      Theme.create(name: "lawyer")
+      Theme.create(name: "lawyer") 
       create_list(:question, 6, theme: Theme.all.first, good_evil_chaotic_lawful: 0)
       create_list(:question, 6, theme: Theme.all.first, good_evil_chaotic_lawful: 1)
 
