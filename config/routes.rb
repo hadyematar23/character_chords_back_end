@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
       namespace :chordsapi do 
-        namespace :v1 do         
+        namespace :v1 do   
+            root to: "themes#index"
           resources :themes do
             resources :questions, only: [:index]
             resources :characters, only: [:show] do 
