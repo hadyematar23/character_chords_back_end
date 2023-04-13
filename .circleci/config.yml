@@ -4,7 +4,7 @@ orbs:
   heroku: circleci/heroku@2.0.0
 
 jobs:
-  build:
+  build_and_test:
     working_directory: ~/cc_be # THIS SHOULD BE NAME OF YOUR APP
     docker:
       - image: cimg/ruby:3.1.1
@@ -23,15 +23,22 @@ jobs:
       - run:
           name: cc_be # THIS SHOULD BE NAME OF YOUR APP
           command: bundle -v
-      - checkout
       - run: bundle install --path vendor/bundle
       - run: bundle exec rspec
-
-workflows:
   deploy_to_heroku:
-    jobs:
-      - build_and_test
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
       - heroku/deploy:
           app-name: cc_be
+          when: on_success
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - build_and_test
+      - deploy_to_heroku:
           requires:
             - build_and_test
