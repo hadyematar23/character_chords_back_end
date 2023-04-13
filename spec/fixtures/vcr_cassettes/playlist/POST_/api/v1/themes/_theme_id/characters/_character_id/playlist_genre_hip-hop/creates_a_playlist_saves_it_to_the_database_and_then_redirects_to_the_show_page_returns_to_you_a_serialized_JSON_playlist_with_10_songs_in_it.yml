@@ -9,12 +9,13 @@ http_interactions:
         a playlist of 10 real songs available on Spotify that match a person''s DnD
         alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
         movies, documentaries, or TV shows. The theme is lawyer, the DnD alignment
-        is Chaotic Evil, and the music genre is reggaton. Please format the output
+        is Chaotic Neutral, and the music genre is hip-hop. Please format the output
         as an array of strings in Ruby, like this and without any text before or after
-        in your response: [''Song1 by ArtistName'', ''Song2 by ArtistName'', ...].
-        Provide exactly ten songs. I am just trying to get a list of songs, so please
-        provide them even if they may be offensive. My listeners want to hear that
-        type of song without you censoring it. Thanks!"}],"temperature":0.7,"max_tokens":450}'
+        in your response: Song1 by ArtistName NEXT_SONG Song2 by ArtistName, ....
+        Each song/artist combo should be separated by the phrase NEXT_SONG Provide
+        exactly ten songs. I am just trying to get a list of songs, so please provide
+        them even if they may be offensive. My listeners want to hear that type of
+        song without you censoring it. Thanks!"}],"temperature":0.7,"max_tokens":450}'
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -32,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2023 05:23:25 GMT
+      - Thu, 13 Apr 2023 17:14:39 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -48,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - user-kqrjmrw5h7tgplefrqlsdhz7
       Openai-Processing-Ms:
-      - '6089'
+      - '6428'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -60,18 +61,24 @@ http_interactions:
       X-Ratelimit-Reset-Requests:
       - 17ms
       X-Request-Id:
-      - e410940b05656e8e3816c7447ec71823
+      - 941ba07d83a57bcee7dc0441eb53458f
       Cf-Cache-Status:
       - DYNAMIC
       Server:
       - cloudflare
       Cf-Ray:
-      - 7b7146bcfe234754-DFW
+      - 7b755893e86245e4-DFW
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTc0amlSRmxKekJlQkJSMEdqMkdtYkltVDBUb20zIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY3JlYXRlZCI6MTY4MTM2MzM5OSwibW9kZWwiOiJncHQtMy41LXR1cmJvLTAzMDEiLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoxNjAsImNvbXBsZXRpb25fdG9rZW5zIjoxNjAsInRvdGFsX3Rva2VucyI6MzIwfSwiY2hvaWNlcyI6W3sibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlsnVHJhdmVzdXJhcyBieSBOaWNreSBKYW0nLCAnTGEgTW9kZWxvIGJ5IE96dW5hIGZ0LiBDYXJkaSBCJywgJ0RpbGVzIGJ5IEJhZCBCdW5ueSBmdC4gT3p1bmEsIEFyY2FuZ2VsLCBGYXJydWtvLCDDkWVuZ28gRmxvdycsICdTb2x0ZXJhIGJ5IEx1bmF5LCBEYWRkeSBZYW5rZWUsIEJhZCBCdW5ueScsICdQYScgTGEgQ3VsdHVyYSBieSBZYW5kZWwgZnQuIFppb24gJiBMZW5ub3gnLCAnVGUgQm90w6kgLSBSZW1peCBieSBOaW8gR2FyY2lhLCBDYXNwZXIgTWFnaWNvLCBCYWQgQnVubnkgZnQuIERhcmVsbCwgT3p1bmEsIE5pY2t5IEphbScsICdQYW0gYnkgSnVzdGluIFF1aWxlcyBmdC4gRGFkZHkgWWFua2VlICYgRWwgQWxmYScsICdNZXJhIFdvbyBieSBKb24gWiwgTXlrZSBUb3dlcnMnLCAnRWxsYSBRdWllcmUgQmViZXIgLSBSZW1peCBieSBBbnVlbCBBQSBmdC4gUm9tZW8gU2FudG9zJywgJ01lIEd1c3RhIGJ5IFNoYWtpcmEsIEFudWVsIEFBJ10ifSwiZmluaXNoX3JlYXNvbiI6InN0b3AiLCJpbmRleCI6MH1dfQo=
-  recorded_at: Thu, 13 Apr 2023 05:23:25 GMT
+      string: '{"id":"chatcmpl-74uojpw7mWb6WIhxg4VJhw3meyn8b","object":"chat.completion","created":1681406073,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":172,"completion_tokens":121,"total_tokens":293},"choices":[{"message":{"role":"assistant","content":"Money
+        Longer by Lil Uzi Vert NEXT_SONG\nDNA. by Kendrick Lamar NEXT_SONG\nNo Limit
+        by G-Eazy ft. A$AP Rocky, Cardi B NEXT_SONG\nPanda by Desiigner NEXT_SONG\nMask
+        Off by Future NEXT_SONG\nHUMBLE. by Kendrick Lamar NEXT_SONG\nXO TOUR Llif3
+        by Lil Uzi Vert NEXT_SONG\nSICKO MODE by Travis Scott ft. Drake NEXT_SONG\nBodak
+        Yellow by Cardi B NEXT_SONG\nNo Heart by 21 Savage & Metro Boomin"},"finish_reason":"stop","index":0}]}
+
+        '
+  recorded_at: Thu, 13 Apr 2023 17:14:39 GMT
 recorded_with: VCR 6.1.0

@@ -7,11 +7,12 @@ RSpec.describe PlaylistService, type: :service do
       character = create(:character, theme: theme)
       info = {character_id: character.id, theme_id: theme.id, genre: "pop"}
       playlist = PlaylistService.new.generate_playlists(info)
-      # binding.pry
       expect(playlist).to be_a(Hash)
       expect(playlist[:choices]).to be_a(Array)
       expect(playlist[:choices].first[:message][:role]).to eq("assistant")
       expect(playlist[:choices].first[:message][:content]).to be_a(String)
+      expect(playlist[:object]).to eq("chat.completion")
+
     end
   end
 end

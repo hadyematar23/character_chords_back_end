@@ -9,13 +9,10 @@ RSpec.describe PlaylistFacade, type: :facade do
       playlist = PlaylistFacade.new.generate_playlist(info)
       
       expect(playlist).to be_a(Hash)
-      expect(playlist[:data]).to be_a(Hash)
-      expect(playlist[:data][:type]).to eq("playlist")
-      expect(playlist[:data][:attributes]).to be_a(Hash)
-      expect(playlist[:data][:attributes][:character_name]).to be_a(String)
-      expect(playlist[:data][:attributes][:quiz_theme]).to be_a(String)
-      expect(playlist[:data][:attributes][:character_alignment]).to be_a(String)
-      expect(playlist[:data][:attributes][:song_titles]).to be_an(Array)
+      expect(playlist[:choices]).to be_a(Array)
+      expect(playlist[:choices].first[:message][:role]).to eq("assistant")
+      expect(playlist[:choices].first[:message][:content]).to be_a(String)
+      expect(playlist[:object]).to eq("chat.completion")
     end
   end
 end
