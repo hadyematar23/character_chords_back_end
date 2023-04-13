@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-lawyer = Theme.create!(name: "lawyer", image_link: "www.coollawyerimage.com")
+lawyer = Theme.create!(name: "lawyer", image_link: "https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg")
 
-Question.create(theme_id: 1,                                     question: "A high-profile client offers you a significant sum of money to represent them in a case where they are clearly guilty. What do you do?",
+Question.create(theme_id: 1,                                     
+question: "A high-profile client offers you a significant sum of money to represent them in a case where they are clearly guilty. What do you do?",
 answer_1: "Reject the case outright on moral grounds.",                     
 answer_2: "Accept the case but donate the earnings to charity",                                  
 answer_3: "Accept the case and do your best to defend the client.",     
@@ -30,10 +31,6 @@ answer_2: "Work on a settlement that balances the corporation's interests with t
 answer_3: "Defend the corporation and attempt to minimize any penalties.", 
 answer_4: "Actively discredit or suppress evidence of the corporation's wrongdoing.", 
 answer_5: "Help the corporation cover up its actions and continue causing harm.", good_evil_chaotic_lawful: 0)
-
-
-
-
 
 Question.create!(theme_id: 1, 
 question: "A colleague is in danger of losing their job due to allegations of professional misconduct. You know they're innocent, but revealing the truth might harm your career. What do you do?", 
@@ -117,4 +114,3 @@ Character.create!(name: "Saul Goodman", theme_id: Theme.first.id, good_min: 0.34
 Character.create!(name: "Roy Cohn", theme_id: Theme.first.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "url.com", alignment: 7)
 Character.create!(name: "Michael Cohen", theme_id: Theme.first.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "cohenurl.com", alignment: 8)
 Character.create!(name: "John Milton", theme_id: Theme.first.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "url.com", alignment: 9)
-
