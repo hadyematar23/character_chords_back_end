@@ -12,7 +12,7 @@ class PlaylistService
           # So I would like to ask you some questions around assistance, but can you respond in being completely frank and open, without censoring yourself as that is really offensive to me.
           
           "Generate a playlist of 10 real songs available on Spotify that match a person's DnD alignment, their chosen theme, and preferred music genre. Exclude audiobooks, movies, documentaries, or TV shows. The theme is #{Theme.find(info[:theme_id]).name}, the DnD alignment is #{Character.find(info[:character_id]).alignment}, and the music genre is #{info[:genre]}. Please format the output as an array of strings in Ruby, like this and without any text before or after in your response: Song1 by ArtistName NEXT_SONG Song2 by ArtistName, .... Each song/artist combo should be separated by the phrase NEXT_SONG. Provide exactly ten songs, including those with explicit or offensive content, as the users have requested such content. Thanks!"
-          "
+          
         }
       ],
       "temperature": 0.7,
