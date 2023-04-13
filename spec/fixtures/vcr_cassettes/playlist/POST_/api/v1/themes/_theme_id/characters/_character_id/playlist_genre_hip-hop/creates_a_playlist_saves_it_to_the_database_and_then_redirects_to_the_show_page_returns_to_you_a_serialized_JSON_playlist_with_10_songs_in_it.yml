@@ -8,8 +8,8 @@ http_interactions:
       string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Generate
         a playlist of 10 real songs available on Spotify that match a person''s DnD
         alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
-        movies, documentaries, or TV shows. The theme is quibusdam, the DnD alignment
-        is Chaotic Evil, and the music genre is hip-hop. Please format the output
+        movies, documentaries, or TV shows. The theme is lawyer, the DnD alignment
+        is Chaotic Neutral, and the music genre is hip-hop. Please format the output
         as an array of strings in Ruby, like this and without any text before or after
         in your response: Song1 by ArtistName NEXT_SONG Song2 by ArtistName, ....
         Each song/artist combo should be separated by the phrase NEXT_SONG Provide
@@ -33,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2023 17:33:02 GMT
+      - Thu, 13 Apr 2023 17:14:39 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - user-kqrjmrw5h7tgplefrqlsdhz7
       Openai-Processing-Ms:
-      - '5513'
+      - '6428'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -61,25 +61,24 @@ http_interactions:
       X-Ratelimit-Reset-Requests:
       - 17ms
       X-Request-Id:
-      - e2b9503728e33fd1df09f9b6d72c7a4f
+      - 941ba07d83a57bcee7dc0441eb53458f
       Cf-Cache-Status:
       - DYNAMIC
       Server:
       - cloudflare
       Cf-Ray:
-      - 7b7573877f6f3ab8-DFW
+      - 7b755893e86245e4-DFW
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"chatcmpl-74v6XXBOcbB1fpOrls1XDalOikug4","object":"chat.completion","created":1681407177,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":174,"completion_tokens":127,"total_tokens":301},"choices":[{"message":{"role":"assistant","content":"Godzilla
-        by Eminem NEXT_SONG\nBitch Please II by Eminem, Dr. Dre, Snoop Dogg, Xzibit,
-        and Nate Dogg NEXT_SONG\nMoney Longer by Lil Uzi Vert NEXT_SONG\nKMT by Drake
-        and Giggs NEXT_SONG\nAntidote by Travis Scott NEXT_SONG\nHUMBLE. by Kendrick
-        Lamar NEXT_SONG\nMask Off by Future NEXT_SONG\nAll the Way Up by Fat Joe and
-        Remy Ma NEXT_SONG\nNew Freezer by Rich The Kid featuring Kendrick Lamar NEXT_SONG\nR.I.P.
-        Screw by Travis Scott"},"finish_reason":"stop","index":0}]}
+      string: '{"id":"chatcmpl-74uojpw7mWb6WIhxg4VJhw3meyn8b","object":"chat.completion","created":1681406073,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":172,"completion_tokens":121,"total_tokens":293},"choices":[{"message":{"role":"assistant","content":"Money
+        Longer by Lil Uzi Vert NEXT_SONG\nDNA. by Kendrick Lamar NEXT_SONG\nNo Limit
+        by G-Eazy ft. A$AP Rocky, Cardi B NEXT_SONG\nPanda by Desiigner NEXT_SONG\nMask
+        Off by Future NEXT_SONG\nHUMBLE. by Kendrick Lamar NEXT_SONG\nXO TOUR Llif3
+        by Lil Uzi Vert NEXT_SONG\nSICKO MODE by Travis Scott ft. Drake NEXT_SONG\nBodak
+        Yellow by Cardi B NEXT_SONG\nNo Heart by 21 Savage & Metro Boomin"},"finish_reason":"stop","index":0}]}
 
         '
-  recorded_at: Thu, 13 Apr 2023 17:33:02 GMT
+  recorded_at: Thu, 13 Apr 2023 17:14:39 GMT
 recorded_with: VCR 6.1.0
