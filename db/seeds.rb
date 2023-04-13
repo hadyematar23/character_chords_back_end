@@ -222,7 +222,7 @@ Question.create!(
 # Lawful/Chaotic Questions
 # 1
 Question.create!(
-  theme_id: alignment.id,, 
+  theme_id: alignment.id, 
   question: "A new policy is implemented that you believe is unethical. How do you handle situations that involve this policy?", 
   answer_1: "Uphold the policy, as it is your duty to follow the rules.", 
   answer_2: "Work within the system to challenge the policy or find alternatives.", 
@@ -233,7 +233,7 @@ Question.create!(
 )
 # 2
 Question.create!(
-  theme_id: alignment.id,, 
+  theme_id: alignment.id, 
   question: "You are aware that someone has done something wrong, but they ask you to keep it a secret. How do you handle the situation?", 
   answer_1: "Advise the person to confess and seek forgiveness.", 
   answer_2: "Respect the person's wishes and keep their secret within moral limits.", 
