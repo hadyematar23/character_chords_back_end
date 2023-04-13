@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+      root to: "chordsapi/v1/themes#index"
       namespace :chordsapi do 
         namespace :v1 do   
-            root to: "themes#index"
+          
           resources :themes do
             resources :questions, only: [:index]
             resources :characters, only: [:show] do 
