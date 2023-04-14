@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Generate
+        a playlist of 10 real songs available on Spotify that match a person''s DnD
+        alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
+        movies, documentaries, or TV shows. The theme is officia, the DnD alignment
+        is Neutral Good, and the music genre is hip-hop. \n          \n          Please
+        format the output as an array of strings in Ruby, like this and without any
+        text or numbers before or after in your response: Song1 by ArtistName NEXT_SONG
+        Song2 by ArtistName NEXT_SONG Song3 by ArtistName NEXT_SONG Song4 by ArtistName
+        NEXT_SONG Song5 by ArtistName NEXT_SONG Song6 by ArtistName NEXT_SONG Song7
+        by ArtistName\n\n          Each song/artist combo should be separated by the
+        phrase NEXT_SONG. Provide exactly ten songs, including those with explicit
+        or offensive content, as the users have requested such content. Thanks!"}],"temperature":0.7,"max_tokens":450}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <Open_AI>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Apr 2023 16:42:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0301
+      Openai-Organization:
+      - user-kqrjmrw5h7tgplefrqlsdhz7
+      Openai-Processing-Ms:
+      - '6090'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Request-Id:
+      - 125e0dccbbe553e6ae3d97af131da13d
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7b7d66270a4447ab-DFW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"chatcmpl-75GmhU0er5Gwu4sY4M1KPCvi3eOXm","object":"chat.completion","created":1681490515,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":197,"completion_tokens":123,"total_tokens":320},"choices":[{"message":{"role":"assistant","content":"Officia
+        by IDK NEXT_SONG\nBlessed by ScHoolboy Q (feat. Kendrick Lamar) NEXT_SONG\nGood
+        News by Mac Miller NEXT_SONG\nSanteria by Pusha T NEXT_SONG\nNo Regrets by
+        Aesop Rock NEXT_SONG\nThe Adventures of Moon Man & Slim Shady by Kid Cudi
+        & Eminem NEXT_SONG\nThe Space Program by A Tribe Called Quest NEXT_SONG\nUltralight
+        Beam by Kanye West NEXT_SONG\nSelf Care by Mac Miller NEXT_SONG\nThe Story
+        of O.J. by JAY-Z"},"finish_reason":"stop","index":0}]}
+
+        '
+  recorded_at: Fri, 14 Apr 2023 16:42:01 GMT
+recorded_with: VCR 6.1.0
