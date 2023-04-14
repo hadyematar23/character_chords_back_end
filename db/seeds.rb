@@ -298,3 +298,5 @@ Character.create!(name: "Chaotic Neutral", theme_id: alignment.id, good_min: 0.3
 Character.create!(name: "Lawful Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7)
 Character.create!(name: "Neutral Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
 Character.create!(name: "Chaotic Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
+
+Playlist.create!(genre: "Rock and Roll", character: "Lenny from of Mice and Men", alignment: "Chaotic Neutral", songs: ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5", "Song 6", "Song 7", "Song 8", "Song 9", "Song 10"])
