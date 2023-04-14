@@ -33,7 +33,7 @@ class PlaylistSerializer
       data: {
         type: "playlist",
         genre: playlist.genre,
-        id: nil, 
+        id: playlist.id, 
         attributes: {
           character_name: playlist.character,
           quiz_theme: found_character.theme.name,
