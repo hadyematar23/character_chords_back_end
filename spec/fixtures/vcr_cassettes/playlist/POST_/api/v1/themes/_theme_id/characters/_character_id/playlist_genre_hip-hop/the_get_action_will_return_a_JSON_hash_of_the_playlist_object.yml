@@ -9,13 +9,14 @@ http_interactions:
         a playlist of 10 real songs available on Spotify that match a person''s DnD
         alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
         movies, documentaries, or TV shows. The theme is lawyer, the DnD alignment
-        is Chaotic Neutral, and the music genre is hip-hop. Please format the output
-        as an array of strings in Ruby, like this and without any text before or after
-        in your response: Song1 by ArtistName NEXT_SONG Song2 by ArtistName, ....
-        Each song/artist combo should be separated by the phrase NEXT_SONG Provide
-        exactly ten songs. I am just trying to get a list of songs, so please provide
-        them even if they may be offensive. My listeners want to hear that type of
-        song without you censoring it. Thanks!"}],"temperature":0.7,"max_tokens":450}'
+        is Chaotic Neutral, and the music genre is hip-hop. \n          \n          Please
+        format the output as an array of strings in Ruby, like this and without any
+        text or numbers before or after in your response: Song1 by ArtistName NEXT_SONG
+        Song2 by ArtistName NEXT_SONG Song3 by ArtistName NEXT_SONG Song4 by ArtistName
+        NEXT_SONG Song5 by ArtistName NEXT_SONG Song6 by ArtistName NEXT_SONG Song7
+        by ArtistName\n\n          Each song/artist combo should be separated by the
+        phrase NEXT_SONG. Provide exactly ten songs, including those with explicit
+        or offensive content, as the users have requested such content. Thanks!"}],"temperature":1.0,"max_tokens":450}'
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -33,7 +34,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2023 17:17:20 GMT
+      - Fri, 14 Apr 2023 16:22:34 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,7 +50,7 @@ http_interactions:
       Openai-Organization:
       - user-kqrjmrw5h7tgplefrqlsdhz7
       Openai-Processing-Ms:
-      - '6572'
+      - '7534'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -61,25 +62,26 @@ http_interactions:
       X-Ratelimit-Reset-Requests:
       - 17ms
       X-Request-Id:
-      - 47fdc58b1c9b23f2d31652b172511167
+      - 14733a6f048ac0646951d0513e9d1b7c
       Cf-Cache-Status:
       - DYNAMIC
       Server:
       - cloudflare
       Cf-Ray:
-      - 7b755c831f512cd5-DFW
+      - 7b7d49a3ef0047a4-DFW
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"chatcmpl-74urKsjn7BqdI1WaROEEFNxncOh8O","object":"chat.completion","created":1681406234,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":172,"completion_tokens":140,"total_tokens":312},"choices":[{"message":{"role":"assistant","content":"1.
-        \"Money Longer\" by Lil Uzi Vert NEXT_SONG\n2. \"I Don''t Like\" by Chief
-        Keef NEXT_SONG\n3. \"Famous\" by Kanye West NEXT_SONG\n4. \"Flexicution\"
-        by Logic NEXT_SONG\n5. \"No Role Modelz\" by J. Cole NEXT_SONG\n6. \"HUMBLE.\"
-        by Kendrick Lamar NEXT_SONG\n7. \"Backseat Freestyle\" by Kendrick Lamar NEXT_SONG\n8.
-        \"Panda\" by Desiigner NEXT_SONG\n9. \"Bodak Yellow\" by Cardi B NEXT_SONG\n10.
-        \"Mask Off\" by Future"},"finish_reason":"stop","index":0}]}
+      string: '{"id":"chatcmpl-75GTrqUxkim6AisvMAJQ2DmHiu4j8","object":"chat.completion","created":1681489347,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":197,"completion_tokens":154,"total_tokens":351},"choices":[{"message":{"role":"assistant","content":"Power
+        by Kanye West \nNEXT_SONG\nN.Y. State of Mind by Nas\nNEXT_SONG\nNo Role Modelz
+        by J. Cole\nNEXT_SONG\nLifestyle (feat. Young Thug & Rich Homie Quan) by Rich
+        Gang \nNEXT_SONG\nDrip Too Hard by Lil Baby & Gunna\nNEXT_SONG\nMoney Longer
+        by Lil Uzi Vert \nNEXT_SONG\nMercy by Kanye West, Big Sean, Pusha T, 2 Chainz
+        \nNEXT_SONG\nSicko Mode by Travis Scott feat. Drake \nNEXT_SONG\n6 Foot 7
+        Foot by Lil Wayne feat. Cory Gunz \nNEXT_SONG\nPowerglide by Rae Sremmurd
+        feat. Juicy J"},"finish_reason":"stop","index":0}]}
 
         '
-  recorded_at: Thu, 13 Apr 2023 17:17:20 GMT
+  recorded_at: Fri, 14 Apr 2023 16:22:34 GMT
 recorded_with: VCR 6.1.0
