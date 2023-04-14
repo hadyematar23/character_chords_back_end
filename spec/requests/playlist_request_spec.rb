@@ -28,7 +28,6 @@ RSpec.describe "playlist", type: :request do
       follow_redirect!
 
       parsed_playlist = JSON.parse(response.body, symbolize_names: true)
-      require 'pry'; binding.pry
       expect(Playlist.count).to eq(1)
       expect(response.status).to eq(200)
       expect(parsed_playlist).to be_a(Hash)
@@ -56,7 +55,6 @@ RSpec.describe "playlist", type: :request do
       
       parsed_playlist = JSON.parse(response.body, symbolize_names: true)
       expect(response.status).to eq(200)
-      require 'pry'; binding.pry
       expect(parsed_playlist).to be_a(Hash)
       expect(parsed_playlist[:links]).to be_a(Hash)
       expect(parsed_playlist[:links][:image]).to be_a(String)
