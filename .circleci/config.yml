@@ -26,3 +26,23 @@ jobs:
       - checkout
       - run: bundle install --path vendor/bundle
       - run: bundle exec rspec
+
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git:
+          app-name: frozen-savannah-58383 # REPLACE WITH THE NAME OF YOUR HEROKU APP
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main # REPLACE "main" WITH THE NAME OF YOUR DEPLOYMENT BRANCH IF DIFFERENT
