@@ -1,7 +1,6 @@
 class PlaylistSerializer
 
   def generate_playlist(playlist, character, theme)
-    require 'pry'; binding.pry
     {
       links: {
       image: character.url
