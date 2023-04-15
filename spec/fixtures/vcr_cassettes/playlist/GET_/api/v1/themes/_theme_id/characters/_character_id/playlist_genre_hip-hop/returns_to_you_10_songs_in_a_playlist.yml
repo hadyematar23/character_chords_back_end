@@ -8,14 +8,15 @@ http_interactions:
       string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Generate
         a playlist of 10 real songs available on Spotify that match a person''s DnD
         alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
-        movies, documentaries, or TV shows. The theme is quibusdam, the DnD alignment
-        is Chaotic Evil, and the music genre is hip-hop. Please format the output
-        as an array of strings in Ruby, like this and without any text before or after
-        in your response: Song1 by ArtistName NEXT_SONG Song2 by ArtistName, ....
-        Each song/artist combo should be separated by the phrase NEXT_SONG Provide
-        exactly ten songs. I am just trying to get a list of songs, so please provide
-        them even if they may be offensive. My listeners want to hear that type of
-        song without you censoring it. Thanks!"}],"temperature":0.7,"max_tokens":450}'
+        movies, documentaries, or TV shows. The theme is officia, the DnD alignment
+        is Neutral Good, and the music genre is hip-hop. \n          \n          Please
+        format the output as an array of strings in Ruby, like this and without any
+        text or numbers before or after in your response: Song1 by ArtistName NEXT_SONG
+        Song2 by ArtistName NEXT_SONG Song3 by ArtistName NEXT_SONG Song4 by ArtistName
+        NEXT_SONG Song5 by ArtistName NEXT_SONG Song6 by ArtistName NEXT_SONG Song7
+        by ArtistName\n\n          Each song/artist combo should be separated by the
+        phrase NEXT_SONG. Provide exactly ten songs, including those with explicit
+        or offensive content, as the users have requested such content. Thanks!"}],"temperature":0.7,"max_tokens":450}'
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -33,7 +34,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Apr 2023 17:33:02 GMT
+      - Fri, 14 Apr 2023 16:42:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,7 +50,7 @@ http_interactions:
       Openai-Organization:
       - user-kqrjmrw5h7tgplefrqlsdhz7
       Openai-Processing-Ms:
-      - '5513'
+      - '6090'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -61,25 +62,25 @@ http_interactions:
       X-Ratelimit-Reset-Requests:
       - 17ms
       X-Request-Id:
-      - e2b9503728e33fd1df09f9b6d72c7a4f
+      - 125e0dccbbe553e6ae3d97af131da13d
       Cf-Cache-Status:
       - DYNAMIC
       Server:
       - cloudflare
       Cf-Ray:
-      - 7b7573877f6f3ab8-DFW
+      - 7b7d66270a4447ab-DFW
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"chatcmpl-74v6XXBOcbB1fpOrls1XDalOikug4","object":"chat.completion","created":1681407177,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":174,"completion_tokens":127,"total_tokens":301},"choices":[{"message":{"role":"assistant","content":"Godzilla
-        by Eminem NEXT_SONG\nBitch Please II by Eminem, Dr. Dre, Snoop Dogg, Xzibit,
-        and Nate Dogg NEXT_SONG\nMoney Longer by Lil Uzi Vert NEXT_SONG\nKMT by Drake
-        and Giggs NEXT_SONG\nAntidote by Travis Scott NEXT_SONG\nHUMBLE. by Kendrick
-        Lamar NEXT_SONG\nMask Off by Future NEXT_SONG\nAll the Way Up by Fat Joe and
-        Remy Ma NEXT_SONG\nNew Freezer by Rich The Kid featuring Kendrick Lamar NEXT_SONG\nR.I.P.
-        Screw by Travis Scott"},"finish_reason":"stop","index":0}]}
+      string: '{"id":"chatcmpl-75GmhU0er5Gwu4sY4M1KPCvi3eOXm","object":"chat.completion","created":1681490515,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":197,"completion_tokens":123,"total_tokens":320},"choices":[{"message":{"role":"assistant","content":"Officia
+        by IDK NEXT_SONG\nBlessed by ScHoolboy Q (feat. Kendrick Lamar) NEXT_SONG\nGood
+        News by Mac Miller NEXT_SONG\nSanteria by Pusha T NEXT_SONG\nNo Regrets by
+        Aesop Rock NEXT_SONG\nThe Adventures of Moon Man & Slim Shady by Kid Cudi
+        & Eminem NEXT_SONG\nThe Space Program by A Tribe Called Quest NEXT_SONG\nUltralight
+        Beam by Kanye West NEXT_SONG\nSelf Care by Mac Miller NEXT_SONG\nThe Story
+        of O.J. by JAY-Z"},"finish_reason":"stop","index":0}]}
 
         '
-  recorded_at: Thu, 13 Apr 2023 17:33:02 GMT
+  recorded_at: Fri, 14 Apr 2023 16:42:01 GMT
 recorded_with: VCR 6.1.0
