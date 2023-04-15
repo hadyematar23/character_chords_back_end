@@ -1,6 +1,6 @@
 class Chordsapi::V1::PlaylistsController < ApplicationController
 
-  def create 
+  def create
     playlist = PlaylistFacade.new.generate_playlist(params)
     serialized_playlist= PlaylistSerializer.new.generate_playlist(Character.find(params[:character_id]), playlist, params[:genre])
     created_playlist = Playlist.create!(genre: serialized_playlist[:data][:genre], character: serialized_playlist[:data][:attributes][:character_name], alignment: serialized_playlist[:data][:attributes][:character_alignment], songs: serialized_playlist[:data][:attributes][:song_titles])    
