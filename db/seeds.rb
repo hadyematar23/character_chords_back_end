@@ -3,7 +3,7 @@
 debug = Theme.create!(name: "debug", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
 # Good/Evil Question
 Question.create(
-  theme_id: 1,                                     
+  theme_id: debug.id,                                     
   question: "Test Question 1",
   answer_1: "Very Good",                     
   answer_2: "Kinda Good",                                  
@@ -16,14 +16,14 @@ Question.create(
 # Lawful/Chaotic Question
 
 Question.create(
-  theme_id: 1,                                     
+  theme_id: debug.id,                                     
   question: "Test Question 2",
   answer_1: "Very Lawful",                     
   answer_2: "Kinda Lawful",                                  
   answer_3: "Neutral",     
   answer_4: "Kinda Chaotic",                
   answer_5: "Very Chaotic", 
-  good_evil_chaotic_lawful: 0
+  good_evil_chaotic_lawful: 1
 )
 
 # DEBUGGING CHARACTERS -- REMOVE BEFORE FINAL PROD #
@@ -45,7 +45,7 @@ lawyer = Theme.create!(name: "lawyer", image_link: "https://images.pexels.com/ph
 # Good/Evil Questions
 # 1
 Question.create(
-  theme_id: 1,                                     
+  theme_id: lawyer.id,                                     
   question: "A high-profile client offers you a significant sum of money to represent them in a case where they are clearly guilty. What do you do?",
   answer_1: "Reject the case outright on moral grounds.",                     
   answer_2: "Accept the case but donate the earnings to charity",                                  
@@ -56,7 +56,7 @@ Question.create(
 )
 # 2
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "You come across evidence that could potentially exonerate a defendant, but it would also incriminate your client. How do you proceed?", 
   answer_1: "Present the evidence to the court and protect the innocent party.", 
   answer_2: "Disclose the evidence to both parties privately, seeking a resolution without jeopardizing your client's case.", 
@@ -67,7 +67,7 @@ Question.create!(
 )
 # 3
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "Your client is a corporation that has caused significant environmental damage. How do you approach the case?", 
   answer_1: "Advise the corporation to own up to its actions and compensate the affected communities.", 
   answer_2: "Work on a settlement that balances the corporation's interests with the affected communities' needs.", 
@@ -78,7 +78,7 @@ Question.create!(
 )
 # 4
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "A colleague is in danger of losing their job due to allegations of professional misconduct. You know they're innocent, but revealing the truth might harm your career. What do you do?", 
   answer_1: "Come forward with the truth, regardless of the consequences to your career.", 
   answer_2: "Try to help your colleague clear their name without putting your own career at risk.", 
@@ -89,7 +89,7 @@ Question.create!(
 )
 # 5
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "You discover that a fellow attorney has been knowingly providing false evidence in court. How do you respond?", 
   answer_1: "Report the attorney to the appropriate authorities immediately.", 
   answer_2: "Confront the attorney privately and give them a chance to correct their actions.", 
@@ -100,7 +100,7 @@ Question.create!(
 )
 # 6
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "Your firm is representing a client who is known for their philanthropy, but you discover they are involved in illegal activities. How do you handle the situation?", 
   answer_1: "I Advise the client to end their illegal activities and make amends.", 
   answer_2: "Continue representing the client but encourage them to change their ways.", 
@@ -112,7 +112,7 @@ Question.create!(
 # Lawful/Chaotic Questions
 # 1
 Question.create(
-  theme_id: 1,                                                
+  theme_id: lawyer.id,                                                
   question: "A new law is passed that you believe is unjust. How do you handle cases that involve this law?",
   answer_1: "Uphold the law, as it is your duty to follow the legal system.",                     
   answer_2: "Work within the legal system to challenge the law or find loopholes.",                                  
@@ -123,7 +123,7 @@ Question.create(
 )
 # 2
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "A client you know to be innocent is found guilty in court. How do you proceed?", 
   answer_1: "Accept the verdict and move on, as the legal system has spoken.", 
   answer_2: "Pursue an appeal and exhaust all legal remedies available.", 
@@ -134,7 +134,7 @@ Question.create!(
 )
 # 3
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "You are representing a client who is clearly guilty but insists on pleading not guilty. How do you handle the situation?", 
   answer_1: "Advise the client to change their plea and seek a fair punishment.", 
   answer_2: "Follow the client's wishes and present a defense within the confines of the law.", 
@@ -145,7 +145,7 @@ Question.create!(
 )
 # 4
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "Your client is facing a long sentence for a crime they committed out of desperation. How do you approach their defense?", 
   answer_1: "Seek the appropriate punishment under the law, regardless of the circumstances.", 
   answer_2: "Argue for leniency based on your client's difficult situation.", 
@@ -156,7 +156,7 @@ Question.create!(
 )
 # 5
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "You are offered a bribe to sabotage a case you are working on. How do you respond?", 
   answer_1: "Refuse the bribe and report the incident to the authorities.", 
   answer_2: "Refuse the bribe but keep the incident to yourself.", 
@@ -167,7 +167,7 @@ Question.create!(
 )
 # 6
 Question.create!(
-  theme_id: 1, 
+  theme_id: lawyer.id, 
   question: "You discover a technicality that could potentially get your guilty client acquitted. What do you do?", 
   answer_1: "Ignore the technicality, as your client should face the consequences of their actions.", 
   answer_2: "Present the technicality in court and let the judge decide its significance.", 
@@ -259,7 +259,6 @@ Question.create!(
   answer_5: "Use the information on the phone to blackmail the owner for personal gain.",
   good_evil_chaotic_lawful: 0
 )
-
 # Lawful/Chaotic Questions
 # 1
 Question.create!(
@@ -340,3 +339,150 @@ Character.create!(name: "Lawful Evil", theme_id: alignment.id, good_min: 0.00, g
 Character.create!(name: "Neutral Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
 Character.create!(name: "Chaotic Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
 Playlist.create!(genre: "Rock and Roll", character: "Thurgood Marshall", alignment: "Chaotic Neutral", songs: ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5", "Song 6", "Song 7", "Song 8", "Song 9", "Song 10"])
+
+### Star Wars Quiz ###
+
+star_wars = Theme.create!(name: "Star Wars", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/225px-Star_wars2.svg.png")
+# Good/Evil Questions
+# 1
+Question.create(
+  theme_id: star_wars.id,
+  question: "You discover that a group of Rebels has planted a bomb in a highly populated area that will kill many innocent people. What do you do?",
+  answer_1: "Report the bomb to the authorities and try to stop it from detonating, even if it means siding against the Rebels.",
+  answer_2: "Try to negotiate with the Rebels to disarm the bomb peacefully.",
+  answer_3: "Attempt to disable the bomb without involving the authorities, risking your own safety.",
+  answer_4: "Help the Rebels escape and let the bomb detonate, seeing it as a necessary sacrifice for their cause.",
+  answer_5: "Join the Rebels in planting the bomb and actively participate in the attack.",
+  good_evil_chaotic_lawful: 0
+)
+# 2
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a Jedi who has been sent to negotiate peace between two warring factions. However, you discover that one of the factions has been committing horrific war crimes against civilians. What do you do?",
+  answer_1: "Report the faction to the authorities and try to stop their actions, even if it means jeopardizing the peace negotiations.",
+  answer_2: "Use your influence to pressure the faction into ending their war crimes, without revealing their actions to the other side.",
+  answer_3: "Attempt to mediate a peaceful resolution without directly confronting the faction about their actions.",
+  answer_4: "Join the other faction and use the information about the war crimes to gain an advantage in the negotiations.",
+  answer_5: "Join the faction and actively participate in their war crimes, seeing it as necessary to win the war.",
+  good_evil_chaotic_lawful: 0
+)
+# 3
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a smuggler who has been hired to transport illegal weapons to a group of Mandalorians fighting against the Hutts. What do you do?",
+  answer_1: "Reject the job outright on moral grounds, fearing the weapons could be used to harm innocent people.",
+  answer_2: "Accept the job but only transport the weapons to a third party who will dispose of them safely.",
+  answer_3: "Transport the weapons to the Mandalorians, but also alert the New Republic of the transaction.",
+  answer_4: "Transport the weapons to the Mandalorians and actively participate in the attack against the Hutts.",
+  answer_5: "Steal the weapons and sell them to the Hutts for personal gain.",
+  good_evil_chaotic_lawful: 0
+)
+# 4
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a bounty hunter hired to capture a notorious criminal. When you find them, they offer you a large sum of money to help them escape the New Republic authorities. Do you:",
+  answer_1: "Refuse the offer and turn the criminal over to the New Republic authorities.",
+  answer_2: "Take the money but still turn the criminal over to the New Republic authorities.",
+  answer_3: "Help the criminal escape but anonymously tip off the New Republic authorities to their whereabouts.",
+  answer_4: "Help the criminal escape and then collect your payment without regard for the consequences.",
+  answer_5: "Help the criminal escape and then join them as their partner in crime.",
+  good_evil_chaotic_lawful: 0
+)
+# 5
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a member of a group of Rebels fighting against the Empire. Empire officials are threatening to execute innocent civilians unless your Rebel group surrenders themselves. Do you:",
+  answer_1: "Surrender yourself to the authorities to spare the lives of the civilians.",
+  answer_2: "Surrender yourself and use the opportunity to assassinate the corrupt leader of the government.",
+  answer_3: "Refuse to surrender and try to rescue the civilians yourself.",
+  answer_4: "Refuse to surrender and let the civilians be executed.",
+  answer_5: "Betray the other Rebels to save your own life.",
+  good_evil_chaotic_lawful: 0
+)
+# 6
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a Jedi tasked with guarding a powerful artifact that could be used for either great good or great evil. A group of Rebels is seeking to steal the artifact to use it against the Empire, but a Sith Lord has also learned of its existence and seeks to use it to further their own power. Do you:",
+  answer_1: "Refuse to let anyone have the artifact and keep it under Jedi protection.",
+  answer_2: "Allow the Rebels to take the artifact, as you believe they will use it for good.",
+  answer_5: "Destroy the artifact to prevent either side from using it for evil.",
+  answer_4: "Allow the Sith Lord to take the artifact, as you believe you can persuade them to use it for good.",
+  answer_5: "Take the artifact for yourself and use it to achieve your own goals.",
+  good_evil_chaotic_lawful: 0
+)
+# Lawful/Chaotic Questions
+# 1
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are part of a team assigned to complete a mission for the Rebel Alliance. Your commanding officer has given you a direct order that conflicts with the best chance for success. What do you do?",
+  answer_1: "Follow the direct orders of your commanding officer, as it is your duty to follow the chain of command.",
+  answer_2: "Confront your commanding officer about the order and try to come up with a compromise that maximizes the chances of success.",
+  answer_3: "Follow the order, but secretly make arrangements to ensure the success of the mission.",
+  answer_4: "Disobey the order and follow the plan that offers the best chance for success, even if it means going against your commanding officer's orders.",
+  answer_5: "Take matters into your own hands and pursue the plan you think will achieve success, regardless of the consequences or orders given."
+)
+# 2
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are on a team of Jedi that have been entrusted with a valuable item that is needed for an important mission. A member of the Jedi Council asks to borrow it for personal reasons. What do you do?",
+  answer_1: "Refuse to lend it, as it could jeopardize the mission and the team's success.",
+  answer_2: "Lend it with the expectation that it will be returned promptly and used only for mission-related purposes.",
+  answer_3: "Lend it only if the Jedi Council member agrees to use it for mission-related purposes and returns it promptly.",
+  answer_4: "Lend it without any conditions or expectations, trusting that the Jedi Council member will use it responsibly.",
+  answer_5: "Give it to the Jedi Council member, regardless of the consequences for the mission, as their personal needs are more important."
+)
+# 3
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a member of a group of bounty hunters. Your group is hired to capture a Trandoshan war lord, dead or alive. When you finally locate the Trandoshan, they are accompanied by a young child who appears to be their own child. What do you do?",
+  answer_1: "Capture both the Trandoshan and the child and turn them over to the authorities, as it is your duty to follow the contract terms.",
+  answer_2: "Capture the Trandoshan but leave the child unharmed, as you have no quarrel with the child.",
+  answer_3: "Allow the Trandoshan and the child to escape, as you do not want to harm the child or involve yourself in an unnecessary conflict.",
+  answer_4: "Capture the Trandoshan and sell the child into slavery, as you see it as a profitable opportunity.",
+  answer_5: "Help the Trandoshan and the child escape and join them on the run, as you sympathize with their situation and see an opportunity to form an alliance."
+)
+# 4
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a Jedi Knight. Your Padawan is discovered to be secretly studying the dark side of the Force. What do you do?",
+  answer_1: "Report the Padawan to the Jedi Council for disciplinary action.",
+  answer_2: "Confront the Padawan and try to reason with them to stop their studies.",
+  answer_3: "Keep a close eye on the Padawan's studies and intervene only if they cross a line.",
+  answer_4: "Mentor the Padawan to help them overcome their curiosity.",
+  answer_5: "Secretly aid the Padawan's studies and help them harness their power for good.",
+  good_evil_chaotic_lawful: 1
+)
+# 5
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are in charge of a group of Rebels. A member of your group is suspected of betraying the cause to the Empire. What do you do?",
+  answer_1: "Hold a trial to determine the member's guilt and act accordingly, but risk exposing the group's secrets.",
+  answer_2: "Confront the member and try to get them to confess to their betrayal, but risk alienating other members who might have doubts about the cause.",
+  answer_3: "Keep an eye on the member but give them the benefit of the doubt until more evidence is found, but risk jeopardizing the group's safety.",
+  answer_4: "Exile the member from the group to prevent any further damage, but risk losing valuable intel.",
+  answer_5: "Kill the member immediately without a trial or evidence, but risk betraying the very values that the group stands for.",
+  good_evil_chaotic_lawful: 1
+)
+# 6
+Question.create(
+  theme_id: star_wars.id,
+  question: "You are a leader of a planet that has been invaded by the Empire. The Empire offers you a deal: surrender and allow them to take control peacefully or fight and risk the total destruction of your planet. What do you do?",
+  answer_1: "Surrender peacefully to protect the lives of your people, but risk becoming a pawn of the Empire.",
+  answer_2: "Try to negotiate with the Empire for better terms before surrendering, but risk appearing weak and losing the respect of your people.",
+  answer_3: "Rally the people to fight against the Empire and risk the destruction of your planet, but risk causing the death of many innocent people.",
+  answer_4: "Pretend to surrender but secretly plot to overthrow the Empire from within, but risk being discovered and causing even more harm to your people.",
+  answer_5: "Join the Empire and become their loyal servant in exchange for your people's safety, but risk betraying your own principles and morals.",
+  good_evil_chaotic_lawful: 1
+)
+# Character Creation
+Character.create!(name: "Luke Skywalker", theme_id: star_wars.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/commons/6/67/Luke_Skywalker_-_Welcome_Banner_%28Cropped%29.jpg", alignment: 1)
+Character.create!(name: "Leia Organa", theme_id: star_wars.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/1/1b/Princess_Leia%27s_characteristic_hairstyle.jpg?20190831062334", alignment: 2)
+Character.create!(name: "Han Solo", theme_id: star_wars.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/b/be/Han_Solo_depicted_in_promotional_image_for_Star_Wars_%281977%29.jpg", alignment: 3)
+
+Character.create!(name: "C-3PO", theme_id: star_wars.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/5/5c/C-3PO_droid.png?20180102220614", alignment: 4)
+Character.create!(name: "Boba Fett", theme_id: star_wars.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/3/3e/FettbobaJB.png?20100126122410", alignment: 5)
+Character.create!(name: "Lando Calrissian", theme_id: star_wars.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/c/cb/Lando6-2.jpg?20171217221509", alignment: 6)
+
+Character.create!(name: "Darth Vader", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/0/0b/Darth_Vader_in_The_Empire_Strikes_Back.jpg?20211020000259", alignment: 7)
+Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/8/8f/Emperor_RotJ.png?20130207121428", alignment: 8)
+Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/5/53/Jabba_the_Hutt_in_Return_of_the_Jedi_%281983%29.png?20171220071330", alignment: 9)
