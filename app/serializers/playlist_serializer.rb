@@ -1,27 +1,27 @@
 class PlaylistSerializer
 
-  def generate_playlist(character, playlist, genre)
+  def generate_playlist(playlist, character, theme)
     {
       links: {
       image: character.url
       },
       data: {
         type: "playlist",
-        genre: genre,
-        id: nil, 
+        genre: playlist.genre,
+        id: playlist.id, 
         attributes: {
           character_name: character.name,
-          quiz_theme: character.theme.name,
+          quiz_theme: theme.name,
           character_alignment: character.alignment,                             
-          song_titles: return_array(playlist)
+          song_titles: return_array(playlist.songs)
         }
       }
     }
   end
 
-  def return_array(playlist)
-    playlist_content = playlist[:choices].first[:message][:content]
-    songs = playlist_content.split('NEXT_SONG').map(&:strip)
+  def return_array(songs)
+    playlist_content = songs.first
+    parsed_songs = playlist_content.split('NEXT_SONG').map(&:strip)
   end
 
   def render_playlist(playlist)

@@ -13,7 +13,8 @@ class CharacterSerializer
         attributes: {
           name: @info.name,
           quiz: Theme.find(@info.theme_id).name,
-          alignment: @info.alignment 
+          alignment: @info.alignment, 
+          character_id: @info.id
         }
       }
     }

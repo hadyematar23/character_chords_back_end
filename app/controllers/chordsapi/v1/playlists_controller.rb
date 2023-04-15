@@ -2,9 +2,14 @@ class Chordsapi::V1::PlaylistsController < ApplicationController
 
   def create
     playlist = PlaylistFacade.new.generate_playlist(params)
-    serialized_playlist= PlaylistSerializer.new.generate_playlist(Character.find(params[:character_id]), playlist, params[:genre])
-    created_playlist = Playlist.create!(genre: serialized_playlist[:data][:genre], character: serialized_playlist[:data][:attributes][:character_name], alignment: serialized_playlist[:data][:attributes][:character_alignment], songs: serialized_playlist[:data][:attributes][:song_titles])    
-    redirect_to "/chordsapi/v1/themes/#{params[:theme_id]}/characters/#{params[:character_id]}/playlists/#{created_playlist.id.to_s}"
+    character = Character.find(params[:character_id])
+    theme = character.theme
+    
+    created_playlist = Playlist.create!(genre: params[:genre], character: character.name, alignment: character.alignment, songs: [playlist[:choices].first[:message][:content]])    
+    
+    serialized_playlist= PlaylistSerializer.new.generate_playlist(created_playlist, character, theme)
+
+    render json: serialized_playlist
   
   end
   

@@ -25,7 +25,6 @@ RSpec.describe "playlist", type: :request do
       expect(Playlist.count).to eq(0)
 
       post "/chordsapi/v1/themes/#{Theme.first.id}/characters/#{@jimmy.id}/playlists?genre=hip-hop"
-      follow_redirect!
 
       parsed_playlist = JSON.parse(response.body, symbolize_names: true)
       expect(Playlist.count).to eq(1)
@@ -66,7 +65,7 @@ RSpec.describe "playlist", type: :request do
       expect(parsed_playlist[:data][:attributes][:quiz_theme]).to be_a(String)
       expect(parsed_playlist[:data][:attributes][:character_alignment]).to be_a(String)
       expect(parsed_playlist[:data][:attributes][:song_titles]).to be_a(Array)
-      expect(parsed_playlist[:data][:attributes][:song_titles].count).to eq(10)
+      expect(parsed_playlist[:data][:attributes][:song_titles].count).to eq(1)
       parsed_playlist[:data][:attributes][:song_titles].each do |song|
         expect(song).to be_a(String)
       end

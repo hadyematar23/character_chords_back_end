@@ -31,7 +31,7 @@ RSpec.describe "character", type: :request do
       expect(parsed_character[:data][:attributes][:name]).to be_a(String)
       expect(parsed_character[:data][:attributes][:quiz]).to eq(Theme.find(Theme.all.first.id).name)
       expect(parsed_character[:data][:attributes][:alignment]).to be_a(String)
-
+      expect(parsed_character[:data][:attributes][:character_id]).to be_a(Integer)
     end 
   end 
 end 
