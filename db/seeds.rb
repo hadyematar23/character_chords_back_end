@@ -1,3 +1,44 @@
+### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
+
+debug = Theme.create!(name: "debug", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
+# Good/Evil Question
+Question.create(
+  theme_id: 1,                                     
+  question: "Test Question 1",
+  answer_1: "Very Good",                     
+  answer_2: "Kinda Good",                                  
+  answer_3: "Neutral",     
+  answer_4: "Kinda Evil",                
+  answer_5: "Very Evil", 
+  good_evil_chaotic_lawful: 0
+)
+
+# Lawful/Chaotic Question
+
+Question.create(
+  theme_id: 1,                                     
+  question: "Test Question 2",
+  answer_1: "Very Lawful",                     
+  answer_2: "Kinda Lawful",                                  
+  answer_3: "Neutral",     
+  answer_4: "Kinda Chaotic",                
+  answer_5: "Very Chaotic", 
+  good_evil_chaotic_lawful: 0
+)
+
+# DEBUGGING CHARACTERS -- REMOVE BEFORE FINAL PROD #
+Character.create!(name: "Lawful Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 1)
+Character.create!(name: "Neutral Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 2)
+Character.create!(name: "Chaotic Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 3)
+
+Character.create!(name: "Lawful Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 4)
+Character.create!(name: "True Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 5)
+Character.create!(name: "Chaotic Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 6)
+
+Character.create!(name: "Lawful Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7)
+Character.create!(name: "Neutral Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
+Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
+
 ### Lawyer Quiz ###
 
 lawyer = Theme.create!(name: "lawyer", image_link: "https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg")
