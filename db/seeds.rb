@@ -486,3 +486,152 @@ Character.create!(name: "Lando Calrissian", theme_id: star_wars.id, good_min: 0.
 Character.create!(name: "Darth Vader", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/0/0b/Darth_Vader_in_The_Empire_Strikes_Back.jpg?20211020000259", alignment: 7)
 Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/8/8f/Emperor_RotJ.png?20130207121428", alignment: 8)
 Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/5/53/Jabba_the_Hutt_in_Return_of_the_Jedi_%281983%29.png?20171220071330", alignment: 9)
+
+### Harry Potter Quiz ###
+harry_potter = Theme.create!(name: "Harry Potter", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
+# Good/Evil Questions
+# 1
+Question.create(
+  theme_id: harry_potter.id,
+  question: "You have been given a magical potion that can grant you immense magical power, but it requires the sacrifice of a life to create. What do you do?",
+  answer_1: "Refuse to use the potion and report it to the authorities.",
+  answer_2: "Consider using the potion, but only after exploring other avenues to gain power.",
+  answer_4: "Use the potion to gain power, but only if the person sacrificed is evil or has committed heinous crimes.",
+  answer_3: "Drink the potion and use your newfound power to make the world a better place.",
+  answer_5: "Use the potion without hesitation to gain power and achieve your goals.",
+  good_evil_chaotic_lawful: 0.25
+)
+# 2
+Question.create(
+  theme_id: harry_potter.id,                                     
+  question: "A fellow student is struggling with their History of Magic studies. How do you respond?",
+  answer_1: "Offer to tutor them and help them improve their grades.",
+  answer_2: "Encourage them to seek help from their professors or school resources.",
+  answer_3: "Give them tips and tricks to help them study more effectively.",
+  answer_5: "Offer to help them study, but only if they agree to do something for you in return",
+  answer_4: "Help them study, but only to make yourself look good in front of the professor.",
+  good_evil_chaotic_lawful: 0
+)
+# 3
+Question.create(
+  theme_id: harry_potter.id,                                     
+  question: "You are attending Hogwarts School of Witchcraft and Wizardry, and one of your classmates is being bullied by a group of older Slytherins. What do you do?",
+  answer_1: "Stand up for the classmate and report the bullies to the headmaster.",
+  answer_2: "Try to reason with the bullies and convince them to stop.",
+  answer_3: "Stay out of it and hope someone else intervenes.",
+  answer_4: "Use magic to get revenge on the bullies and protect the classmate.",
+  answer_5: "Join the bullies to avoid becoming a target yourself.",
+  good_evil_chaotic_lawful: 0
+)
+# 4
+Question.create(
+  theme_id: harry_potter.id,                                     
+  question: "You witness a fellow student using dark magic. How do you respond?",
+  answer_1: "Confront the student and report their actions to professors, but also offer to help turn away from dark magic",
+  answer_2: "Confront the student and try to talk them out of it.",
+  answer_3: "Try to understand their reasons for using dark magic and offer guidance.",
+  answer_4: "Stay out of it and hope that they will stop on their own.",
+  answer_5: "Offer to teach them how to use dark magic more responsibly, with the hope of steering them towards a more balanced approach to magic.",
+  good_evil_chaotic_lawful: 0
+)
+# 5
+Question.create(
+  theme_id: harry_potter.id,                                     
+  question: "You have the opportunity to cheat on a difficult potions exam. What do you do?",
+  answer_1: "Study hard and try your best to pass without cheating.",
+  answer_2: "Ask for help from a fellow student or house prefect.",
+  answer_3: "Use a small cheat parchment to help you remember important information.",
+  answer_4: "Copy off of someone else's exam parchment.",
+  answer_5: "Use magic to cheat without getting caught.",
+  good_evil_chaotic_lawful: 0
+)
+# 6
+Question.create(
+  theme_id: harry_potter.id,                                     
+  question: "While wandering around Hogwarts, you come across a secret room that is rumored to contain a powerful magical artifact. What do you do?",
+  answer_1: "Report the discovery to the headmaster and ask for guidance.",
+  answer_2: "Leave the artifact untouched, as it may be cursed or bring about unwanted consequences.",
+  answer_3: "Investigate the room, but only take the artifact if it is necessary to protect yourself or others.",
+  answer_4: "Take the artifact without hesitation, as you are confident that it will give you the power you need to accomplish your goals.",
+  answer_5: "Take the artifact and sell it on the black market in Knockturn Ally to the highest bidder.",
+  good_evil_chaotic_lawful: 0
+)
+# Lawful/Chaotic Questions
+# 1
+Question.create(
+  theme_id: harry_potter.id,
+  question: "You are a professor at Hogwarts who has been tasked with punishing a student who broke school rules. What do you do?",
+  answer_1: "Strictly enforce the rules and assign severe punishment, regardless of the circumstances.",
+  answer_2: "Enforce the rules, but take into consideration the student's motives and circumstances when assigning punishment.",
+  answer_3: "Consider the student's intentions and motives first, and then assign a punishment that is appropriate.",
+  answer_4: "Ignore the infraction altogether and let the student off the hook, reasoning that rules are meant to be broken.",
+  answer_5: "Use the situation as an opportunity to teach the student a valuable lesson about the importance of following rules, but be lenient in the punishment.",
+  good_evil_chaotic_lawful: 0
+)
+# 2
+Question.create(
+  theme_id: harry_potter.id,
+  question: "You are a wizard who has the rare power to control the minds of others. What do you do with this power?",
+  answer_1: "Use it to enforce order and control over others, even if it means infringing on their personal freedoms.",
+  answer_2: "Use it only in situations where it is necessary, such as in self-defense or to prevent harm to others.",
+  answer_3: "Refuse to use this power at all, as it violates the principles of free will and personal autonomy.",
+  answer_4: "Use it sparingly, and only with the consent of the person being controlled.",
+  answer_5: "Use it frequently to manipulate others to your advantage, regardless of the consequences.",
+  good_evil_chaotic_lawful: 0
+)
+# 3
+Question.create(
+  theme_id: harry_potter.id,
+  question: "You are offered a powerful and illegal potion that will give you an edge in your magical studies. What do you do?",
+  answer_1: "Refuse the potion and report the person offering it to the professors.",
+  answer_2: "Politely refuse the potion and walk away.",
+  answer_3: "Consider taking the potion but ultimately decide against it.",
+  answer_4: "Take the potion, but don't use it immediately.",
+  answer_5: "Take the potion and use it without hesitation.",
+  good_evil_chaotic_lawful: 0
+)
+# 4
+Question.create(
+  theme_id: harry_potter.id,
+  question: "You have been given a powerful magical artifact that could be used for good or evil. What do you do with it?",
+  answer_1: "Destroy it to prevent anyone from using it for evil, but risk losing the potential good it could bring.",
+  answer_2: "Keep it hidden and never use it, but risk it falling into the wrong hands.",
+  answer_3: "Sell it to the highest bidder and let them decide its fate, but risk it being used for evil.",
+  answer_4: "Use it to bring about a better world, even if it means using morally questionable methods.",
+  answer_5: "Use it for personal gain, but only if it doesn't harm innocent people.",
+  good_evil_chaotic_lawful: 0 
+)
+# 5
+Question.create(
+  theme_id: harry_potter.id,
+  question: "You discover that a Hogwarts professor has been using their power to bully and intimidate students. What do you do?",
+  answer_1: "Report the professor to the Headmaster or Headmistress immediately.",
+  answer_2: "Confront the professor and try to convince them to stop their behavior.",
+  answer_3: "Ignore the behavior, reasoning that you don't want to get involved.",
+  answer_4: "Gather evidence against the professor and blackmail them into changing their behavior.",
+  answer_5: "Use the professor's behavior to your advantage, either by getting special treatment or by causing trouble.",
+  good_evil_chaotic_lawful: 0
+)
+# 6
+Question.create(
+  theme_id: harry_potter.id,
+  question: "A classmate has been spreading rumors about you, causing other students to treat you unfairly. What do you do?",
+  answer_1: "Report the classmate to a professor or Head of House for disciplinary action.",
+  answer_2: "Confront the classmate and try to convince them to stop spreading rumors.",
+  answer_3: "Try to ignore the rumors and hope they'll die down on their own.",
+  answer_4: "Spread rumors about the classmate in return, but only if it means protecting yourself from further harm.",
+  answer_5: "Seek revenge on the classmate, even if it means causing them serious harm.",
+  good_evil_chaotic_lawful: 1
+)
+# Character Creation
+Character.create!(name: "Hermione Granger", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Hermione_Granger_poster.jpg/220px-Hermione_Granger_poster.jpg", alignment: 1)
+Character.create!(name: "Harry Potter", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Harry_Potter_character_poster.jpg/220px-Harry_Potter_character_poster.jpg", alignment: 2)
+Character.create!(name: "Ron Weasley", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Ron_Weasley_poster.jpg/220px-Ron_Weasley_poster.jpg", alignment: 3)
+
+Character.create!(name: "Severous Snape", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Ootp076.jpg/220px-Ootp076.jpg", alignment: 4)
+Character.create!(name: "Hedwig", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_Making_of_Harry_Potter_29-05-2012_%28Hedwig%29.jpg/150px-The_Making_of_Harry_Potter_29-05-2012_%28Hedwig%29.jpg", alignment: 5)
+Character.create!(name: "Gilderoy Lockhart", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/harrypotter/images/d/d4/Gilderoy_Lockhart_COS_promo.jpg/revision/latest?cb=20160905192348", alignment: 6)
+
+Character.create!(name: "Voldemort", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/220px-Lordvoldemort.jpg", alignment: 7)
+Character.create!(name: "Lucius Malfoy", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://static.wikia.nocookie.net/harrypotter/images/b/b4/Lucius_Malfoy_BoH.png/revision/latest/scale-to-width-down/338?cb=20190604135420", alignment: 8)
+Character.create!(name: "Bellatrix Lestrange", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9)
