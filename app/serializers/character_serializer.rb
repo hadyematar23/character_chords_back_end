@@ -14,7 +14,8 @@ class CharacterSerializer
           name: @info.name,
           quiz: Theme.find(@info.theme_id).name,
           alignment: @info.alignment, 
-          character_id: @info.id
+          character_id: @info.id,
+          description: @info.description
         }
       }
     }
@@ -31,7 +32,8 @@ class CharacterSerializer
             name: character.name,
             quiz: Theme.find(character.theme_id).name,
             alignment: character.alignment,
-            character_id: character.id
+            character_id: character.id,
+            description: character.description
           }
         }
       }

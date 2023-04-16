@@ -27,17 +27,17 @@ Question.create(
 )
 
 # DEBUGGING CHARACTERS -- REMOVE BEFORE FINAL PROD #
-Character.create!(name: "Lawful Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 1)
-Character.create!(name: "Neutral Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 2)
-Character.create!(name: "Chaotic Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 3)
+Character.create!(name: "Lawful Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 1, description: "This is a description of the character")
+Character.create!(name: "Neutral Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 2, description: "This is a description of the character")
+Character.create!(name: "Chaotic Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 3, description: "This is a description of the character")
 
-Character.create!(name: "Lawful Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 4)
-Character.create!(name: "True Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 5)
-Character.create!(name: "Chaotic Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 6)
+Character.create!(name: "Lawful Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 4, description: "This is a description of the character")
+Character.create!(name: "True Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 5, description: "This is a description of the character")
+Character.create!(name: "Chaotic Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 6, description: "This is a description of the character")
 
-Character.create!(name: "Lawful Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7)
-Character.create!(name: "Neutral Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
-Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
+Character.create!(name: "Lawful Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7, description: "This is a description of the character")
+Character.create!(name: "Neutral Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8, description: "This is a description of the character")
+Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9, description: "This is a description of the character")
 
 ### Lawyer Quiz ###
 
@@ -327,17 +327,17 @@ Question.create!(
   good_evil_chaotic_lawful: 1
 )
 # Character Creation
-Character.create!(name: "The Hero", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/6303759/pexels-photo-6303759.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 1)
-Character.create!(name: "The Ally", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/6998462/pexels-photo-6998462.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 2)
-Character.create!(name: "The Rebel", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 3)
+Character.create!(name: "The Hero", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/6303759/pexels-photo-6303759.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 1, description: "This is a description of the character")
+Character.create!(name: "The Ally", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/6998462/pexels-photo-6998462.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 2, description: "This is a description of the character")
+Character.create!(name: "The Rebel", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 3, description: "This is a description of the character")
 
-Character.create!(name: "The Judge", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 4)
-Character.create!(name: "The Observer", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3769697/pexels-photo-3769697.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 5)
-Character.create!(name: "The Wildcard", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/8848555/pexels-photo-8848555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alignment: 6)
+Character.create!(name: "The Judge", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 4, description: "This is a description of the character")
+Character.create!(name: "The Observer", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3769697/pexels-photo-3769697.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 5, description: "This is a description of the character")
+Character.create!(name: "The Wildcard", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/8848555/pexels-photo-8848555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alignment: 6, description: "This is a description of the character")
 
-Character.create!(name: "The Tyrant", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/11064686/pexels-photo-11064686.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 7)
-Character.create!(name: "The Opportunist", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 8)
-Character.create!(name: "The Destroyer", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5xbzTczBHU2rPVJLBu8rBUqYcqSArUx-M1wwjtxtJQ&usqp=CAU&ec=48600113", alignment: 9)
+Character.create!(name: "The Tyrant", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/11064686/pexels-photo-11064686.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 7, description: "This is a description of the character")
+Character.create!(name: "The Opportunist", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 8, description: "This is a description of the character")
+Character.create!(name: "The Destroyer", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5xbzTczBHU2rPVJLBu8rBUqYcqSArUx-M1wwjtxtJQ&usqp=CAU&ec=48600113", alignment: 9, description: "This is a description of the character")
 
 Playlist.create!(genre: "Rock and Roll", character: "Thurgood Marshall", alignment: "Chaotic Neutral", songs: ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5", "Song 6", "Song 7", "Song 8", "Song 9", "Song 10"])
 
