@@ -744,7 +744,6 @@ Question.create(
   good_evil_chaotic_lawful: 1
 )
 # 4
-#as a Ruby object:
 Question.create(
   theme_id: lotr.id,
   question: "You have been captured by orcs and are being interrogated for information about the One Ring. What do you do?",

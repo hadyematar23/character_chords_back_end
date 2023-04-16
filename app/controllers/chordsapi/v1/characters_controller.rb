@@ -1,4 +1,8 @@
 class Chordsapi::V1::CharactersController < ApplicationController
+  def index
+    characters = Theme.find(params[:theme_id]).characters
+    render json: CharacterSerializer.new(characters).serialize_all_characters
+  end
 
   def find_character
     characters= Theme.find(params[:theme_id]).characters
@@ -6,5 +10,4 @@ class Chordsapi::V1::CharactersController < ApplicationController
     result = result.first
     render json: CharacterSerializer.new(result).serialize_character
   end
-
 end
