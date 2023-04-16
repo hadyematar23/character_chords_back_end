@@ -21,18 +21,21 @@ RSpec.describe "All Characters", type: :request do
       
       get "/chordsapi/v1/themes/#{theme.id}/characters"
       parsed_characters = JSON.parse(response.body, symbolize_names: true)
+      expect(parsed_characters).to be_a(Array)
+      expect(parsed_characters.count).to eq(9)
       
-      expect(parsed_characters).to be_a(Hash)
-      expect(parsed_characters[:data].count).to eq(9)
-
-      parsed_characters[:data].each do |character|
+      parsed_characters.each do |character|
         expect(character).to be_a(Hash)
-        expect(character[:type]).to eq("character")
-        expect(character[:theme_id]).to eq(theme.id)
-        expect(character[:attributes][:name]).to be_a(String)
-        expect(character[:attributes][:quiz]).to eq(Theme.find(theme.id).name)
-        expect(character[:attributes][:alignment]).to be_a(String)
-        expect(character[:attributes][:character_id]).to be_a(Integer)
+        expect(character[:links]).to be_a(Hash)
+        expect(character[:data]).to be_a(Hash)
+        expect(character[:data][:attributes]).to be_a(Hash)
+
+        expect(character[:data][:type]).to eq("character")
+        expect(character[:data][:theme_id]).to eq(theme.id)
+        expect(character[:data][:attributes][:name]).to be_a(String)
+        expect(character[:data][:attributes][:quiz]).to eq(Theme.find(theme.id).name)
+        expect(character[:data][:attributes][:alignment]).to be_a(String)
+        expect(character[:data][:attributes][:character_id]).to be_a(Integer)
       end
     end
   end
