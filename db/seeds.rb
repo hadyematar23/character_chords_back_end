@@ -641,7 +641,7 @@ Character.create!(name: "Lucius Malfoy", theme_id: harry_potter.id, good_min: 0.
 Character.create!(name: "Bellatrix Lestrange", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9)
 
 ### Lord of the Rings Quiz ###
-lotr = Theme.create!(name: "Lord of the Rings Character", image_link: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg/220px-The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg")
+lotr = Theme.create!(name: "Lord of the Rings Character", image_link: "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -744,7 +744,7 @@ Question.create(
   good_evil_chaotic_lawful: 1
 )
 # 4
-as a Ruby object:
+#as a Ruby object:
 Question.create(
   theme_id: lotr.id,
   question: "You have been captured by orcs and are being interrogated for information about the One Ring. What do you do?",

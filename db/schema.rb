@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_051706) do
     t.float "good_max"
     t.float "lawful_min"
     t.float "lawful_max"
-    t.string "description", default: ""
+    t.string "description"
     t.bigint "theme_id", null: false
     t.string "url"
     t.integer "alignment", default: 1
