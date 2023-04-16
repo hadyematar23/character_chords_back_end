@@ -1,6 +1,6 @@
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
-debug = Theme.create!(name: "debug", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
+debug = Theme.create!(name: "debugger", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
 # Good/Evil Question
 Question.create(
   theme_id: debug.id,                                     
@@ -27,17 +27,17 @@ Question.create(
 )
 
 # DEBUGGING CHARACTERS -- REMOVE BEFORE FINAL PROD #
-Character.create!(name: "The Hero", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/6303759/pexels-photo-6303759.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 1)
-Character.create!(name: "The Ally", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/6998462/pexels-photo-6998462.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 2)
-Character.create!(name: "The Rebel", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 3)
+Character.create!(name: "Lawful Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 1)
+Character.create!(name: "Neutral Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 2)
+Character.create!(name: "Chaotic Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 3)
 
-Character.create!(name: "The Judge", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 4)
-Character.create!(name: "The Observer", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3769697/pexels-photo-3769697.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 5)
-Character.create!(name: "The Wildcard", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/8848555/pexels-photo-8848555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alignment: 6)
+Character.create!(name: "Lawful Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 4)
+Character.create!(name: "True Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 5)
+Character.create!(name: "Chaotic Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 6)
 
-Character.create!(name: "The Tyrant", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/11064686/pexels-photo-11064686.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 7)
-Character.create!(name: "The Opportunist", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 8)
-Character.create!(name: "The Destroyer", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5xbzTczBHU2rPVJLBu8rBUqYcqSArUx-M1wwjtxtJQ&usqp=CAU&ec=48600113", alignment: 9)
+Character.create!(name: "Lawful Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7)
+Character.create!(name: "Neutral Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
+Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
 
 ### Lawyer Quiz ###
 
@@ -327,22 +327,23 @@ Question.create!(
   good_evil_chaotic_lawful: 1
 )
 # Character Creation
-Character.create!(name: "Lawful Good", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 1)
-Character.create!(name: "Neutral Good", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 2)
-Character.create!(name: "Chaotic Good", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 3)
+Character.create!(name: "The Hero", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/6303759/pexels-photo-6303759.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 1)
+Character.create!(name: "The Ally", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/6998462/pexels-photo-6998462.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 2)
+Character.create!(name: "The Rebel", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 3)
 
-Character.create!(name: "Lawful Neutral", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 4)
-Character.create!(name: "True Neutral", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 5)
-Character.create!(name: "Chaotic Neutral", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 6)
+Character.create!(name: "The Judge", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 4)
+Character.create!(name: "The Observer", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3769697/pexels-photo-3769697.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 5)
+Character.create!(name: "The Wildcard", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/8848555/pexels-photo-8848555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alignment: 6)
 
-Character.create!(name: "Lawful Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7)
-Character.create!(name: "Neutral Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
-Character.create!(name: "Chaotic Evil", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
+Character.create!(name: "The Tyrant", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/11064686/pexels-photo-11064686.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 7)
+Character.create!(name: "The Opportunist", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 8)
+Character.create!(name: "The Destroyer", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5xbzTczBHU2rPVJLBu8rBUqYcqSArUx-M1wwjtxtJQ&usqp=CAU&ec=48600113", alignment: 9)
+
 Playlist.create!(genre: "Rock and Roll", character: "Thurgood Marshall", alignment: "Chaotic Neutral", songs: ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5", "Song 6", "Song 7", "Song 8", "Song 9", "Song 10"])
 
 ### Star Wars Quiz ###
 
-star_wars = Theme.create!(name: "Star Wars", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/225px-Star_wars2.svg.png")
+star_wars = Theme.create!(name: "Star Wars Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/225px-Star_wars2.svg.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -405,7 +406,7 @@ Question.create(
   question: "You are a Jedi tasked with guarding a powerful artifact that could be used for either great good or great evil. A group of Rebels is seeking to steal the artifact to use it against the Empire, but a Sith Lord has also learned of its existence and seeks to use it to further their own power. Do you:",
   answer_1: "Refuse to let anyone have the artifact and keep it under Jedi protection.",
   answer_2: "Allow the Rebels to take the artifact, as you believe they will use it for good.",
-  answer_5: "Destroy the artifact to prevent either side from using it for evil.",
+  answer_3: "Destroy the artifact to prevent either side from using it for evil.",
   answer_4: "Allow the Sith Lord to take the artifact, as you believe you can persuade them to use it for good.",
   answer_5: "Take the artifact for yourself and use it to achieve your own goals.",
   good_evil_chaotic_lawful: 0
@@ -491,7 +492,7 @@ Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0
 Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/5/53/Jabba_the_Hutt_in_Return_of_the_Jedi_%281983%29.png?20171220071330", alignment: 9)
 
 ### Harry Potter Quiz ###
-harry_potter = Theme.create!(name: "Harry Potter", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
+harry_potter = Theme.create!(name: "Harry Potter Character", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -640,7 +641,7 @@ Character.create!(name: "Lucius Malfoy", theme_id: harry_potter.id, good_min: 0.
 Character.create!(name: "Bellatrix Lestrange", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9)
 
 ### Lord of the Rings Quiz ###
-lotr = Theme.create!(name: "Lord of the Rings", image_link: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg/220px-The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg")
+lotr = Theme.create!(name: "Lord of the Rings Character", image_link: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg/220px-The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg")
 # Good/Evil Questions
 # 1
 Question.create(
