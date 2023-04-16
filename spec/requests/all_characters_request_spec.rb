@@ -37,6 +37,7 @@ RSpec.describe "All Characters", type: :request do
         expect(character[:data][:attributes][:quiz]).to eq(Theme.find(theme.id).name)
         expect(character[:data][:attributes][:alignment]).to be_a(String)
         expect(character[:data][:attributes][:character_id]).to be_a(Integer)
+        expect(character[:data][:attributes][:description]).to be_a(String)
       end
     end
   end
