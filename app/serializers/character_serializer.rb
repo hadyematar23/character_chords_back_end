@@ -7,7 +7,7 @@ class CharacterSerializer
   def serialize_character
     {
       links: {image: @info.url},
-        data: {
+      data: {
         type: "character",
         theme_id: @info.theme_id,
         attributes: {
@@ -17,6 +17,24 @@ class CharacterSerializer
           character_id: @info.id
         }
       }
+    }
+  end
+  
+  def serialize_all_characters
+    {
+      links: {image: @info[0].url},
+      data: @info.map do |character|
+        {
+        type: "character",
+        theme_id: character.theme_id,
+        attributes: {
+          name: character.name,
+          quiz: Theme.find(character.theme_id).name,
+          alignment: character.alignment, 
+          character_id: character.id
+        }
+      }
+    end
     }
   end
 end

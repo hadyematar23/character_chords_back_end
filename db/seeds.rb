@@ -492,7 +492,7 @@ Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0
 Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/5/53/Jabba_the_Hutt_in_Return_of_the_Jedi_%281983%29.png?20171220071330", alignment: 9)
 
 ### Harry Potter Quiz ###
-harry_potter = Theme.create!(name: "Harry Potter Character", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
+harry_potter = Theme.create!(name: "Harry Potter Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -744,7 +744,6 @@ Question.create(
   good_evil_chaotic_lawful: 1
 )
 # 4
-as a Ruby object:
 Question.create(
   theme_id: lotr.id,
   question: "You have been captured by orcs and are being interrogated for information about the One Ring. What do you do?",
