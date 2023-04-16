@@ -27,17 +27,17 @@ Question.create(
 )
 
 # DEBUGGING CHARACTERS -- REMOVE BEFORE FINAL PROD #
-Character.create!(name: "Righteous", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 1)
-Character.create!(name: "Benevolent", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 2)
-Character.create!(name: "Maverick", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 3)
+Character.create!(name: "The Hero", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/6303759/pexels-photo-6303759.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 1)
+Character.create!(name: "The Ally", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/6998462/pexels-photo-6998462.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 2)
+Character.create!(name: "The Rebel", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 3)
 
-Character.create!(name: "Traditional", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 4)
-Character.create!(name: "Balanced", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 5)
-Character.create!(name: "Free-spirited", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 6)
+Character.create!(name: "The Judge", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 4)
+Character.create!(name: "The Observer", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3769697/pexels-photo-3769697.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 5)
+Character.create!(name: "The Wildcard", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/8848555/pexels-photo-8848555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alignment: 6)
 
-Character.create!(name: "Ruthless", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 7)
-Character.create!(name: "Opportunistic", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 8)
-Character.create!(name: "Destructive", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png", alignment: 9)
+Character.create!(name: "The Tyrant", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/11064686/pexels-photo-11064686.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 7)
+Character.create!(name: "The Opportunist", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 8)
+Character.create!(name: "The Destroyer", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5xbzTczBHU2rPVJLBu8rBUqYcqSArUx-M1wwjtxtJQ&usqp=CAU&ec=48600113", alignment: 9)
 
 ### Lawyer Quiz ###
 
@@ -419,7 +419,8 @@ Question.create(
   answer_2: "Confront your commanding officer about the order and try to come up with a compromise that maximizes the chances of success.",
   answer_3: "Follow the order, but secretly make arrangements to ensure the success of the mission.",
   answer_4: "Disobey the order and follow the plan that offers the best chance for success, even if it means going against your commanding officer's orders.",
-  answer_5: "Take matters into your own hands and pursue the plan you think will achieve success, regardless of the consequences or orders given."
+  answer_5: "Take matters into your own hands and pursue the plan you think will achieve success, regardless of the consequences or orders given.",
+  good_evil_chaotic_lawful: 1
 )
 # 2
 Question.create(
@@ -429,7 +430,8 @@ Question.create(
   answer_2: "Lend it with the expectation that it will be returned promptly and used only for mission-related purposes.",
   answer_3: "Lend it only if the Jedi Council member agrees to use it for mission-related purposes and returns it promptly.",
   answer_4: "Lend it without any conditions or expectations, trusting that the Jedi Council member will use it responsibly.",
-  answer_5: "Give it to the Jedi Council member, regardless of the consequences for the mission, as their personal needs are more important."
+  answer_5: "Give it to the Jedi Council member, regardless of the consequences for the mission, as their personal needs are more important.",
+  good_evil_chaotic_lawful: 1
 )
 # 3
 Question.create(
@@ -439,7 +441,8 @@ Question.create(
   answer_2: "Capture the Trandoshan but leave the child unharmed, as you have no quarrel with the child.",
   answer_3: "Allow the Trandoshan and the child to escape, as you do not want to harm the child or involve yourself in an unnecessary conflict.",
   answer_4: "Capture the Trandoshan and sell the child into slavery, as you see it as a profitable opportunity.",
-  answer_5: "Help the Trandoshan and the child escape and join them on the run, as you sympathize with their situation and see an opportunity to form an alliance."
+  answer_5: "Help the Trandoshan and the child escape and join them on the run, as you sympathize with their situation and see an opportunity to form an alliance.",
+  good_evil_chaotic_lawful: 1
 )
 # 4
 Question.create(
@@ -499,7 +502,7 @@ Question.create(
   answer_4: "Use the potion to gain power, but only if the person sacrificed is evil or has committed heinous crimes.",
   answer_3: "Drink the potion and use your newfound power to make the world a better place.",
   answer_5: "Use the potion without hesitation to gain power and achieve your goals.",
-  good_evil_chaotic_lawful: 0.25
+  good_evil_chaotic_lawful: 0
 )
 # 2
 Question.create(
@@ -566,7 +569,7 @@ Question.create(
   answer_3: "Consider the student's intentions and motives first, and then assign a punishment that is appropriate.",
   answer_4: "Ignore the infraction altogether and let the student off the hook, reasoning that rules are meant to be broken.",
   answer_5: "Use the situation as an opportunity to teach the student a valuable lesson about the importance of following rules, but be lenient in the punishment.",
-  good_evil_chaotic_lawful: 0
+  good_evil_chaotic_lawful: 1
 )
 # 2
 Question.create(
@@ -577,7 +580,7 @@ Question.create(
   answer_3: "Refuse to use this power at all, as it violates the principles of free will and personal autonomy.",
   answer_4: "Use it sparingly, and only with the consent of the person being controlled.",
   answer_5: "Use it frequently to manipulate others to your advantage, regardless of the consequences.",
-  good_evil_chaotic_lawful: 0
+  good_evil_chaotic_lawful: 1
 )
 # 3
 Question.create(
@@ -588,7 +591,7 @@ Question.create(
   answer_3: "Consider taking the potion but ultimately decide against it.",
   answer_4: "Take the potion, but don't use it immediately.",
   answer_5: "Take the potion and use it without hesitation.",
-  good_evil_chaotic_lawful: 0
+  good_evil_chaotic_lawful: 1
 )
 # 4
 Question.create(
@@ -599,7 +602,7 @@ Question.create(
   answer_3: "Sell it to the highest bidder and let them decide its fate, but risk it being used for evil.",
   answer_4: "Use it to bring about a better world, even if it means using morally questionable methods.",
   answer_5: "Use it for personal gain, but only if it doesn't harm innocent people.",
-  good_evil_chaotic_lawful: 0 
+  good_evil_chaotic_lawful: 1 
 )
 # 5
 Question.create(
@@ -610,7 +613,7 @@ Question.create(
   answer_3: "Ignore the behavior, reasoning that you don't want to get involved.",
   answer_4: "Gather evidence against the professor and blackmail them into changing their behavior.",
   answer_5: "Use the professor's behavior to your advantage, either by getting special treatment or by causing trouble.",
-  good_evil_chaotic_lawful: 0
+  good_evil_chaotic_lawful: 1
 )
 # 6
 Question.create(
@@ -624,14 +627,164 @@ Question.create(
   good_evil_chaotic_lawful: 1
 )
 # Character Creation
-Character.create!(name: "Hermione Granger", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Hermione_Granger_poster.jpg/220px-Hermione_Granger_poster.jpg", alignment: 1)
-Character.create!(name: "Harry Potter", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Harry_Potter_character_poster.jpg/220px-Harry_Potter_character_poster.jpg", alignment: 2)
-Character.create!(name: "Ron Weasley", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Ron_Weasley_poster.jpg/220px-Ron_Weasley_poster.jpg", alignment: 3)
+Character.create!(name: "Hermione Granger", theme_id: harry_potter.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Hermione_Granger_poster.jpg/220px-Hermione_Granger_poster.jpg", alignment: 1)
+Character.create!(name: "Harry Potter", theme_id: harry_potter.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Harry_Potter_character_poster.jpg/220px-Harry_Potter_character_poster.jpg", alignment: 2)
+Character.create!(name: "Ron Weasley", theme_id: harry_potter.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Ron_Weasley_poster.jpg/220px-Ron_Weasley_poster.jpg", alignment: 3)
 
-Character.create!(name: "Severous Snape", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Ootp076.jpg/220px-Ootp076.jpg", alignment: 4)
-Character.create!(name: "Hedwig", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_Making_of_Harry_Potter_29-05-2012_%28Hedwig%29.jpg/150px-The_Making_of_Harry_Potter_29-05-2012_%28Hedwig%29.jpg", alignment: 5)
-Character.create!(name: "Gilderoy Lockhart", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/harrypotter/images/d/d4/Gilderoy_Lockhart_COS_promo.jpg/revision/latest?cb=20160905192348", alignment: 6)
+Character.create!(name: "Severous Snape", theme_id: harry_potter.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Ootp076.jpg/220px-Ootp076.jpg", alignment: 4)
+Character.create!(name: "Hedwig", theme_id: harry_potter.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_Making_of_Harry_Potter_29-05-2012_%28Hedwig%29.jpg/150px-The_Making_of_Harry_Potter_29-05-2012_%28Hedwig%29.jpg", alignment: 5)
+Character.create!(name: "Gilderoy Lockhart", theme_id: harry_potter.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/harrypotter/images/d/d4/Gilderoy_Lockhart_COS_promo.jpg/revision/latest?cb=20160905192348", alignment: 6)
 
-Character.create!(name: "Voldemort", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/220px-Lordvoldemort.jpg", alignment: 7)
-Character.create!(name: "Lucius Malfoy", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://static.wikia.nocookie.net/harrypotter/images/b/b4/Lucius_Malfoy_BoH.png/revision/latest/scale-to-width-down/338?cb=20190604135420", alignment: 8)
-Character.create!(name: "Bellatrix Lestrange", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9)
+Character.create!(name: "Voldemort", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/220px-Lordvoldemort.jpg", alignment: 7)
+Character.create!(name: "Lucius Malfoy", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://static.wikia.nocookie.net/harrypotter/images/b/b4/Lucius_Malfoy_BoH.png/revision/latest/scale-to-width-down/338?cb=20190604135420", alignment: 8)
+Character.create!(name: "Bellatrix Lestrange", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9)
+
+### Lord of the Rings Quiz ###
+lotr = Theme.create!(name: "Lord of the Rings", image_link: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg/220px-The_Lord_of_the_Rings_%281997%29_theatrical_poster.jpg")
+# Good/Evil Questions
+# 1
+Question.create(
+  theme_id: lotr.id,
+  question: "You stumble across a small, abandoned village in the wilderness. You notice a stash of food and supplies that could be useful to you on your journey, but you also know that taking them would leave the villagers with nothing. What do you do?",
+  answer_1: "Leave the supplies untouched and move on.",
+  answer_2: "Take only what you need and leave the rest for the villagers.",
+  answer_3: "Take the supplies and leave some gold or other items in exchange as payment.",
+  answer_4: "Take the supplies for yourself, they will help you on your journey.",
+  answer_5: "Take the supplies and leave behind a note warning other travelers not to rely on the village for aid.",
+  good_evil_chaotic_lawful: 0
+)
+# 2
+Question.create(
+  theme_id: lotr.id,
+  question: "You come across a wounded hobbit on the side of the road. They tell you they were attacked by a group of orcs and beg for your help. What do you do?",
+  answer_1: "Help the hobbit, as it is the right thing to do.",
+  answer_2: "Help the hobbit, but only if they can pay you for your services.",
+  answer_3: "Ignore the hobbit and continue on your journey.",
+  answer_4: "Help the hobbit, but steal some of their possessions while they are unconscious.",
+  answer_5: "Help the hobbit, but secretly lead them into an ambush to steal their possessions.",
+  good_evil_chaotic_lawful: 0
+  )
+# 3
+Question.create(
+  theme_id: lotr.id,
+  question: "You come across a powerful artifact that could be used to defeat the dark lord and save Middle-earth. However, using the artifact would require sacrificing the life of a close friend. What do you do?",
+  answer_1: "Refuse to use the artifact and find another way to defeat the dark lord.",
+  answer_2: "Consider using the artifact, but ultimately refuse to sacrifice your friend.",
+  answer_4: "Use the artifact to defeat the dark lord, but find a way to bring your friend back to life afterwards.",
+  answer_3: "Use the artifact to defeat the dark lord, even if it means sacrificing your friend.",
+  answer_5: "Use the artifact to defeat the dark lord, but also use it to gain more power and control over Middle-earth.",
+  good_evil_chaotic_lawful: 0
+)
+# 4
+Question.create(
+  theme_id: lotr.id,
+  question: "You are part of a group of adventurers who have been tasked with retrieving a powerful artifact from the Mines of Moria. However, a dwarf in your group is injured and cannot continue. What do you do?",
+  answer_1: "Fallback and carry the injured dwarf out of the mines.",
+  answer_3: "Decide to set up camp and wait for the injured dwarf to recover before continuing with the mission.",
+  answer_4: "Split the group up, with some members continuing on with the mission and others staying behind to care for the injured friend.",
+  answer_2: "Take the dwarf with you, but be prepared to abandon them if their injuries slow the group down too much",
+  answer_5: "Leave the injured dwarf behind with some provisions and a map, hoping they will make it out alive",
+  good_evil_chaotic_lawful: 0
+  )
+# 5
+Question.create(
+  theme_id: lotr.id,
+  question: "You are a powerful wizard who has the ability to control the minds of others. A group of travelers comes to you seeking guidance and protection. What do you do?",
+  answer_1: "Offer your guidance and protection to the travelers, but be upfront with them about the fact that you have mind-control powers and vow not to use them on them unless it is absolutely necessary.",
+  answer_4: "Consider using your mind control abilities, but ultimately decide not to use them, recognizing the dangers and ethical concerns involved.",
+  answer_2: "Use your powers to help the travelers, but only to the extent that it does not infringe on their free will or agency.",
+  answer_3: "Use your mind-control powers to ensure that the travelers stay safe and follow your instructions, believing that it is for their own good.",
+  answer_5: "Use your mind control abilities to make the travelers your loyal followers, without their knowledge or consent",
+  good_evil_chaotic_lawful: 0
+)
+# 6
+Question.create(
+  theme_id: lotr.id,
+  question: "You come across a small village that is being terrorized by a band of orcs. The villagers ask for your help in driving off the orcs. What do you do?",
+  answer_1: "Help the villagers defend their homes and drive off the orcs, ensuring their safety and well-being.",
+  answer_2: "Agree to help the villagers, but demand payment for your services before taking action.",
+  answer_3: "Negotiate with the orcs, seeking a peaceful solution that satisfies both parties.",
+  answer_4: "Offer to help the orcs in exchange for leaving the village alone, even if it means abandoning the villagers.",
+  answer_5: "Side with the orcs and join in their attack on the village, taking advantage of the chaos for your own gain.",
+  good_evil_chaotic_lawful: 0
+)
+# Lawful/Chaotic Questions
+# 1
+Question.create(
+  theme_id: lotr.id,
+  question: "You discover that a friend has been stealing carrots from Farmer Maggot's fields. You know that if you report them to the authorities, they will be punished severely. What do you do?",
+  answer_1: "Report them to the authorities, as stealing is a crime.",
+  answer_2: "Confront them and try to convince them to stop stealing.",
+  answer_3: "Ignore the situation and go about your business.",
+  answer_4: "Help your friend steal more carrots, but only if you get some of the tasty carrots.",
+  answer_5: "Use your friend's theft to your own advantage, even if it means putting innocent people in danger.",
+  good_evil_chaotic_lawful: 1
+)
+# 2
+Question.create(
+  theme_id: lotr.id,
+  question: "You discover that a group of dwarves are planning a rebellion against the ruling government of Gondor. You know that their cause is just, but Gondor will not take kindly to the uprising. What do you do?",
+  answer_1: "Join Gondor's side and fight against the rebellion.",
+  answer_2: "Support Gondor for a reward.",
+  answer_3: "Stay neutral and do not get involved in the conflict.",
+  answer_4: "Support the rebellion, but from a distance so as not to be caught by Gondor.",
+  answer_5: "Join the rebellion and fight for their cause.",
+  good_evil_chaotic_lawful: 1
+)
+# 3
+Question.create(
+  theme_id: lotr.id,
+  question: "A group of men have come to your land seeking refuge, but they are being hunted by orcs. What do you do?",
+  answer_1: "Offer them protection and shelter, no matter the cost to yourself or your people.",
+  answer_2: "Allow them to stay, but only if they agree to fight alongside your people against the orcs.",
+  answer_3: "Offer them temporary shelter and assistance, but make it clear they must leave eventually.",
+  answer_4: "Turn them away, as you cannot risk bringing the enemy's attention to your land.",
+  answer_5: "Betray them to the enemy, in exchange for a reward or to avoid conflict.",
+  good_evil_chaotic_lawful: 1
+)
+# 4
+as a Ruby object:
+Question.create(
+  theme_id: lotr.id,
+  question: "You have been captured by orcs and are being interrogated for information about the One Ring. What do you do?",
+  answer_1: "Refuse to cooperate, even if it means enduring torture or death.",
+  answer_2: "Cooperate to some extent, but try to mislead your captors whenever possible.",
+  answer_3: "Cooperate, believing that it is the only way to stay alive.",
+  answer_4: "Cooperate eagerly, believing that you can use the situation to your advantage.",
+  answer_5: "Betray your allies but give your captors false information in exchange for your life.",
+  good_evil_chaotic_lawful: 1
+)
+# 5
+Question.create(
+  theme_id: lotr.id,
+  question: "You are on a mission to destroy the One Ring, but you discover that innocent people will be killed in the process. What do you do?",
+  answer_1: "Refuse to carry out the mission and risk the wrath of your companions.",
+  answer_2: "Attempt to convince your companions to change their plans.",
+  answer_3: "Carry out the mission as ordered, but try to find a way to protect the innocent.",
+  answer_4: "Carry out the mission eagerly, believing that the end justifies the means.",
+  answer_5: "Carry out the mission, but take the opportunity to betray your companions to their Sauron.",
+  good_evil_chaotic_lawful: 1
+)
+# 6
+Question.create(
+  theme_id: lotr.id,
+  question: "You have been offered a palantír, a powerful artifact that could give you great knowledge and influence. What do you do?",
+  answer_1: "Refuse the palantír, believing that it is too dangerous to possess.",
+  answer_2: "Take the palantír, but only with the intention of using it for the greater good.",
+  answer_3: "Take the palantír, but only with the intention of using it for your own personal gain.",
+  answer_4: "Take the palantír eagerly, believing that you are entitled to it.",
+  answer_5: "Take the palantír and use it to gain power over others, regardless of the consequences.",
+  good_evil_chaotic_lawful: 1
+)
+# Character Creation
+Character.create!(name: "Aragorn", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Aragorn300ppx.png/170px-Aragorn300ppx.png", alignment: 1)
+Character.create!(name: "Frodo", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Elijah_Wood_as_Frodo_Baggins.png/170px-Elijah_Wood_as_Frodo_Baggins.png", alignment: 2)
+Character.create!(name: "Samwise", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/9/9d/Samwise_the_Brave.jpg/revision/latest/scale-to-width-down/350?cb=20201005101149", alignment: 3)
+
+Character.create!(name: "Boromir", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/b/b4/Seanbean_boromir.jpg/revision/latest?cb=20150513011509", alignment: 4)
+Character.create!(name: "Treebeard", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/6/67/Treebeard_ROTK_1.png/revision/latest/scale-to-width-down/350?cb=20211030072336", alignment: 5)
+Character.create!(name: "Gollum", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/e/e1/Gollum_Render.png/revision/latest?cb=20151102075339", alignment: 6)
+
+Character.create!(name: "Sauron", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/9/90/Sauron-2.jpg/revision/latest?cb=20190217072058", alignment: 7)
+Character.create!(name: "Saruman", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/0/0c/Christopher_Lee_as_Saruman.jpg/revision/latest?cb=20190314151146", alignment: 8)
+Character.create!(name: "Balrog", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/c/c4/Balrog_-_FOTR.png/revision/latest/scale-to-width-down/241?cb=20200706113151", alignment: 9)
