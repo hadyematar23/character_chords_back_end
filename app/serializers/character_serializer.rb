@@ -21,20 +21,20 @@ class CharacterSerializer
   end
   
   def serialize_all_characters
-    {
-      links: {image: @info[0].url},
-      data: @info.map do |character|
-        {
-        type: "character",
-        theme_id: character.theme_id,
-        attributes: {
-          name: character.name,
-          quiz: Theme.find(character.theme_id).name,
-          alignment: character.alignment, 
-          character_id: character.id
+    @info.map do |character|
+      {
+        links: {image: character.url},
+        data: {
+          type: "character",
+          theme_id: character.theme_id,
+          attributes: {
+            name: character.name,
+            quiz: Theme.find(character.theme_id).name,
+            alignment: character.alignment,
+            character_id: character.id
+          }
         }
       }
     end
-    }
   end
 end
