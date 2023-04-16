@@ -75,3 +75,10 @@ VCR.configure do |config|
   config.configure_rspec_metadata!
   config.filter_sensitive_data('<Open_AI>') { ENV['Open_AI'] }
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end

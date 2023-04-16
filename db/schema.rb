@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_15_210822) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_16_180841) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_15_210822) do
   end
 
   create_table "playlists", force: :cascade do |t|
-    t.string "genre"
+    t.string "genre", limit: 36
     t.string "character"
     t.string "alignment"
     t.text "songs", default: [], array: true
