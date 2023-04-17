@@ -233,4 +233,53 @@ After running that command, inspect `/db/schema` in the application to make sure
 ```
 
 ## Contributors
-- list all of us and any other acknowledgments
+<table>
+  <tr>
+    <th>James White</th>
+    <th>Madeline Mauser</th>
+    <th>Sean Culliton</th>
+    <th>William Wang</th>
+  </tr>
+  
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/108167041?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/106927896?width="200" height="115""></td>
+    <td><img src="https://avatars.githubusercontent.com/u/108320490?s=120&v=4"></td>
+    <td><img src="https://ca.slack-edge.com/T029P2S9M-U03KQFD5WJK-e1166a8fec70-512?width="200" height="115""></td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/James-E-White"  rel="nofollow noreferrer">
+          <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
+        </a><br>
+      <a href="https://www.linkedin.com/in/james-ed-wh/" rel="nofollow noreferrer">
+    <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+        </a>
+    </td>
+        <td>
+       <a href="https://github.com/MadelineMauser" rel="nofollow noreferrer">
+            <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
+      </a><br>
+        <a href="https://www.linkedin.com/in/madeline-mauser-644239245/" rel="nofollow noreferrer">
+          <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+      </a>
+    </td>
+        <td>
+       <a href="https://github.com/smculliton" rel="nofollow noreferrer">
+          <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
+      </a><br>
+        <a href="https://www.linkedin.com/in/seanculliton" rel="nofollow noreferrer">
+          <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+      </a>
+    </td>
+        <td>
+       <a href="https://github.com/willjw2" rel="nofollow noreferrer">
+            <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
+      </a><br>
+        <a href="https://www.linkedin.com/in/william-wang-814442240/" rel="nofollow noreferrer">
+          <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+      </a>
+    </td>
+  </tr>   
+</table>
