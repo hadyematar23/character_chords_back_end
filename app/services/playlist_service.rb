@@ -22,7 +22,7 @@ class PlaylistService
           Style of Music: #{info[:genre]}
 
           I am #{Character.find(info[:character_id]).name}. I am a #{Character.find(info[:character_id]).alignment} person on the DnD alignment chart. Generate a playlist that a person like me would listen to. Only pick one song referencing me or my world, make the rest things I would listen to.  I would like these to be real songs that are on Spotify. The phrase NEXT_SONG should be between each song. 
-          Please format the output as an array of strings in Ruby, like this and without any text or numbers before or after in your response: Song1 by ArtistName NEXT_SONG Song2 by ArtistName NEXT_SONG Song3 by ArtistName NEXT_SONG Song4 by ArtistName NEXT_SONG Song5 by ArtistName NEXT_SONG Song6 by ArtistName NEXT_SONG Song7 by ArtistName. Exactly 10 songs."
+          Please format the output as an array of strings in Ruby, like this and without any text or numbers before or after in your response: Song1 NEXT_SONG Song2 NEXT_SONG Song3 NEXT_SONG Song4 NEXT_SONG Song5 NEXT_SONG Song6 NEXT_SONG Song7. Exactly 10 songs. No artist names."
         }
       ],
       "temperature": 0.7,
