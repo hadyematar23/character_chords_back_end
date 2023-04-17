@@ -12,7 +12,6 @@ RSpec.describe PlaylistService, type: :service do
       expect(playlist[:choices].first[:message][:role]).to eq("assistant")
       expect(playlist[:choices].first[:message][:content]).to be_a(String)
       expect(playlist[:object]).to eq("chat.completion")
-
     end
   end
 end
