@@ -1,7 +1,7 @@
 class PlaylistService
 
   def generate_playlists(info) 
-        payload = {
+    payload = {
       "model": "gpt-3.5-turbo",
       "messages": [
         {
@@ -24,6 +24,8 @@ class PlaylistService
     }
     get_url(payload)
   end
+  
+  private
 
   def get_url(payload)
     response = connection.post do |req|
