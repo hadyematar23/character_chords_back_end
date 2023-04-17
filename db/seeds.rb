@@ -1,6 +1,6 @@
-Theme.destroy_all
-Character.destroy_all
 Question.destroy_all
+Character.destroy_all
+Theme.destroy_all
 
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
