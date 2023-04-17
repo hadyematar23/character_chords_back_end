@@ -183,14 +183,16 @@ Question.create!(
 # Character Creation
 Character.create!(name: "Thurgood Marshall", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Thurgood-marshall-2.jpg/220px-Thurgood-marshall-2.jpg", alignment: 1, description: "You are Thurgood Marshall, the legendary civil rights attorney and Supreme Court Justice. You are a champion of justice, always working to ensure that everyone has access to the same rights and freedoms. Your unwavering commitment to justice often puts you at odds with people who are unwilling to change, but your sense of fairness never waivers.")
 Character.create!(name: "Amal Clooney", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amal_Clooney_02.jpg/1280px-Amal_Clooney_02.jpg", alignment: 2, description: "You are Amal Clooney, a lawyer and activist who is a force to be reckoned with. You are a shining example of what it means to be a champion of justice and will fight for what is right no matter the odds.")
-Character.create!(name: "Clarence Darrow", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Clarence_Darrow.jpg/800px-Clarence_Darrow.jpg", alignment: 3, description: "You are Clarence Darrow, the rebel lawyer. You are always defending the rights of the oppressed, and you're not afraid to stand up to anyone, no matter how powerful they are. You are a true believer in justice and freedom, and you won't let anyone stand in your way. Your wit and charm make you a natural leader, but your occasional bouts of recklessness can get you into trouble!" )
+Character.create!(name: "Clarence Darrow", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Clarence_Darrow.jpg/800px-Clarence_Darrow.jpg", alignment: 3, description: "As Clarence Darrow, you embody the chaotic good alignment, driven by a passion for individual freedom and a desire to fight against injustice, even if it means breaking rules or challenging authority, always standing up for what you believe is right and never backing down from a challenge, and ultimately serving as a force for good in pursuit of a more just and equitable society." )
 
 Character.create!(name: "Jack McCoy", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/7/72/Jack_McCoy_-_L%26O.png", alignment: 4, description: "You are Jack McCoy, a lawful neutral character. You are a master of the courtroom and an expert at finding loopholes. You make sure justice is served and the law is followed, but you often do so with a bit of mischief and humor. You are a master of strategy and can outwit even the most cunning opponent. It may take a few rounds to get your point across, but in the end, you always get your way." )
 Character.create!(name: "Robert Shapiro", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Robert-shapiro.jpg", alignment: 5, description: "You are Robert Shapiro (O.J. Simpson's lawyer), a true neutral. You are a master of the legal system and you have a knack of knowing where the loopholes are. You are never swayed by emotions and you always strive for a fair and reasonable outcome. You are an independent thinker and you have no problem standing up for what you believe in.")
 Character.create!(name: "Saul Goodman", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/3/34/Jimmy_McGill_BCS_S3.png", alignment: 6, description: "You are Saul Goodman (fictional lawyer from Breaking Bad), you have a penchant for bending the law to suit your own needs, and you're always looking for a way to make a quick buck. You don't always play fair and you're not afraid to do whatever it takes to get what you want. You'll never turn down a challenge, and you're always ready to take a risk. Just don't be surprised if things don't always go your way.")
 
 Character.create!(name: "Roy Cohn", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Roy_Cohn.jpg/463px-Roy_Cohn.jpg", alignment: 7, description: "You are Roy Cohn, a ruthless, cunning and manipulative individual who will stop at nothing to achieve your goals. You follow the letter of the law but will bend it to your own advantage. You are a master of deception and an expert at finding loopholes in any situation. You will never accept defeat, no matter how dire the consequences")
+
 Character.create!(name: "Michael Cohen", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Michael_Cohen_in_2019.png", alignment: 8, description: "You are Michael Cohen, a corporate lawyer who always looks out for himself first. You always make sure your own interests are taken care of, no matter the cost to others. You're a master of manipulation and deception, and you have no qualms about using people to your own advantage.")
+
 Character.create!(name: "John Milton", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/villains/images/9/9f/John_Milton.jpg/revision/latest?cb=20140511211844", alignment: 9, description: "You are a menace to society")
 
 ### Generic Quiz ###
@@ -792,3 +794,156 @@ Character.create!(name: "Gollum", theme_id: lotr.id, good_min: 0.34, good_max: 0
 Character.create!(name: "Sauron", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/9/90/Sauron-2.jpg/revision/latest?cb=20190217072058", alignment: 7, description: "You are Sauron, Lord of the Rings. You are a powerful ruler with a vision of a world where order and strength reign supreme. You will stop at nothing to achieve your goals and will do whatever it takes to ensure the success of your plans.")
 Character.create!(name: "Saruman", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/0/0c/Christopher_Lee_as_Saruman.jpg/revision/latest?cb=20190314151146", alignment: 8, description: "You are Sarumon the White,  a scheming and ambitious individual with little regard for laws and regulations. You are willing to do whatever it takes to get ahead, no matter the cost to others.")
 Character.create!(name: "Balrog", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/pjmidearthfilms/images/c/c4/Balrog_-_FOTR.png/revision/latest/scale-to-width-down/241?cb=20200706113151", alignment: 9, description: "You have been chosen as the Balrog of Morgoth - the first and greatest of the Dark Lords of Middle-earth. You are a powerful being of pure evil, and your only purpose is to cause chaos and destruction wherever you go. Enjoy your reign of terror!")
+
+
+#####
+#Coder Quiz 
+
+coder = Theme.create!(name: "coder", image_link: "https://cdn-media-1.freecodecamp.org/images/1*2TWW_kmC28W_rfXJqT6oPg.jpeg")
+
+# Good/Evil Questions
+# 1
+Question.create(
+  theme_id: coder.id,
+  question: "You work for a software company that is planning to release a new product. Your boss has instructed you to intentionally add a backdoor that will allow the company to access user data without their knowledge or consent. What would you do?",
+  answer_1: "Refuse to add the backdoor and report your boss's request to higher management or authorities if necessary.",
+  answer_2: "Add the backdoor as requested without question.",
+  answer_3: "Add the backdoor but also implement measures to ensure that it can only be accessed with user consent and awareness.",
+  answer_4: "Add the backdoor but secretly notify users of its existence and how to block it.",
+  answer_5: "Add the backdoor but purposely make it difficult or impossible for the company to access user data.",
+  good_evil_chaotic_lawful: 0
+)
+# 2
+Question.create(
+  theme_id: coder.id,
+  question: "You discover that a fellow programmer has intentionally written code that will cause harm to users. What would you do?",
+  answer_1: "Report the programmer's actions to your supervisor or other relevant authority.",
+  answer_2: "Ignore the issue and hope that it does not cause harm.",
+  answer_3: "Confront the programmer directly and try to persuade them to fix the code.",
+  answer_4: "Intentionally write code that will counteract the harmful code.",
+  answer_5: "Sabotage the programmer's work to ensure the harmful code does not make it into the final product.",
+  good_evil_chaotic_lawful: 0
+  )
+# 3
+Question.create(
+  theme_id: coder.id,
+  question: "You are working on a project for a client that requires you to use a third-party library with known security vulnerabilities. What would you do?",
+  answer_1: "Use the library as requested but also implement measures to minimize the security risks.",
+  answer_2: "Refuse to use the library and propose alternative solutions to the client.",
+  answer_3: "Use the library but disclose the potential security risks to the client and obtain their consent.",
+  answer_4: "Use the library without any additional measures or disclosures.",
+  answer_5: "Use the library but also write code that will exploit the security vulnerabilities for personal gain.",
+  good_evil_chaotic_lawful: 0
+)
+# 4
+Question.create(
+  theme_id: coder.id,
+  question: "You work for a company that has developed a new algorithm that can predict which users are most likely to default on their loans. The company plans to sell the algorithm to banks and financial institutions, but you discover that the algorithm is biased against certain minority groups. What would you do?",
+  answer_1: "Refuse to be involved in the sale of the algorithm and report the bias to higher management or authorities if necessary..",
+  answer_3: "Sell the algorithm as planned without addressing the bias.",
+  answer_4: "Sell the algorithm but also develop a plan to address and eliminate the bias.",
+  answer_2: "Sell the algorithm but secretly notify affected minority groups of the bias and how to avoid it.",
+  answer_5: "Sell the algorithm but purposely make it less effective for banks and financial institutions that use it to discriminate against certain minority groups.",
+  good_evil_chaotic_lawful: 0
+  )
+# 5
+Question.create(
+  theme_id: coder.id,
+  question: "You are a freelance programmer working on a project for a client who has requested that you include a feature that violates privacy laws. What would you do?",
+  answer_1: "Refuse to include the feature and report the request to the appropriate authorities if necessary."
+  answer_2: "Include the feature as requested without question.",
+  answer_3: "Include the feature but also implement measures to minimize the privacy violations.",
+  answer_4: "Include the feature but also disclose the potential privacy violations to the client and obtain their consent.",
+  answer_5: "Include the feature but purposely make it difficult or impossible to access user data without their consent.",
+  good_evil_chaotic_lawful: 0
+)
+# 6
+Question.create(
+  theme_id: coder.id,
+  question: "You are working on a project for a company that requires you to use a proprietary software library owned by a competitor. The competitor has offered to sell you a modified version of the library that contains intentional vulnerabilities that they can exploit to gain access to your company's data. What would you do?",
+  answer_1: "Refuse to use the library and report the competitor's offer to higher management or authorities if necessary.",
+  answer_2: "Use the library as requested but also implement measures to prevent the competitor from exploiting the vulnerabilities.",
+  answer_3: "Use the library but also disclose the potential vulnerabilities to your company and obtain their consent.",
+  answer_4: "Use the library without any additional measures or disclosures.",
+  answer_5: "Use the library but also write code that will exploit the vulnerabilities to gain access to the competitor's data.",
+  good_evil_chaotic_lawful: 0
+)
+# Lawful/Chaotic Questions
+# 1
+Question.create(
+  theme_id: coder.id,
+  question: "How do you feel about following a strict coding style guide, even if it means sacrificing some creativity?",
+  answer_1: "I always follow the style guide strictly, even if it limits my creativity.",
+  answer_2: "I mostly follow the style guide, but occasionally make exceptions to improve code quality or creativity.",
+  answer_3: "I try to follow the style guide, but prioritize creativity and code quality over strict adherence.",
+  answer_4: "I only follow the style guide when absolutely necessary, preferring to express my creativity and style freely.",
+  answer_5: "I intentionally disregard the style guide in favor of my own personal preferences or chaos.",
+  good_evil_chaotic_lawful: 1
+)
+# 2
+Question.create(
+  theme_id: coder.id,
+  question: "How do you feel about working on a team project with a clearly defined leader and hierarchy?",
+  answer_1: "I enjoy working in a structured environment with a clear chain of command.",
+  answer_2: "I am comfortable working in a team with a leader, but prefer some degree of autonomy and collaboration.",
+  answer_3: "I prefer working in a flat team structure where everyone's input is valued equally.",
+  answer_4: "I dislike being in a hierarchical team structure and prefer to work independently or with a small group.",
+  answer_5: "I intentionally disrupt team hierarchies and structures, preferring a chaotic and free-flowing work environment.",
+  good_evil_chaotic_lawful: 1
+)
+# 3
+Question.create(
+  theme_id: coder.id,
+  question: "How do you feel about maintaining detailed documentation and commenting your code thoroughly?",
+  answer_1: "I always make sure to document and comment my code thoroughly, even if it takes extra time.",
+  answer_2: "I mostly maintain documentation and comments, but sometimes prioritize code quality or speed over thoroughness.",
+  answer_3: "I try to maintain documentation and comments, but sometimes forget or overlook certain parts of the code.",
+  answer_4: "I only maintain documentation and comments when it is required or necessary for others to understand the code.",
+  answer_5: "I intentionally avoid or leave out documentation and comments, preferring to keep the code as concise and chaotic as possible.",
+  good_evil_chaotic_lawful: 1
+)
+# 4
+Question.create(
+  theme_id: coder.id,
+  question: "How do you feel about testing your code rigorously before releasing it?",
+  answer_1: "I always test my code thoroughly and make sure it meets all quality standards before releasing it.",
+  answer_2: "I mostly test my code, but sometimes prioritize speed or other factors over thorough testing.",
+  answer_3: "I try to test my code, but sometimes overlook certain parts or don't have enough time to test everything thoroughly.",
+  answer_4: "I only test my code when it is required or necessary for the project.",
+  answer_5: "I intentionally avoid testing my code or don't prioritize it, preferring to release code quickly and rely on users to report bugs.",
+  good_evil_chaotic_lawful: 1
+)
+# 5
+Question.create(
+  theme_id: coder.id,
+  question: "How do you feel about maintaining a clean and organized codebase?",
+  answer_1: "I always make sure to maintain a clean and organized codebase, even if it takes extra time.",
+  answer_2: "I mostly maintain a clean and organized codebase, but sometimes prioritize speed or other factors over organization.",
+  answer_3: "I try to maintain a clean and organized codebase, but sometimes let things get cluttered or disorganized.",
+  answer_4: "I only maintain a clean and organized codebase when it is required or necessary for the project.",
+  answer_5: "I intentionally avoid maintaining a clean and organized codebase, preferring a more chaotic and free-flowing approach.",
+  good_evil_chaotic_lawful: 1
+)
+# 6
+Question.create(
+  theme_id: coder.id,
+  question: "How do you feel about following industry standards and best practices for coding?",
+  answer_1: "I always make sure to follow industry standards and best practices, even if it means sacrificing some personal preferences or creativity.",
+  answer_2: "I mostly follow industry standards and best practices, but sometimes make exceptions for creative or technical reasons.",
+  answer_3: "I try to follow industry standards and best practices, but sometimes overlook or forget certain parts of the code.",
+  answer_4: "I only follow industry standards and best practices when it is required or necessary for the project.",
+  answer_5: "I intentionally disregard industry standards and best practices, preferring to express my own personal style and creativity.",
+  good_evil_chaotic_lawful: 1
+)
+
+Character.create!(name: "White Hat Hacker", theme_id: lotr.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://static.wikia.nocookie.net/loshackers/images/0/05/White-Hat-Hacker-1.jpg/revision/latest?cb=20190811075735&path-prefix=es", alignment: 1, description: "This coder is highly ethical and uses their skills for the greater good. They may work to improve security and prevent cybercrime, and may even work with law enforcement agencies to catch cybercriminals.")
+Character.create!(name: "The Open Source Advocate", theme_id: lotr.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://www.itsecurityguru.org/wp-content/uploads/2015/10/hosting-dens-free-website_development.png", alignment: 2, description: "This coder is passionate about open-source software and collaboration. They may contribute to open-source projects and work to make code more accessible and widely available.")
+Character.create!(name: "Whistleblower aka Anonymous", theme_id: lotr.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://www.eltiempo.com/files/image_640_428/uploads/2017/06/27/595317e8f0820.jpeg", alignment: 3, description: "This coder is willing to break rules and take risks to expose corruption or unethical behavior. They may use their coding abilities to uncover secrets and bring about positive change." )
+
+Character.create!(name: "IT Administrator", theme_id: lotr.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://trackersuite.net/graphics/carlos_frustration.gif", alignment: 4, description: "This coder is highly skilled at maintaining computer systems and networks. They may work to ensure that systems are secure and reliable, but may also be resistant to change or innovation.")
+Character.create!(name: "Code Connoisseur", theme_id: lotr.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://thesecondangle.com/wp-content/uploads/2022/03/image1-1.png", alignment: 5, description: " This coder is highly knowledgeable about different coding practices and may have a deep understanding of multiple programming languages. They may not have a particular agenda, but may be highly respected in the coding community for their expertise.")
+Character.create!(name: "Grey Hat Hacker", theme_id: lotr.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdcy3t3ltz3l-YTtgcPEjRft2XujmsxH4x_Q&usqp=CAU", alignment: 6, description: "This coder is willing to break rules and push boundaries, but may not necessarily have any particular ethical or moral code. They may use their skills for good or evil purposes, depending on their whims at the time.")
+
+Character.create!(name: "Corporate Spy", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://media.newyorker.com/photos/60f5d8c64b5c199789e01980/4:3/w_2276,h_1707,c_limit/Lee-Allgood-Spy.jpg", alignment: 7, description: "This coder is highly skilled at gathering information and may work for companies or governments to steal secrets from competitors or other organizations. They may use their skills for financial gain or to gain a competitive advantage.")
+Character.create!(name: "Black Hat Hacker", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://atos.net/wp-content/uploads/2020/07/hacking-blog-image.jpg", alignment: 8, description: "This coder is highly skilled at breaking into computer systems and networks. They may use their skills for personal gain, to steal sensitive information or cause damage to computer systems for malicious purposes.")
+Character.create!(name: "Cyberterrorist", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://s3.envato.com/files/f0e545c9-40a8-4a2d-ac63-c982e457748f/inline_image_preview.jpg", alignment: 9, description: "This coder is highly skilled at causing chaos and destruction through their use of computer systems. They may create viruses or malware, engage in cyberattacks, or use their abilities to cause harm to individuals or organizations.")
