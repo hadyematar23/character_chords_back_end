@@ -235,49 +235,50 @@ After running that command, inspect `/db/schema` in the application to make sure
 ## Contributors
 <table>
   <tr>
-    <th>James White</th>
-    <th>Madeline Mauser</th>
-    <th>Sean Culliton</th>
-    <th>William Wang</th>
+    <th>Hady Matar</th>
+    <th>Harrison Ryan</th>
+    <th>James Taylor</th>
+    <th>Weston Sandfort</th>
   </tr>
   
-  <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/108167041?s=120&v=4"></td>
-    <td><img src="https://avatars.githubusercontent.com/u/106927896?width="200" height="115""></td>
-    <td><img src="https://avatars.githubusercontent.com/u/108320490?s=120&v=4"></td>
-    <td><img src="https://ca.slack-edge.com/T029P2S9M-U03KQFD5WJK-e1166a8fec70-512?width="200" height="115""></td>
-  </tr>
+<tr>
+  <td><img src="https://avatars.githubusercontent.com/u/115317749?v=4" width="150" height="150"></td>
+  <td><img src="https://avatars.githubusercontent.com/u/116698937?v=4" width="150" height="150"></td>
+  <td><img src="https://avatars.githubusercontent.com/u/117054959?v=4" width="150" height="150"></td>
+  <td><img src="https://avatars.githubusercontent.com/u/80081206?v=4" width="150" height="150"></td>
+</tr>
+
 
   <tr>
     <td>
-      <a href="https://github.com/James-E-White"  rel="nofollow noreferrer">
+      <a href="https://github.com/hadyematar23"  rel="nofollow noreferrer">
           <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
         </a><br>
-      <a href="https://www.linkedin.com/in/james-ed-wh/" rel="nofollow noreferrer">
+      <a href="https://www.linkedin.com/in/hady-emmanuel-matar/" rel="nofollow noreferrer">
     <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
         </a>
     </td>
         <td>
-       <a href="https://github.com/MadelineMauser" rel="nofollow noreferrer">
+       <a href="https://github.com/hwryan12" rel="nofollow noreferrer">
             <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
       </a><br>
-        <a href="https://www.linkedin.com/in/madeline-mauser-644239245/" rel="nofollow noreferrer">
+        <a href="https://www.linkedin.com/in/harrison-ryan-2b987725a/" rel="nofollow noreferrer">
           <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
       </a>
     </td>
         <td>
-       <a href="https://github.com/smculliton" rel="nofollow noreferrer">
+       <a href="https://github.com/JTaylor28" rel="nofollow noreferrer">
           <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
       </a><br>
-        <a href="https://www.linkedin.com/in/seanculliton" rel="nofollow noreferrer">
+        <a href="https://www.linkedin.com/in/james-taylor-a02a7a199/" rel="nofollow noreferrer">
           <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
       </a>
     </td>
         <td>
-       <a href="https://github.com/willjw2" rel="nofollow noreferrer">
+       <a href="https://github.com/sandfortw" rel="nofollow noreferrer">
             <img src="https://i.stack.imgur.com/tskMh.png" alt="github"> Github
       </a><br>
-        <a href="https://www.linkedin.com/in/william-wang-814442240/" rel="nofollow noreferrer">
+        <a href="https://www.linkedin.com/in/westonsandfort/" rel="nofollow noreferrer">
           <img src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
       </a>
     </td>
