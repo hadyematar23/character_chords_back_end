@@ -1,6 +1,6 @@
-Theme.destroy_all
-Character.destroy_all
 Question.destroy_all
+Character.destroy_all
+Theme.destroy_all
 
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
@@ -823,7 +823,7 @@ Question.create(
   answer_4: "Intentionally write code that will counteract the harmful code.",
   answer_5: "Sabotage the programmer's work to ensure the harmful code does not make it into the final product.",
   good_evil_chaotic_lawful: 0
-  )
+)
 # 3
 Question.create(
   theme_id: coder.id,
@@ -845,12 +845,12 @@ Question.create(
   answer_2: "Sell the algorithm but secretly notify affected minority groups of the bias and how to avoid it.",
   answer_5: "Sell the algorithm but purposely make it less effective for banks and financial institutions that use it to discriminate against certain minority groups.",
   good_evil_chaotic_lawful: 0
-  )
+)
 # 5
 Question.create(
   theme_id: coder.id,
   question: "You are a freelance programmer working on a project for a client who has requested that you include a feature that violates privacy laws. What would you do?",
-  answer_1: "Refuse to include the feature and report the request to the appropriate authorities if necessary."
+  answer_1: "Refuse to include the feature and report the request to the appropriate authorities if necessary.",
   answer_2: "Include the feature as requested without question.",
   answer_3: "Include the feature but also implement measures to minimize the privacy violations.",
   answer_4: "Include the feature but also disclose the potential privacy violations to the client and obtain their consent.",
