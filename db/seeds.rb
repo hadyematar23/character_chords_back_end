@@ -4,7 +4,7 @@ Question.destroy_all
 
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
-debug = Theme.create!(name: "Debugger Test!", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
+debug = Theme.create!(name: "Debugger Test!!", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
 # Good/Evil Question
 Question.create(
   theme_id: debug.id,                                     
