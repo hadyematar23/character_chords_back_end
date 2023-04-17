@@ -1,6 +1,6 @@
 class Character < ApplicationRecord
   belongs_to :theme
-
+  
   enum alignment: {
     'Lawful Good' => 1,
     'Neutral Good' => 2,
