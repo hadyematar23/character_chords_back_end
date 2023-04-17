@@ -5,8 +5,8 @@ Introducing a new app that combines the fun of taking a personality test with th
 ## Table of Contents
 - [Getting Started](#getting-started) 
 - [Endpoints](#endpoints)
-- [Goals](#goals)
 - [Database and Schema](#database-and-schema)
+- [Goals](#goals)
 - [Contributors](#contributors)
 
 ## Getting Started
@@ -162,16 +162,6 @@ After running that command, inspect `/db/schema` in the application to make sure
   ```
   *NOTE:* Response should contain all `Quizzes`
 
-## Goals
-### Learning Goals
-- Create a web application that solves a real world problem and utilizes Service-Oriented Architecture (SOA).
-- Implement authentication via OAuth and consume at least two other APIs.
-- Develop a Rails "back end" API that acts as the interface layer to the database, handles API consumption, and uses Serializers.
-- Gain professional development benefits such as experience working on a larger team, understanding the impact of changes on a system, and familiarity with SOA/multi-app systems.
-
-
-- ### list future goals (whatever extensions we don't get to)
-
 ## Database and Schema
 ```bash
   create_table "characters", force: :cascade do |t|
@@ -231,6 +221,15 @@ After running that command, inspect `/db/schema` in the application to make sure
   add_foreign_key "characters", "themes"
   add_foreign_key "questions", "themes"
 ```
+## Goals
+### Learning Goals
+- Create a web application that solves a real world problem and utilizes Service-Oriented Architecture (SOA).
+- Implement authentication via OAuth and consume at least two other APIs.
+- Develop a Rails "back end" API that acts as the interface layer to the database, handles API consumption, and uses Serializers.
+- Gain professional development benefits such as experience working on a larger team, understanding the impact of changes on a system, and familiarity with SOA/multi-app systems.
+
+
+- ### list future goals (whatever extensions we don't get to)
 
 ## Contributors
 <table>
