@@ -92,6 +92,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_030538) do
 
   create_table "themes", force: :cascade do |t|
     t.string "name"
+    t.string "title", default: "Oops, we forgot to title this"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_link"

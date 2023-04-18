@@ -1,13 +1,11 @@
-require_relative '../app/helpers/s3_helper'
-include S3Helper
-
 Theme.destroy_all
 Character.destroy_all
 Question.destroy_all
+Theme.destroy_all
 
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
-debug = Theme.create!(name: "Debugger Test!!", image_link: nil, s3_key: "DebugTheme.jpeg")
+debug = Theme.create!(title: "Debugging Test", name: "Debugger Test!!", image_link: nil, s3_key: "DebugTheme.jpeg")
 # Good/Evil Question
 Question.create(
   theme_id: debug.id,                                     
@@ -48,7 +46,7 @@ Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good
 
 ### Lawyer Quiz ###
 
-lawyer = Theme.create!(name: "lawyer", image_link: nil, s3_key: "LawyerTheme.jpeg")
+lawyer = Theme.create!(title: "Want To Know Which Famous Lawyer You're Most Like? Take This Quiz And Achieve Ultimate Enlightenment!", name: "lawyer", image_link: nil, s3_key: "LawyerTheme.jpeg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -198,7 +196,7 @@ Character.create!(name: "Rudy Guiliani", theme_id: lawyer.id, good_min: 0.00, go
 
 ### Generic Quiz ###
 
-alignment = Theme.create!(name: "alignment", image_link: nil, s3_key: "AlignmentTheme.png")
+alignment = Theme.create!(title:"Discover Your True Nature With This Fun DnD Alignment Quiz", name: "alignment", image_link: nil, s3_key: "AlignmentTheme.png")
 # Good/Evil Questions
 # 1
 Question.create!(
@@ -350,7 +348,7 @@ Playlist.create!(genre: "Rock and Roll", character: "Thurgood Marshall", alignme
 
 ### Star Wars Quiz ###
 
-star_wars = Theme.create!(name: "Star Wars Character", image_link: nil, s3_key: "StarWarsTheme.png")
+star_wars = Theme.create!(title: "May The Force Be With You: Discover Your Inner Star Wars Character With This Quiz", name: "Star Wars Character", image_link: nil, s3_key: "StarWarsTheme.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -499,7 +497,7 @@ Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0
 Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'StarWarsCharacters/JabbaTheHutt.png', alignment: 9, description: "You are Jaba the Hutt, the crime lord of Tatooine. You are cunning and calculating, and you will do whatever it takes to achieve your goals. You will use any means necessary to gain power, even if it means breaking the law. You are unafraid to make enemies, and you will do whatever it takes to get what you want." )
 
 ### Harry Potter Quiz ###
-harry_potter = Theme.create!(name: "Harry Potter Character", image_link: nil, s3_key: "HarryPotterTheme.png")
+harry_potter = Theme.create!(title: "Are You A Hero, Villain, Or An Extra? Take This Harry Potter Character Quiz And Find Out Where You Stand In The Wizarding World!", name: "Harry Potter Character", image_link: nil, s3_key: "HarryPotterTheme.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -648,7 +646,7 @@ Character.create!(name: "Lucius Malfoy", theme_id: harry_potter.id, good_min: 0.
 Character.create!(name: "Bellatrix Lestrange", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'HarryPotterCharacters/Lestrange.jpeg', alignment: 9, description: "Bellatrix Lestrange is a chaotic evil character. She is impulsive and has a strong disregard for laws and social conventions. She is driven by her own desires and will do anything to get her way. She is also highly manipulative and is willing to use any means necessary to get what she wants. She is willing to take risks and doesn't hesitate to hurt others in order to achieve her goals. Her actions often lead to destruction and chaos." )
 
 ### Lord of the Rings Quiz ###
-lotr = Theme.create!(name: "Lord of the Rings Character", image_link: nil, s3_key: "LordOfTheRingsTheme.jpeg")
+lotr = Theme.create!(title: "Sauron or Samwise, take this LOTR character alignment to find where you stand in the fight for Middle Earth!", name: "Lord of the Rings Character", image_link: nil, s3_key: "LordOfTheRingsTheme.jpeg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -800,7 +798,7 @@ Character.create!(name: "Balrog", theme_id: lotr.id, good_min: 0.00, good_max: 0
 #####
 #Coder Quiz 
 
-coder = Theme.create!(name: "coder", image_link: nil, s3_key: "CoderTheme.jpeg")
+coder = Theme.create!(title: "Techies Unite: Find out Which Side of the Digital Divide You're on with Our CyberQuiz", name: "coder", image_link: nil, s3_key: "CoderTheme.jpeg")
 
 # Good/Evil Questions
 # 1
@@ -824,7 +822,7 @@ Question.create(
   answer_4: "Intentionally write code that will counteract the harmful code.",
   answer_5: "Sabotage the programmer's work to ensure the harmful code does not make it into the final product.",
   good_evil_chaotic_lawful: 0
-  )
+)
 # 3
 Question.create(
   theme_id: coder.id,
@@ -846,7 +844,7 @@ Question.create(
   answer_2: "Sell the algorithm but secretly notify affected minority groups of the bias and how to avoid it.",
   answer_5: "Sell the algorithm but purposely make it less effective for banks and financial institutions that use it to discriminate against certain minority groups.",
   good_evil_chaotic_lawful: 0
-  )
+)
 # 5
 Question.create(
   theme_id: coder.id,
@@ -937,14 +935,14 @@ Question.create(
   good_evil_chaotic_lawful: 1
 )
 
-Character.create!(name: "White Hat Hacker", theme_id: lotr.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, s3key: 'CodingCharacters/Saruman.webp', alignment: 1, description: "This coder is highly ethical and uses their skills for the greater good. They may work to improve security and prevent cybercrime, and may even work with law enforcement agencies to catch cybercriminals.")
-Character.create!(name: "The Open Source Advocate", theme_id: lotr.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, s3key: 'CodingCharacters/OpenSource.png', alignment: 2, description: "This coder is passionate about open-source software and collaboration. They may contribute to open-source projects and work to make code more accessible and widely available.")
-Character.create!(name: "Whistleblower aka Anonymous", theme_id: lotr.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, s3key: 'CodingCharacters/Whistleblower.jpeg', alignment: 3, description: "This coder is willing to break rules and take risks to expose corruption or unethical behavior. They may use their coding abilities to uncover secrets and bring about positive change." )
+Character.create!(name: "White Hat Hacker", theme_id: coder.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, s3key: 'CodingCharacters/Saruman.webp', alignment: 1, description: "This coder is highly ethical and uses their skills for the greater good. They may work to improve security and prevent cybercrime, and may even work with law enforcement agencies to catch cybercriminals.")
+Character.create!(name: "The Open Source Advocate", theme_id: coder.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, s3key: 'CodingCharacters/OpenSource.png', alignment: 2, description: "This coder is passionate about open-source software and collaboration. They may contribute to open-source projects and work to make code more accessible and widely available.")
+Character.create!(name: "Whistleblower aka Anonymous", theme_id: coder.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, s3key: 'CodingCharacters/Whistleblower.jpeg', alignment: 3, description: "This coder is willing to break rules and take risks to expose corruption or unethical behavior. They may use their coding abilities to uncover secrets and bring about positive change." )
 
-Character.create!(name: "IT Administrator", theme_id: lotr.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, s3key: 'CodingCharacters/ITAdministrator.gif', alignment: 4, description: "This coder is highly skilled at maintaining computer systems and networks. They may work to ensure that systems are secure and reliable, but may also be resistant to change or innovation.")
-Character.create!(name: "Code Connoisseur", theme_id: lotr.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, s3key: 'CodingCharacters/CodeConnisseur.png', alignment: 5, description: " This coder is highly knowledgeable about different coding practices and may have a deep understanding of multiple programming languages. They may not have a particular agenda, but may be highly respected in the coding community for their expertise.")
-Character.create!(name: "Grey Hat Hacker", theme_id: lotr.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, s3key: 'CodingCharacters/GreyHatHacker.jpeg', alignment: 6, description: "This coder is willing to break rules and push boundaries, but may not necessarily have any particular ethical or moral code. They may use their skills for good or evil purposes, depending on their whims at the time.")
+Character.create!(name: "IT Administrator", theme_id: coder.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, s3key: 'CodingCharacters/ITAdministrator.gif', alignment: 4, description: "This coder is highly skilled at maintaining computer systems and networks. They may work to ensure that systems are secure and reliable, but may also be resistant to change or innovation.")
+Character.create!(name: "Code Connoisseur", theme_id: coder.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, s3key: 'CodingCharacters/CodeConnisseur.png', alignment: 5, description: " This coder is highly knowledgeable about different coding practices and may have a deep understanding of multiple programming languages. They may not have a particular agenda, but may be highly respected in the coding community for their expertise.")
+Character.create!(name: "Grey Hat Hacker", theme_id: coder.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, s3key: 'CodingCharacters/GreyHatHacker.jpeg', alignment: 6, description: "This coder is willing to break rules and push boundaries, but may not necessarily have any particular ethical or moral code. They may use their skills for good or evil purposes, depending on their whims at the time.")
 
-Character.create!(name: "Corporate Spy", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, s3key: 'CodingCharacters/CorporateSpy.webp', alignment: 7, description: "This coder is highly skilled at gathering information and may work for companies or governments to steal secrets from competitors or other organizations. They may use their skills for financial gain or to gain a competitive advantage.")
-Character.create!(name: "Black Hat Hacker", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, s3key: 'CodingCharacters/BlackHatHacker.jpeg', alignment: 8, description: "This coder is highly skilled at breaking into computer systems and networks. They may use their skills for personal gain, to steal sensitive information or cause damage to computer systems for malicious purposes.")
-Character.create!(name: "Cyberterrorist", theme_id: lotr.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'CodingCharacters/CyberTerrorist.jpeg', alignment: 9, description: "This coder is highly skilled at causing chaos and destruction through their use of computer systems. They may create viruses or malware, engage in cyberattacks, or use their abilities to cause harm to individuals or organizations.")
+Character.create!(name: "Corporate Spy", theme_id: coder.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, s3key: 'CodingCharacters/CorporateSpy.webp', alignment: 7, description: "This coder is highly skilled at gathering information and may work for companies or governments to steal secrets from competitors or other organizations. They may use their skills for financial gain or to gain a competitive advantage.")
+Character.create!(name: "Black Hat Hacker", theme_id: coder.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, s3key: 'CodingCharacters/BlackHatHacker.jpeg', alignment: 8, description: "This coder is highly skilled at breaking into computer systems and networks. They may use their skills for personal gain, to steal sensitive information or cause damage to computer systems for malicious purposes.")
+Character.create!(name: "Cyberterrorist", theme_id: coder.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'CodingCharacters/CyberTerrorist.jpeg', alignment: 9, description: "This coder is highly skilled at causing chaos and destruction through their use of computer systems. They may create viruses or malware, engage in cyberattacks, or use their abilities to cause harm to individuals or organizations.")
