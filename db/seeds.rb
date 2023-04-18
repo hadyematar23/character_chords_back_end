@@ -4,7 +4,7 @@ Theme.destroy_all
 
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
-debug = Theme.create!(name: "Debugger Test!!", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
+debug = Theme.create!(title: "Debugging Test", name: "Debugger Test!!", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
 # Good/Evil Question
 Question.create(
   theme_id: debug.id,                                     
@@ -45,7 +45,7 @@ Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good
 
 ### Lawyer Quiz ###
 
-lawyer = Theme.create!(name: "lawyer", image_link: "https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg")
+lawyer = Theme.create!(title: "Want To Know Which Famous Lawyer You're Most Like? Take This Quiz And Achieve Ultimate Enlightenment!", name: "lawyer", image_link: "https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -197,7 +197,7 @@ Character.create!(name: "John Milton", theme_id: lawyer.id, good_min: 0.00, good
 
 ### Generic Quiz ###
 
-alignment = Theme.create!(name: "alignment", image_link: "https://images.pexels.com/photos/137049/pexels-photo-137049.jpeg")
+alignment = Theme.create!(title:"Discover Your True Nature With This Fun DnD Alignment Quiz", name: "alignment", image_link: "https://images.pexels.com/photos/137049/pexels-photo-137049.jpeg")
 # Good/Evil Questions
 # 1
 Question.create!(
@@ -349,7 +349,7 @@ Playlist.create!(genre: "Rock and Roll", character: "Thurgood Marshall", alignme
 
 ### Star Wars Quiz ###
 
-star_wars = Theme.create!(name: "Star Wars Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/225px-Star_wars2.svg.png")
+star_wars = Theme.create!(title: "May The Force Be With You: Discover Your Inner Star Wars Character With This Quiz", name: "Star Wars Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/225px-Star_wars2.svg.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -498,7 +498,7 @@ Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0
 Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/5/53/Jabba_the_Hutt_in_Return_of_the_Jedi_%281983%29.png?20171220071330", alignment: 9, description: "You are Jaba the Hutt, the crime lord of Tatooine. You are cunning and calculating, and you will do whatever it takes to achieve your goals. You will use any means necessary to gain power, even if it means breaking the law. You are unafraid to make enemies, and you will do whatever it takes to get what you want." )
 
 ### Harry Potter Quiz ###
-harry_potter = Theme.create!(name: "Harry Potter Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
+harry_potter = Theme.create!(title: "Are You A Hero, Villain, Or An Extra? Take This Harry Potter Character Quiz And Find Out Where You Stand In The Wizarding World!", name: "Harry Potter Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -647,7 +647,7 @@ Character.create!(name: "Lucius Malfoy", theme_id: harry_potter.id, good_min: 0.
 Character.create!(name: "Bellatrix Lestrange", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9, description: "Bellatrix Lestrange is a chaotic evil character. She is impulsive and has a strong disregard for laws and social conventions. She is driven by her own desires and will do anything to get her way. She is also highly manipulative and is willing to use any means necessary to get what she wants. She is willing to take risks and doesn't hesitate to hurt others in order to achieve her goals. Her actions often lead to destruction and chaos." )
 
 ### Lord of the Rings Quiz ###
-lotr = Theme.create!(name: "Lord of the Rings Character", image_link: "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg")
+lotr = Theme.create!(title: "Sauron or Samwise, take this LOTR character alignment to find where you stand in the fight for Middle Earth!", name: "Lord of the Rings Character", image_link: "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -799,7 +799,7 @@ Character.create!(name: "Balrog", theme_id: lotr.id, good_min: 0.00, good_max: 0
 #####
 #Coder Quiz 
 
-coder = Theme.create!(name: "coder", image_link: "https://cdn-media-1.freecodecamp.org/images/1*2TWW_kmC28W_rfXJqT6oPg.jpeg")
+coder = Theme.create!(title: "Techies Unite: Find out Which Side of the Digital Divide You're on with Our CyberQuiz", name: "coder", image_link: "https://cdn-media-1.freecodecamp.org/images/1*2TWW_kmC28W_rfXJqT6oPg.jpeg")
 
 # Good/Evil Questions
 # 1

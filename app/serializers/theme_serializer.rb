@@ -11,7 +11,8 @@ class ThemeSerializer
           id: theme.id,
           attributes: {
             name: theme.name,
-            image: theme.image_link
+            image: theme.image_link,
+            title: theme.title
           }
         }
       end

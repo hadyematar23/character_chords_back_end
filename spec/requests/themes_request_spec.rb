@@ -23,6 +23,8 @@ RSpec.describe "themes", type: :request do
         expect(theme[:attributes][:name]).to be_a(String)
         expect(theme[:attributes]).to have_key(:image)
         expect(theme[:attributes][:image]).to be_a(String)
+        expect(theme[:attributes]).to have_key(:title)
+        expect(theme[:attributes][:image]).to be_a(String)
       end
     end
   end
