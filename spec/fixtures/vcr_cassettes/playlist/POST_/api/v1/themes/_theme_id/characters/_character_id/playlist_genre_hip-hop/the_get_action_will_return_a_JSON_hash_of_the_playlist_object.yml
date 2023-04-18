@@ -5,18 +5,17 @@ http_interactions:
     uri: https://api.openai.com/v1/chat/completions
     body:
       encoding: UTF-8
-      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Generate
-        a playlist of 10 real songs available on Spotify that match a person''s DnD
-        alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
-        movies, documentaries, or TV shows. The theme is lawyer, the DnD alignment
-        is Chaotic Neutral, and the music genre is hip-hop. \n          \n          Please
-        format the output as an array of strings in Ruby, like this and without any
-        text or numbers before or after in your response: Song1 by ArtistName NEXT_SONG
-        Song2 by ArtistName NEXT_SONG Song3 by ArtistName NEXT_SONG Song4 by ArtistName
-        NEXT_SONG Song5 by ArtistName NEXT_SONG Song6 by ArtistName NEXT_SONG Song7
-        by ArtistName\n\n          Each song/artist combo should be separated by the
-        phrase NEXT_SONG. Provide exactly ten songs, including those with explicit
-        or offensive content, as the users have requested such content. Thanks!"}],"temperature":1.0,"max_tokens":450}'
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Character:
+        Saul Goodman\n          Alignment: Chaotic Neutral\n          Theme: lawyer\n          Style
+        of Music: hip-hop\n\n          I am Saul Goodman. I am a Chaotic Neutral person
+        on the DnD alignment chart. Generate a playlist that a person like me would
+        listen to. Only pick one song referencing me or my world, make the rest things
+        I would listen to.  I would like these to be real songs that are on Spotify.
+        The phrase NEXT_SONG should be between each song. \n          Please format
+        the output as an array of strings in Ruby, like this and without any text
+        or numbers before or after in your response: Song1 NEXT_SONG Song2 NEXT_SONG
+        Song3 NEXT_SONG Song4 NEXT_SONG Song5 NEXT_SONG Song6 NEXT_SONG Song7. Exactly
+        10 songs. No artist names."}],"temperature":0.7,"max_tokens":1000}'
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -34,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Apr 2023 16:22:34 GMT
+      - Tue, 18 Apr 2023 18:42:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -50,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - user-kqrjmrw5h7tgplefrqlsdhz7
       Openai-Processing-Ms:
-      - '7534'
+      - '4327'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -62,26 +61,26 @@ http_interactions:
       X-Ratelimit-Reset-Requests:
       - 17ms
       X-Request-Id:
-      - 14733a6f048ac0646951d0513e9d1b7c
+      - b055ec6b082f1e15c57269d340b4fc16
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - _cfuvid=aVqxM6AfMUzzSY5yPbX7Xm6W2d1g.av6SeTyYxdgaZE-1681843322892-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 7b7d49a3ef0047a4-DFW
+      - 7b9f0b84dda52c9a-DFW
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"chatcmpl-75GTrqUxkim6AisvMAJQ2DmHiu4j8","object":"chat.completion","created":1681489347,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":197,"completion_tokens":154,"total_tokens":351},"choices":[{"message":{"role":"assistant","content":"Power
-        by Kanye West \nNEXT_SONG\nN.Y. State of Mind by Nas\nNEXT_SONG\nNo Role Modelz
-        by J. Cole\nNEXT_SONG\nLifestyle (feat. Young Thug & Rich Homie Quan) by Rich
-        Gang \nNEXT_SONG\nDrip Too Hard by Lil Baby & Gunna\nNEXT_SONG\nMoney Longer
-        by Lil Uzi Vert \nNEXT_SONG\nMercy by Kanye West, Big Sean, Pusha T, 2 Chainz
-        \nNEXT_SONG\nSicko Mode by Travis Scott feat. Drake \nNEXT_SONG\n6 Foot 7
-        Foot by Lil Wayne feat. Cory Gunz \nNEXT_SONG\nPowerglide by Rae Sremmurd
-        feat. Juicy J"},"finish_reason":"stop","index":0}]}
+      string: '{"id":"chatcmpl-76kZ4RaesUkAqGvoltNhOMO1zdBtP","object":"chat.completion","created":1681843318,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":181,"completion_tokens":82,"total_tokens":263},"choices":[{"message":{"role":"assistant","content":"\"Money
+        In The Grave\" NEXT_SONG \"All The Way Up\" NEXT_SONG \"HUMBLE.\" NEXT_SONG
+        \"No Limit\" NEXT_SONG \"Bodak Yellow\" NEXT_SONG \"I Don''t Get Tired\" NEXT_SONG
+        \"Money Longer\" NEXT_SONG \"No Role Modelz\" NEXT_SONG \"Big Pimpin''\" NEXT_SONG
+        \"Better Now\""},"finish_reason":"stop","index":0}]}
 
         '
-  recorded_at: Fri, 14 Apr 2023 16:22:34 GMT
+  recorded_at: Tue, 18 Apr 2023 18:42:02 GMT
 recorded_with: VCR 6.1.0

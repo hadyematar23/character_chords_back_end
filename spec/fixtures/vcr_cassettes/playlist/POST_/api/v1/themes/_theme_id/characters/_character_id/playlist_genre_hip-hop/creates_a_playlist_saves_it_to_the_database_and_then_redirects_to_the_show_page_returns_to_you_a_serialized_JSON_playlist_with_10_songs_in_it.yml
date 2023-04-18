@@ -5,18 +5,17 @@ http_interactions:
     uri: https://api.openai.com/v1/chat/completions
     body:
       encoding: UTF-8
-      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Generate
-        a playlist of 10 real songs available on Spotify that match a person''s DnD
-        alignment, their chosen theme, and preferred music genre. Exclude audiobooks,
-        movies, documentaries, or TV shows. The theme is lawyer, the DnD alignment
-        is Chaotic Neutral, and the music genre is hip-hop. \n          \n          Please
-        format the output as an array of strings in Ruby, like this and without any
-        text or numbers before or after in your response: Song1 by ArtistName NEXT_SONG
-        Song2 by ArtistName NEXT_SONG Song3 by ArtistName NEXT_SONG Song4 by ArtistName
-        NEXT_SONG Song5 by ArtistName NEXT_SONG Song6 by ArtistName NEXT_SONG Song7
-        by ArtistName\n\n          Each song/artist combo should be separated by the
-        phrase NEXT_SONG. Provide exactly ten songs, including those with explicit
-        or offensive content, as the users have requested such content. Thanks!"}],"temperature":1.0,"max_tokens":450}'
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Character:
+        Saul Goodman\n          Alignment: Chaotic Neutral\n          Theme: lawyer\n          Style
+        of Music: hip-hop\n\n          I am Saul Goodman. I am a Chaotic Neutral person
+        on the DnD alignment chart. Generate a playlist that a person like me would
+        listen to. Only pick one song referencing me or my world, make the rest things
+        I would listen to.  I would like these to be real songs that are on Spotify.
+        The phrase NEXT_SONG should be between each song. \n          Please format
+        the output as an array of strings in Ruby, like this and without any text
+        or numbers before or after in your response: Song1 NEXT_SONG Song2 NEXT_SONG
+        Song3 NEXT_SONG Song4 NEXT_SONG Song5 NEXT_SONG Song6 NEXT_SONG Song7. Exactly
+        10 songs. No artist names."}],"temperature":0.7,"max_tokens":1000}'
     headers:
       User-Agent:
       - Faraday v2.7.4
@@ -34,7 +33,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 14 Apr 2023 16:22:08 GMT
+      - Tue, 18 Apr 2023 18:41:58 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -50,7 +49,7 @@ http_interactions:
       Openai-Organization:
       - user-kqrjmrw5h7tgplefrqlsdhz7
       Openai-Processing-Ms:
-      - '5345'
+      - '4009'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -62,18 +61,26 @@ http_interactions:
       X-Ratelimit-Reset-Requests:
       - 17ms
       X-Request-Id:
-      - 68ab9fc8103e91ad296562de466084e0
+      - '09165fbc136eec07d918c7f1d3a660f2'
       Cf-Cache-Status:
       - DYNAMIC
+      Set-Cookie:
+      - _cfuvid=Sfy_wrNnuv64tXLV_HlPU_R53ioJDkygCgkRgNMoaRQ-1681843318019-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 7b7d490b3ecb486e-DFW
+      - 7b9f0b684b06eab0-DFW
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6ImNoYXRjbXBsLTc1R1RTUVNWNjE2azlTQmlPNXZWWGdsd1g3ZkNJIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY3JlYXRlZCI6MTY4MTQ4OTMyMiwibW9kZWwiOiJncHQtMy41LXR1cmJvLTAzMDEiLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjoxOTcsImNvbXBsZXRpb25fdG9rZW5zIjoxMTQsInRvdGFsX3Rva2VucyI6MzExfSwiY2hvaWNlcyI6W3sibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6Ik5vIFByb2JsZW0gYnkgQ2hhbmNlIHRoZSBSYXBwZXJcbk5FWFRfU09OR1xuQmFja3NlYXQgRnJlZXN0eWxlIGJ5IEtlbmRyaWNrIExhbWFyXG5ORVhUX1NPTkdcblAuSS5NLlAuIGJ5IDUwIENlbnRcbk5FWFRfU09OR1xuUmlkaW7igJkgRGlydHkgYnkgQ2hhbWlsbGlvbmFpcmVcbk5FWFRfU09OR1xuTi5ZLiBTdGF0ZSBvZiBNaW5kIGJ5IE5hc1xuTkVYVF9TT05HXG5ETkEuIGJ5IEtlbmRyaWNrIExhbWFyIFxuTkVYVF9TT05HXG5DT0xEIGJ5IEthbnllIFdlc3Rcbk5FWFRfU09OR1xuQVRNIGJ5IEouIENvbGVcbk5FWFRfU09OR1xuQmxhY2sgU2tpbmhlYWQgYnkgS2FueWUgV2VzdCBcbk5FWFRfU09OR1xuTW9uZXkgTG9uZ2VyIGJ5IExpbCBVemkgVmVydCJ9LCJmaW5pc2hfcmVhc29uIjoic3RvcCIsImluZGV4IjowfV19Cg==
-  recorded_at: Fri, 14 Apr 2023 16:22:08 GMT
+      string: '{"id":"chatcmpl-76kZ08IdkOoVx7gEIBZEmiXF8Epr1","object":"chat.completion","created":1681843314,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":181,"completion_tokens":78,"total_tokens":259},"choices":[{"message":{"role":"assistant","content":"\"Money
+        Longer\" NEXT_SONG \"No Role Modelz\" NEXT_SONG \"Famous\" NEXT_SONG \"Bodak
+        Yellow\" NEXT_SONG \"Jumpman\" NEXT_SONG \"HUMBLE.\" NEXT_SONG \"I Don''t
+        Fuck With You\" NEXT_SONG \"Panda\" NEXT_SONG \"All The Way Up\" NEXT_SONG
+        \"Better Now\""},"finish_reason":"stop","index":0}]}
+
+        '
+  recorded_at: Tue, 18 Apr 2023 18:41:58 GMT
 recorded_with: VCR 6.1.0
