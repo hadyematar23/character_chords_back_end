@@ -12,7 +12,8 @@ class ThemeSerializer
           attributes: {
             name: theme.name,
             image: theme.image_link,
-            title: theme.title
+            title: theme.title, 
+            s3_key: theme.s3_key
           }
         }
       end

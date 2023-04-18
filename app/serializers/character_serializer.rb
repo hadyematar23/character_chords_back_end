@@ -6,7 +6,7 @@ class CharacterSerializer
 
   def serialize_character
     {
-      links: {image: @info.url},
+      links: {image: @info.s3key},
       data: {
         type: "character",
         theme_id: @info.theme_id,
@@ -24,7 +24,7 @@ class CharacterSerializer
   def serialize_all_characters
     @info.map do |character|
       {
-        links: {image: character.url},
+        links: {image: character.s3key},
         data: {
           type: "character",
           theme_id: character.theme_id,
