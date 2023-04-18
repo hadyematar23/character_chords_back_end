@@ -1,10 +1,13 @@
+require_relative '../app/helpers/s3_helper'
+include S3Helper
+
 Theme.destroy_all
 Character.destroy_all
 Question.destroy_all
 
 ### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
-debug = Theme.create!(name: "Debugger Test!!", image_link: "https://media.istockphoto.com/id/1202688372/photo/error-programming-social-networking-seo-search-and-service-delivery-concept-chart-with.jpg?s=1024x1024&w=is&k=20&c=I0Oued_6FvH_MoQo98ccgZ4WRc6r-OdQTBZYjv9J0gY=")
+debug = Theme.create!(name: "Debugger Test!!", image_link: nil, s3_key: "DebugTheme.jpeg")
 # Good/Evil Question
 Question.create(
   theme_id: debug.id,                                     
@@ -17,6 +20,8 @@ Question.create(
   good_evil_chaotic_lawful: 0
 )
 
+# photo_url = s3_presigned_url('characterchordsbucket23', 'test_image.jpeg')
+# require 'pry'; binding.pry
 # Lawful/Chaotic Question
 
 Question.create(
@@ -45,7 +50,7 @@ Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good
 
 ### Lawyer Quiz ###
 
-lawyer = Theme.create!(name: "lawyer", image_link: "https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg")
+lawyer = Theme.create!(name: "lawyer", image_link: nil, s3_key: "LawyerTheme.jpeg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -181,23 +186,21 @@ Question.create!(
   good_evil_chaotic_lawful: 1
 )
 # Character Creation
-Character.create!(name: "Thurgood Marshall", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Thurgood-marshall-2.jpg/220px-Thurgood-marshall-2.jpg", alignment: 1, description: "You are Thurgood Marshall, the legendary civil rights attorney and Supreme Court Justice. You are a champion of justice, always working to ensure that everyone has access to the same rights and freedoms. Your unwavering commitment to justice often puts you at odds with people who are unwilling to change, but your sense of fairness never waivers.")
-Character.create!(name: "Amal Clooney", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amal_Clooney_02.jpg/1280px-Amal_Clooney_02.jpg", alignment: 2, description: "You are Amal Clooney, a lawyer and activist who is a force to be reckoned with. You are a shining example of what it means to be a champion of justice and will fight for what is right no matter the odds.")
-Character.create!(name: "Clarence Darrow", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Clarence_Darrow.jpg/800px-Clarence_Darrow.jpg", alignment: 3, description: "As Clarence Darrow, you embody the chaotic good alignment, driven by a passion for individual freedom and a desire to fight against injustice, even if it means breaking rules or challenging authority, always standing up for what you believe is right and never backing down from a challenge, and ultimately serving as a force for good in pursuit of a more just and equitable society." )
+Character.create!(name: "Thurgood Marshall", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, s3key: 'LawyerCharacters/ThurgoodMarshall.jpeg', alignment: 1, description: "You are Thurgood Marshall, the legendary civil rights attorney and Supreme Court Justice. You are a champion of justice, always working to ensure that everyone has access to the same rights and freedoms. Your unwavering commitment to justice often puts you at odds with people who are unwilling to change, but your sense of fairness never waivers.")
+Character.create!(name: "Amal Clooney", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, s3key: 'LawyerCharacters/AmalClooney.jpeg', alignment: 2, description: "You are Amal Clooney, a lawyer and activist who is a force to be reckoned with. You are a shining example of what it means to be a champion of justice and will fight for what is right no matter the odds.")
+Character.create!(name: "Clarence Darrow", theme_id: lawyer.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, s3key: 'LawyerCharacters/ClarenceDarrow.jpeg', alignment: 3, description: "As Clarence Darrow, you embody the chaotic good alignment, driven by a passion for individual freedom and a desire to fight against injustice, even if it means breaking rules or challenging authority, always standing up for what you believe is right and never backing down from a challenge, and ultimately serving as a force for good in pursuit of a more just and equitable society." )
 
-Character.create!(name: "Jack McCoy", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/en/7/72/Jack_McCoy_-_L%26O.png", alignment: 4, description: "You are Jack McCoy, a lawful neutral character. You are a master of the courtroom and an expert at finding loopholes. You make sure justice is served and the law is followed, but you often do so with a bit of mischief and humor. You are a master of strategy and can outwit even the most cunning opponent. It may take a few rounds to get your point across, but in the end, you always get your way." )
-Character.create!(name: "Robert Shapiro", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Robert-shapiro.jpg", alignment: 5, description: "You are Robert Shapiro (O.J. Simpson's lawyer), a true neutral. You are a master of the legal system and you have a knack of knowing where the loopholes are. You are never swayed by emotions and you always strive for a fair and reasonable outcome. You are an independent thinker and you have no problem standing up for what you believe in.")
-Character.create!(name: "Saul Goodman", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/3/34/Jimmy_McGill_BCS_S3.png", alignment: 6, description: "You are Saul Goodman (fictional lawyer from Breaking Bad), you have a penchant for bending the law to suit your own needs, and you're always looking for a way to make a quick buck. You don't always play fair and you're not afraid to do whatever it takes to get what you want. You'll never turn down a challenge, and you're always ready to take a risk. Just don't be surprised if things don't always go your way.")
+Character.create!(name: "Jack McCoy", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, s3key: 'LawyerCharacters/JackMccoy.jpeg', alignment: 4, description: "You are Jack McCoy, a lawful neutral character. You are a master of the courtroom and an expert at finding loopholes. You make sure justice is served and the law is followed, but you often do so with a bit of mischief and humor. You are a master of strategy and can outwit even the most cunning opponent. It may take a few rounds to get your point across, but in the end, you always get your way." )
+Character.create!(name: "Robert Shapiro", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, s3key: 'LawyerCharacters/RobertShapiro.jpeg', alignment: 5, description: "You are Robert Shapiro (O.J. Simpson's lawyer), a true neutral. You are a master of the legal system and you have a knack of knowing where the loopholes are. You are never swayed by emotions and you always strive for a fair and reasonable outcome. You are an independent thinker and you have no problem standing up for what you believe in.")
+Character.create!(name: "Saul Goodman AKA Slippin' Jimmy", theme_id: lawyer.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, s3key: 'LawyerCharacters/SaulGoodman.webp', alignment: 6, description: "You are Saul Goodman (fictional lawyer from Breaking Bad), you have a penchant for bending the law to suit your own needs, and you're always looking for a way to make a quick buck. You don't always play fair and you're not afraid to do whatever it takes to get what you want. You'll never turn down a challenge, and you're always ready to take a risk. Just don't be surprised if things don't always go your way.")
 
-Character.create!(name: "Roy Cohn", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Roy_Cohn.jpg/463px-Roy_Cohn.jpg", alignment: 7, description: "You are Roy Cohn, a ruthless, cunning and manipulative individual who will stop at nothing to achieve your goals. You follow the letter of the law but will bend it to your own advantage. You are a master of deception and an expert at finding loopholes in any situation. You will never accept defeat, no matter how dire the consequences")
-
-Character.create!(name: "Michael Cohen", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Michael_Cohen_in_2019.png", alignment: 8, description: "You are Michael Cohen, a corporate lawyer who always looks out for himself first. You always make sure your own interests are taken care of, no matter the cost to others. You're a master of manipulation and deception, and you have no qualms about using people to your own advantage.")
-
-Character.create!(name: "John Milton", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://static.wikia.nocookie.net/villains/images/9/9f/John_Milton.jpg/revision/latest?cb=20140511211844", alignment: 9, description: "You are a menace to society")
+Character.create!(name: "Roy Cohn", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, s3key: 'LawyerCharacters/RoyCohn.webp', alignment: 7, description: "You are Roy Cohn, a ruthless, cunning and manipulative individual who will stop at nothing to achieve your goals. You follow the letter of the law but will bend it to your own advantage. You are a master of deception and an expert at finding loopholes in any situation. You will never accept defeat, no matter how dire the consequences")
+Character.create!(name: "Michael Cohen", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, s3key: 'LawyerCharacters/MichaelCohen.jpeg', alignment: 8, description: "You are Michael Cohen, a corporate lawyer who always looks out for himself first. You always make sure your own interests are taken care of, no matter the cost to others. You're a master of manipulation and deception, and you have no qualms about using people to your own advantage.")
+Character.create!(name: "Rudy Guiliani", theme_id: lawyer.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'LawyerCharacters/RudyGuiliani.jpeg', alignment: 9, description: "The master of chaotic evil, where eyebrow-raising press conferences, baseless conspiracy theories, and Four Seasons Total Landscaping mix for a potent cocktail of public disorder.")
 
 ### Generic Quiz ###
 
-alignment = Theme.create!(name: "alignment", image_link: "https://images.pexels.com/photos/137049/pexels-photo-137049.jpeg")
+alignment = Theme.create!(name: "alignment", image_link: nil, s3_key: "AlignmentTheme.png")
 # Good/Evil Questions
 # 1
 Question.create!(
@@ -333,23 +336,23 @@ Question.create!(
   good_evil_chaotic_lawful: 1
 )
 # Character Creation
-Character.create!(name: "The Hero", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/6303759/pexels-photo-6303759.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 1, description: "This is a description of the character")
-Character.create!(name: "The Ally", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/6998462/pexels-photo-6998462.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 2, description: "This is a description of the character")
-Character.create!(name: "The Rebel", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/953457/pexels-photo-953457.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 3, description: "This is a description of the character")
+Character.create!(name: "The Hero", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, s3key: 'GenericCharacters/LawfulGood.webp', alignment: 1, description: "This is a description of the character")
+Character.create!(name: "The Ally", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, s3key: 'GenericCharacters/AllyImage.webp', alignment: 2, description: "This is a description of the character")
+Character.create!(name: "The Rebel", theme_id: alignment.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, s3key: 'GenericCharacters/RebelImage.jpeg',  alignment: 3, description: "This is a description of the character")
 
-Character.create!(name: "The Judge", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 4, description: "This is a description of the character")
-Character.create!(name: "The Observer", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3769697/pexels-photo-3769697.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 5, description: "This is a description of the character")
-Character.create!(name: "The Wildcard", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, url: "https://images.pexels.com/photos/8848555/pexels-photo-8848555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alignment: 6, description: "This is a description of the character")
+Character.create!(name: "The Judge", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, s3key: 'GenericCharacters/JudgeCharacter.webp', alignment: 4, description: "This is a description of the character")
+Character.create!(name: "The Observer", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, s3key: 'GenericCharacters/ObserverTheme.jpeg', alignment: 5, description: "This is a description of the character")
+Character.create!(name: "The Wildcard", theme_id: alignment.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, s3key: 'GenericCharacters/WildCardTheme.jpeg', alignment: 6, description: "This is a description of the character")
 
-Character.create!(name: "The Tyrant", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, url: "https://images.pexels.com/photos/11064686/pexels-photo-11064686.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 7, description: "This is a description of the character")
-Character.create!(name: "The Opportunist", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, url: "https://images.pexels.com/photos/3760532/pexels-photo-3760532.jpeg?auto=compress&cs=tinysrgb&w=400", alignment: 8, description: "This is a description of the character")
-Character.create!(name: "The Destroyer", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5xbzTczBHU2rPVJLBu8rBUqYcqSArUx-M1wwjtxtJQ&usqp=CAU&ec=48600113", alignment: 9, description: "This is a description of the character")
+Character.create!(name: "The Tyrant", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, s3key: 'GenericCharacters/TyrantImage.jpeg', alignment: 7, description: "This is a description of the character")
+Character.create!(name: "The Opportunist", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, s3key: 'GenericCharacters/OpportunistTheme.jpeg', alignment: 8, description: "This is a description of the character")
+Character.create!(name: "The Destroyer", theme_id: alignment.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'GenericCharacters/DestroyerTheme.jpeg', alignment: 9, description: "This is a description of the character")
 
 Playlist.create!(genre: "Rock and Roll", character: "Thurgood Marshall", alignment: "Chaotic Neutral", songs: ["Song 1", "Song 2", "Song 3", "Song 4", "Song 5", "Song 6", "Song 7", "Song 8", "Song 9", "Song 10"])
 
 ### Star Wars Quiz ###
 
-star_wars = Theme.create!(name: "Star Wars Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/225px-Star_wars2.svg.png")
+star_wars = Theme.create!(name: "Star Wars Character", image_link: nil, s3_key: "StarWarsTheme.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -498,7 +501,7 @@ Character.create!(name: "Emperor Palpatine", theme_id: star_wars.id, good_min: 0
 Character.create!(name: "Jabba the Hutt", theme_id: star_wars.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/5/53/Jabba_the_Hutt_in_Return_of_the_Jedi_%281983%29.png?20171220071330", alignment: 9, description: "You are Jaba the Hutt, the crime lord of Tatooine. You are cunning and calculating, and you will do whatever it takes to achieve your goals. You will use any means necessary to gain power, even if it means breaking the law. You are unafraid to make enemies, and you will do whatever it takes to get what you want." )
 
 ### Harry Potter Quiz ###
-harry_potter = Theme.create!(name: "Harry Potter Character", image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/1280px-Harry_Potter_wordmark.svg.png")
+harry_potter = Theme.create!(name: "Harry Potter Character", image_link: nil, s3_key: "HarryPotterTheme.png")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -647,7 +650,7 @@ Character.create!(name: "Lucius Malfoy", theme_id: harry_potter.id, good_min: 0.
 Character.create!(name: "Bellatrix Lestrange", theme_id: harry_potter.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, url: "https://upload.wikimedia.org/wikipedia/en/d/d8/Bellatrix.jpeg", alignment: 9, description: "Bellatrix Lestrange is a chaotic evil character. She is impulsive and has a strong disregard for laws and social conventions. She is driven by her own desires and will do anything to get her way. She is also highly manipulative and is willing to use any means necessary to get what she wants. She is willing to take risks and doesn't hesitate to hurt others in order to achieve her goals. Her actions often lead to destruction and chaos." )
 
 ### Lord of the Rings Quiz ###
-lotr = Theme.create!(name: "Lord of the Rings Character", image_link: "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg")
+lotr = Theme.create!(name: "Lord of the Rings Character", image_link: nil, s3_key: "LordOfTheRingsTheme.jpeg")
 # Good/Evil Questions
 # 1
 Question.create(
@@ -799,7 +802,7 @@ Character.create!(name: "Balrog", theme_id: lotr.id, good_min: 0.00, good_max: 0
 #####
 #Coder Quiz 
 
-coder = Theme.create!(name: "coder", image_link: "https://cdn-media-1.freecodecamp.org/images/1*2TWW_kmC28W_rfXJqT6oPg.jpeg")
+coder = Theme.create!(name: "coder", image_link: nil, s3_key: "CoderTheme.jpeg")
 
 # Good/Evil Questions
 # 1
@@ -850,7 +853,7 @@ Question.create(
 Question.create(
   theme_id: coder.id,
   question: "You are a freelance programmer working on a project for a client who has requested that you include a feature that violates privacy laws. What would you do?",
-  answer_1: "Refuse to include the feature and report the request to the appropriate authorities if necessary."
+  answer_1: "Refuse to include the feature and report the request to the appropriate authorities if necessary.",
   answer_2: "Include the feature as requested without question.",
   answer_3: "Include the feature but also implement measures to minimize the privacy violations.",
   answer_4: "Include the feature but also disclose the potential privacy violations to the client and obtain their consent.",

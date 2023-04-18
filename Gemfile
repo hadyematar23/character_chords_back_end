@@ -29,7 +29,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
+gem 'aws-sdk-s3'
 gem "faraday"
 gem "figaro"
 gem "jsonapi-serializer"
@@ -48,7 +48,6 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem 'shoulda-matchers', '~> 5.0'
-  gem 'simplecov'
 end
 
 group :development do

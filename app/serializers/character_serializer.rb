@@ -6,7 +6,7 @@ class CharacterSerializer
 
   def serialize_character
     {
-      links: {image: @info.url},
+      links: {image: @info.s3key},
       data: {
         type: "character",
         theme_id: @info.theme_id,
