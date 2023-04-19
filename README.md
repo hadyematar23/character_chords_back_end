@@ -6,13 +6,14 @@ Introducing a new app that combines the fun of taking a personality test with th
 - [Getting Started](#getting-started) 
 - [Endpoints](#endpoints)
 - [Database and Schema](#database-and-schema)
+- [Photo Storage](#photo-rights-and-storage)
 - [Goals](#goals)
 - [Contributors](#contributors)
 
 ## Getting Started
 Character Chords is a full-stack Ruby on Rails app that requires you to clone and set up both the [frontend](https://github.com/sandfortw/character_chords_fe) and backend repositories. You will need to ensure all required gems are installed and that environment variables are properly configured in order to run the app locally. Additionally, this app establishes API endpoints for use with the [Character Chords Front End](https://github.com/sandfortw/character_chords_fe) repository.
 
-To get started, install all gems by running:
+To get started, clone this repo down and install all gems by running:
 ``` 
 bundle install
 ```
@@ -20,12 +21,15 @@ Next, run this command to make sure the database is properly created and migrate
 ```
 rails db:{create,migrate}
 ```
-After running that command, inspect `/db/schema` in the application to make sure the database was properly created. If you're unsure, you can compare with our [Schema](#database-and-schema)
+After running that command, inspect `/db/schema` in the application to make sure the database was properly created. This is what the schema [should look like.](#database-and-schema)
 ## Endpoints
-  ### *Endpoint for all the characters for a given quiz theme* 
+  ### Endpoint 1: *Endpoint for all the characters for a given quiz theme* 
   Example response using the `lawyer` quiz theme: 
 
-  `GET /chordsapi/v1/themes/:theme_id/characters`
+  `GET /chordsapi/v1/themes/:theme_id/characters` is the setup 
+  
+  `GET /chordsapi/v1/themes/2/characters` is a bonafide query that should return the following: 
+  
   ```bash
   [
     {
@@ -64,10 +68,13 @@ After running that command, inspect `/db/schema` in the application to make sure
   ```
   *NOTE:* Response should return `9 Characters`
   
-  ### *Endpoint for a specific character for a given quiz theme*
+  ### Endpoint 2: *Endpoint for a specific character for a given quiz theme*
   Example response from the `lawyer` quiz theme using `.5` for `GOOD_EVIL_SCORE` and `.5` for `LAWFUL_CHAOTIC_SCORE`
 
-  `GET /chordsapi/v1/themes/3/characters/find_character?good_evil=GOOD_EVIL_SCORE&lawful_chaotic=LAWFUL_CHAOTIC_SCORE`
+  `GET /chordsapi/v1/themes/3/characters/find_character?good_evil=GOOD_EVIL_SCORE&lawful_chaotic=LAWFUL_CHAOTIC_SCORE` is a sample query. 
+  
+  `GET /chordsapi/v1/themes/3/characters/find_character?good_evil=0.5&lawful_chaotic=0.5`is a bonafide query which whoudl produce the following results: 
+  
   ```bash
   {
     "links": {
@@ -86,12 +93,17 @@ After running that command, inspect `/db/schema` in the application to make sure
     }
   }
   ```
-  *NOTE:* Pass numeric decimal values (1.0 - 0.0) for `GOOD_EVIL_SCORE` and `LAWFUL_CHAOTIC_SCORE`
+  *NOTE:* Pass numeric decimal values (1.0 - 0.0) for `GOOD_EVIL_SCORE` and `LAWFUL_CHAOTIC_SCORE` 
   
-  ### *Endpoint for a given quiz themes' questions*
-  Example using the `lawyer` quiz theme `id`:
   
-  `GET /chordsapi/v1/themes/:theme_is/questions`
+  
+  ### Endpoint 3: *Endpoint for a given quiz themes' questions*
+  Each theme is made up of 12 questions; this endpoint will provide the 12 questions for the `theme_id` passed through.  
+  Example using the `lawyer` quiz theme id:
+  
+  `GET /chordsapi/v1/themes/:theme_id/questions` is the format. 
+  
+  `GET /chordsapi/v1/themes/2/questions` is a bonafide query that should result in the following response: 
   
   ```bash
   {
@@ -135,7 +147,7 @@ After running that command, inspect `/db/schema` in the application to make sure
   ```
   *NOTE:* Response should return `12 Questions`  
 
-  ### *Endpoint for all quiz themes*
+  ### Endpoint 4: *Endpoint for all quiz themes*
 
   `GET /chordsapi/v1/themes/`
   ```bash
@@ -221,6 +233,11 @@ After running that command, inspect `/db/schema` in the application to make sure
   add_foreign_key "characters", "themes"
   add_foreign_key "questions", "themes"
 ```
+
+## Photo Rights and Storage
+
+The photos were first plucked from the internet (with best efforts being made to adhere to fair use) and are stored digitally in an S3 bucket run by Amazon Web Services cloud services. 
+
 ## Goals
 ### Learning Goals
 - Create a web application that solves a real world problem and utilizes Service-Oriented Architecture (SOA).
@@ -228,8 +245,11 @@ After running that command, inspect `/db/schema` in the application to make sure
 - Develop a Rails "back end" API that acts as the interface layer to the database, handles API consumption, and uses Serializers.
 - Gain professional development benefits such as experience working on a larger team, understanding the impact of changes on a system, and familiarity with SOA/multi-app systems.
 
+### Extension Ideas
+- With additional time and resources, we would like to implement the ChatGPT API in at least two other locations in the project. First, in the creation of the questions and answers for quizzes. We would like for the user to be able to input a profession or a theme and then receive the relevant alignment questions based off of their input. As of the production of this project (April 2023), the API only supports Chat GPT3.5 and not 4.0, making longer and more complex queries more volatile based on user input. 
+- We would also like to implmenet DALL-E 2, the image generator of Open AI to provide a fictional album cover that is based off of the individual user's character selected and music genre. We would then upload the image to the user's Spotify playlist and send them the image in PDF format along with their playlist selection. 
 
-- ### list future goals (whatever extensions we don't get to)
+
 
 ## Contributors
 <table>
