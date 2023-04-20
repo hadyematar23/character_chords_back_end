@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe PlaylistFacade, type: :facade do
   describe "#generate_playlist" do
     before :each do
-      @theme = create(:theme)  
-      @character = create(:character, theme: @theme)
+      @theme = create(:theme, s3_key: "test_theme", image_link: "test_theme_image_link")  
+      @character = create(:character, theme: @theme, s3key: "test_character")
     end
     it "returns a playlist", :vcr => { :cassette_name => "playlist/GET_/api/v1/themes/_theme_id/characters/_character_id/playlist_genre_hip-hop/returns_to_you_10_songs_in_a_playlist" } do
       info = {character_id: @character.id, theme_id: @theme.id, genre: "hip-hop"}   
