@@ -1,4 +1,3 @@
-Theme.destroy_all
 Character.destroy_all
 Question.destroy_all
 Theme.destroy_all
