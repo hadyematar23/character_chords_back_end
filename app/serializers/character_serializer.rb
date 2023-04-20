@@ -5,6 +5,9 @@ class CharacterSerializer
   end
 
   def serialize_character
+    if @info.nil?
+      { error: 'No matching character found' }
+    else
     {
       links: {image: @info.s3key},
       data: {
@@ -19,6 +22,7 @@ class CharacterSerializer
         }
       }
     }
+    end
   end
   
   def serialize_all_characters

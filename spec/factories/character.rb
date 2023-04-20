@@ -9,5 +9,6 @@ FactoryBot.define do
     theme
     url { Faker::Internet.url }
     alignment { Faker::Number.between(from: 1, to: 9) }
+    s3key { Faker::Alphanumeric.alphanumeric(number: 10) }
   end
 end

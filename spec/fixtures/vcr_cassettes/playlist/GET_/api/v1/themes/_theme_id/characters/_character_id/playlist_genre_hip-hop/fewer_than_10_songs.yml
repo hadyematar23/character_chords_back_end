@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Character:
+        Gov. Easter Schmeler\n          Alignment: Lawful Neutral\n          Theme:
+        dicta\n          Style of Music: pop\n\n          I am Gov. Easter Schmeler.
+        I am a Lawful Neutral person on the DnD alignment chart. Generate a playlist
+        that a person like me would listen to. Only pick one song referencing me or
+        my world, make the rest things I would listen to.  I would like these to be
+        real songs that are on Spotify. The phrase NEXT_SONG should be between each
+        song. \n          Please format the output as an array of strings in Ruby,
+        like this and without any text or numbers before or after in your response:
+        Song1 NEXT_SONG Song2 NEXT_SONG Song3 NEXT_SONG Song4 NEXT_SONG Song5 NEXT_SONG
+        Song6 NEXT_SONG Song7. Exactly 10 songs. No artist names."}],"temperature":0.7,"max_tokens":1000}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <Open_AI>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 18:11:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0301
+      Openai-Organization:
+      - user-kqrjmrw5h7tgplefrqlsdhz7
+      Openai-Processing-Ms:
+      - '3976'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Request-Id:
+      - ce04ea9c8244f323e7b2c4778b8c4d76
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7baf59768fe22d2d-DFW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"chatcmpl-77T2ZnIBoV015oAV3WOJ6hquUQCBC","object":"chat.completion","created":1682014283,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":189,"completion_tokens":74,"total_tokens":263},"choices":[{"message":{"role":"assistant","content":"Dicta
+        NEXT_SONG\nCan''t Stop the Feeling! NEXT_SONG\nI Want It That Way NEXT_SONG\nShallow
+        NEXT_SONG\nUptown Funk NEXT_SONG\nDon''t Stop Believin'' NEXT_SONG\nHappy
+        NEXT_SONG\nEye of the Tiger NEXT_SONG\nShape of You NEXT_SONG\nI Will Survive"},"finish_reason":"stop","index":0}]}
+
+        '
+  recorded_at: Thu, 20 Apr 2023 18:11:27 GMT
+recorded_with: VCR 6.1.0
