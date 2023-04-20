@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"Character:
+        Thurgood Marshall\n          Alignment: Lawful Good\n          Theme: lawyer\n          Style
+        of Music: hip-hop\n\n          I am Thurgood Marshall. I am a Lawful Good
+        person on the DnD alignment chart. Generate a playlist that a person like
+        me would listen to. Only pick one song referencing me or my world, make the
+        rest things I would listen to.  I would like these to be real songs that are
+        on Spotify. The phrase NEXT_SONG should be between each song. \n          Please
+        format the output as an array of strings in Ruby, like this and without any
+        text or numbers before or after in your response: Song1 NEXT_SONG Song2 NEXT_SONG
+        Song3 NEXT_SONG Song4 NEXT_SONG Song5 NEXT_SONG Song6 NEXT_SONG Song7. Exactly
+        10 songs. No artist names."}],"temperature":0.7,"max_tokens":1000}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <Open_AI>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 17:32:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0301
+      Openai-Organization:
+      - user-kqrjmrw5h7tgplefrqlsdhz7
+      Openai-Processing-Ms:
+      - '7204'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Request-Id:
+      - 22a741dc5782f4ac1a37140386bd0911
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7baf20b3d8a9475b-DFW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"chatcmpl-77SR4E6GJO0twg2dFLrEKQCThopmI","object":"chat.completion","created":1682011958,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":185,"completion_tokens":135,"total_tokens":320},"choices":[{"message":{"role":"assistant","content":"\"Can''t
+        Stop\" by Red Hot Chili Peppers NEXT_SONG\n\"Changes\" by 2Pac NEXT_SONG\n\"Rosa
+        Parks\" by Outkast NEXT_SONG\n\"U.N.I.T.Y.\" by Queen Latifah NEXT_SONG\n\"The
+        Message\" by Grandmaster Flash & The Furious Five NEXT_SONG\n\"Fight the Power\"
+        by Public Enemy NEXT_SONG\n\"Respect\" by Aretha Franklin NEXT_SONG\n\"Superstition\"
+        by Stevie Wonder NEXT_SONG\n\"Express Yourself\" by N.W.A NEXT_SONG\n\"Empire
+        State of Mind\" by Jay-Z ft. Alicia Keys."},"finish_reason":"stop","index":0}]}
+
+        '
+  recorded_at: Thu, 20 Apr 2023 17:32:45 GMT
+recorded_with: VCR 6.1.0
