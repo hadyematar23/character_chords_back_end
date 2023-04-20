@@ -4,7 +4,6 @@ class Character < ApplicationRecord
   validates :s3key, presence: true
   validates :name, presence: true
   validates :theme, presence: true
-  validate :image_attached
   
   enum alignment: {
     'Lawful Good' => 1,
@@ -17,11 +16,4 @@ class Character < ApplicationRecord
     'Neutral Evil' => 8,
     'Chaotic Evil' => 9
   }
-  private
-  
-  def image_attached
-    unless image.attached?
-      errors.add(:image, "can't be blank")
-    end
-  end
 end
