@@ -5,6 +5,16 @@ RSpec.describe Question, type: :model do
     expect(build(:question)).to be_valid
   end
 
+  describe 'validations' do
+    it { should validate_presence_of(:question) }
+    it { should validate_presence_of(:answer_1) }
+    it { should validate_presence_of(:answer_2) }
+    it { should validate_presence_of(:answer_3) }
+    it { should validate_presence_of(:answer_4) }
+    it { should validate_presence_of(:answer_5) }
+    it { should validate_presence_of(:good_evil_chaotic_lawful) }
+  end  
+
   describe 'associations' do
     it { should belong_to(:theme) }
   end
