@@ -7,6 +7,5 @@ FactoryBot.define do
     answer_3 { Faker::Lorem.sentence }
     answer_4 { Faker::Lorem.sentence }
     answer_5 { Faker::Lorem.sentence }
-
   end
 end
