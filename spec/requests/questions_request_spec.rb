@@ -39,8 +39,24 @@ RSpec.describe "questions", type: :request do
         expect(question[:attributes][:answers][:D][:value]).to eq(4)
         expect(question[:attributes][:answers][:E]).to be_a(Hash)
         expect(question[:attributes][:answers][:E][:value]).to eq(5)
-
       end
     end
-  end 
+    
+    it "returns an empty array if the theme has no questions" do
+      create(:theme)
+      theme_without_questions = Theme.create!(name: "No questions", s3_key: "test", image_link: "test_image")
+      get "/chordsapi/v1/themes/#{theme_without_questions.id}/questions"
+
+      parsed_items = JSON.parse(response.body, symbolize_names: true)
+      expect(response).to have_http_status(200)
+      expect(parsed_items[:data]).to be_empty
+    end
+
+    it "returns a 404 status code if the theme does not exist" do
+      non_existent_theme_id = 99999
+      get "/chordsapi/v1/themes/#{non_existent_theme_id}/questions"
+    
+      expect(response).to have_http_status(404)
+    end    
+  end
 end 
