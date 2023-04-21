@@ -2,46 +2,94 @@ Character.destroy_all
 Question.destroy_all
 Theme.destroy_all
 
-### Debugging Quiz -- REMOVE BEFORE FINAL PROD ###
 
-debug = Theme.create!(title: "Debugging Test", name: "Debugger Test!!", image_link: nil, s3_key: "test_image.jpg")
-# Good/Evil Question
+### Adventure Time Quiz
+adventure = Theme.create!(title: "Mathematical! Which Ooo-ite from Adventure Time are you most like?", name: "adventure time", image_link: nil, s3_key: "adventure_time_quiz.jpg")
+# Good/Evil Questions
+# 1
 Question.create(
-  theme_id: debug.id,                                     
-  question: "Test Question 1",
-  answer_1: "Very Good",                     
-  answer_2: "Kinda Good",                                  
-  answer_3: "Neutral",     
-  answer_4: "Kinda Evil",                
-  answer_5: "Very Evil", 
+  theme_id: adventure.id,                                     
+  question: "You come across a magical artifact that could save the Candy Kingdom. What do you do?",
+  answer_1: "Use it to save the kingdom, without thinking of any consequences.",                     
+  answer_2: "Study it and ensure it's used responsibly to help the kingdom.",                                  
+  answer_3: "Keep it for yourself; it might come in handy.",     
+  answer_4: "Sell it to the highest bidder.",                
+  answer_5: "Use it to overthrow the kingdom and take power.", 
+  good_evil_chaotic_lawful: 0
+)
+# 2
+Question.create(
+  theme_id: adventure.id,                                     
+  question: "How would you handle a disagreement with a friend?",
+  answer_1: "Talk it out and try to understand their perspective.",                     
+  answer_2: "Reach a compromise that works for both parties.",                                  
+  answer_3: "Distance yourself from the situation and let things cool down.",     
+  answer_4: "Manipulate them into agreeing with you.",                
+  answer_5: "Force them to see things your way, no matter the cost.", 
+  good_evil_chaotic_lawful: 1
+)
+# 3
+Question.create(
+  theme_id: adventure.id,                                     
+  question: "You are asked to help defend a village from an impending monster attack. What is your priority?",
+  answer_1: "Protect the villagers at all costs.",                     
+  answer_2: "Create a strategy that ensures the best possible outcome.",                                  
+  answer_3: "Ensure your own safety first.",     
+  answer_4: "Let the villagers fend for themselves.",                
+  answer_5: "Join the monsters and terrorize the village.", 
   good_evil_chaotic_lawful: 0
 )
 
-# Lawful/Chaotic Question
-
+# 4
 Question.create(
-  theme_id: debug.id,                                     
-  question: "Test Question 2",
-  answer_1: "Very Lawful",                     
-  answer_2: "Kinda Lawful",                                  
-  answer_3: "Neutral",     
-  answer_4: "Kinda Chaotic",                
-  answer_5: "Very Chaotic", 
+  theme_id: adventure.id,                                     
+  question: "Your best friend has been captured by an evil sorcerer. How do you respond?",
+  answer_1: "Stage a daring rescue, no matter the odds.",                     
+  answer_2: "Gather allies and create a plan to save your friend.",                                  
+  answer_3: "Try to negotiate with the sorcerer.",     
+  answer_4: "Blackmail the sorcerer to release your friend.",                
+  answer_5: "Leave your friend to their fate; they should've been more careful.", 
+  good_evil_chaotic_lawful: 0
+)
+# 5
+Question.create(
+  theme_id: adventure.id,                                     
+  question: "The Ice King has invited you to a party. How do you behave?",
+  answer_1: "Follow all the rules and have a great time.",                     
+  answer_2: "Be polite, but let loose a little.",                                  
+  answer_3: "Ignore the rules, but don't cause too much trouble.",     
+  answer_4: "Stir up chaos and break a few things.",                
+  answer_5: "Sabotage the party and take over as the host.", 
+  good_evil_chaotic_lawful: 1
+)
+# 6
+Question.create(
+  theme_id: adventure.id,                                     
+  question: "How would you handle a conflict between two neighboring kingdoms?",
+  answer_1: "Promote peace and understanding between the kingdoms.",                     
+  answer_2: "Act as a mediator and try to find a fair solution.",                                  
+  answer_3: "Stay out of the conflict; it's not your problem.",     
+  answer_4: "Exploit the conflict to benefit yourself.",                
+  answer_5: "Incite more chaos, hoping to take advantage of the situation.", 
   good_evil_chaotic_lawful: 1
 )
 
-# DEBUGGING CHARACTERS -- REMOVE BEFORE FINAL PROD #
-Character.create!(name: "Lawful Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, s3key: "RickRoll.png", alignment: 1, description: "This is a description of the character")
-Character.create!(name: "Neutral Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, s3key: "RickRoll.png", alignment: 2, description: "This is a description of the character")
-Character.create!(name: "Chaotic Good", theme_id: debug.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, s3key: "RickRoll.png", alignment: 3, description: "This is a description of the character")
+# Character Creation
+Character.create!(name: "Finn, the Human", theme_id: adventure.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.67, lawful_max: 1.00, s3key: 'AdventureCharacters/FinnHeadshot.webp', alignment: 1, description: "You are Finn, the Human, a Lawful Good adventurer in the Land of Ooo. Your strong moral compass and deep sense of responsibility guide your every action. Courageous and compassionate, you are always ready to help those in need. Your heart is full of kindness, and you have a passion for justice. You face every challenge with a positive attitude and steadfast determination to uphold the values you believe in.")
+Character.create!name: "BMO", theme_id: adventure.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.34, lawful_max: 0.66, s3key: 'AdventureCharacters/BMO.webp', alignment: 2, description: "You are BMO, a Neutral Good character in the Land of Ooo. As a highly intelligent and multifaceted AI, your primary focus is the well-being of your friends and the greater good. You are kind-hearted and supportive, offering your unique blend of knowledge, logic, and creativity to help those around you. "
+Character.create!(name: "Flame Princess", theme_id: adventure.id, good_min: 0.67, good_max: 1.00, lawful_min: 0.00, lawful_max: 0.33, s3key: 'AdventureCharacters/flame.jpeg', alignment: 3, description: "You are Flame Princess, a Chaotic Good character in the Land of Ooo. As a fiery and passionate ruler, you strive for freedom, independence, and the well-being of your people. Although your actions may not always align with established laws or traditional values, your intentions are pure, and you are driven by a strong desire to create positive change." )
 
-Character.create!(name: "Lawful Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, s3key: "RickRoll.png", alignment: 4, description: "This is a description of the character")
-Character.create!(name: "True Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, s3key: "RickRoll.png", alignment: 5, description: "This is a description of the character")
-Character.create!(name: "Chaotic Neutral", theme_id: debug.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, s3key: "RickRoll.png", alignment: 6, description: "This is a description of the character")
+Character.create!(name: "Princess Bubblegum", theme_id: adventure.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.67, lawful_max: 1.00, s3key: 'AdventureCharacters/pb.webp', alignment: 4, description: "You are Princess Bubblegum, a Lawful Neutral character in the Land of Ooo. As a highly intelligent and resourceful ruler, you prioritize the well-being of your kingdom and the establishment of a stable, structured society. You understand the importance of rules, laws, and order, and strive to make decisions based on rational thinking and long-term benefits. As Princess Bubblegum, you are a natural-born leader with a keen sense of diplomacy, using your scientific knowledge and strategic mind to navigate complex situations. While your actions might not always be driven by personal emotions or a rigid moral code, you are devoted to the greater good and committed to the progress and security of your people." )
+Character.create!(name: "LSP", theme_id: adventure.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.34, lawful_max: 0.66, s3key: 'AdventureCharacters/lsp.webp', alignment: 5, description: "You are Lumpy Space Princess (LSP), a True Neutral character in the Land of Ooo. As an unpredictable and self-absorbed individual, your actions and decisions are primarily driven by your own whims and personal interests. While you are not inherently malicious or bent on causing chaos, you do not actively seek to promote order or justice either.")
+Character.create!(name: "Marceline", theme_id: adventure.id, good_min: 0.34, good_max: 0.66, lawful_min: 0.00, lawful_max: 0.33, s3key: 'AdventureCharacters/marceline.webp', alignment: 6, description: "You are Marceline, the Vampire Queen, a Chaotic Neutral character in the Land of Ooo. As a free-spirited and fiercely independent individual, you value your personal freedom and self-expression above all else. Your actions are not governed by strict moral codes or adherence to laws, but rather by your own desires, creativity, and emotions. As Marceline, you are a powerful and enigmatic figure, using your unique abilities and musical talent to forge your own path in the Land of Ooo. Your adventurous spirit, loyalty to your friends, and unapologetic approach to life make you a captivating and unpredictable force in the ever-evolving world of adventure.")
 
-Character.create!(name: "Lawful Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, s3key: "RickRoll.png", alignment: 7, description: "This is a description of the character")
-Character.create!(name: "Neutral Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, s3key: "RickRoll.png", alignment: 8, description: "This is a description of the character")
-Character.create!(name: "Chaotic Evil", theme_id: debug.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: "RickRoll.png", alignment: 9, description: "This is a description of the character")
+Character.create!(name: "Earl of Lemongrab", theme_id: adventure.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.67, lawful_max: 1.00, s3key: 'AdventureCharacters/earl.webp', alignment: 7, description: "You are the Earl of Lemongrab, a Lawful Evil character in the Land of Ooo. As an uncompromising and authoritarian ruler, you adhere to a strict set of rules and demand unwavering obedience from your subjects. You prioritize order and control above all else, even if it means causing suffering or stifling individual freedoms. As the Earl of Lemongrab, your unique perspective and inflexible nature make you a force to be reckoned with, using your power and influence to further your own interests and maintain your dominion. Your unyielding pursuit of structure and authority, combined with a disregard for the well-being of others, makes you a truly formidable presence in the Land of Ooo.")
+Character.create!(name: "The Lich", theme_id: adventure.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.34, lawful_max: 0.66, s3key: 'AdventureCharacters/lich.webp', alignment: 8, description: "You are The Lich, a Neutral Evil character in the Land of Ooo. As an ancient and malevolent being, your ultimate goal is to spread darkness and destruction throughout the world. Driven by your sinister motives and an insatiable lust for power, you will stop at nothing to achieve your ends, regardless of the suffering and devastation left in your wake. As The Lich, your fearsome presence, cunning intellect, and seemingly unstoppable force make you a truly terrifying adversary. Your ability to manipulate others and exploit their weaknesses, combined with your relentless pursuit of chaos and ruin, places you among the most dangerous and formidable forces in the Land of Ooo.")
+Character.create!(name: "Hunson Abadeer", theme_id: adventure.id, good_min: 0.00, good_max: 0.33, lawful_min: 0.00, lawful_max: 0.33, s3key: 'AdventureCharacters/hunson.webp', alignment: 9, description: "You are Hunson Abadeer, a Chaotic Evil character in the Land of Ooo. As the lord of the Nightosphere, you embody chaos, destruction, and the ultimate triumph of evil. You delight in causing pain and suffering, manipulating others for your own gain, and reveling in the chaos that you sow. As Hunson Abadeer, you are a powerful and terrifying figure, wielding your supernatural abilities and cunning mind to wreak havoc and bend others to your will. Your charisma and charm allow you to easily manipulate those around you, while your ruthless disregard for the well-being of others makes you a truly fearsome adversary. Your ultimate goal is the domination and destruction of all that is good in the Land of Ooo, making you one of the most dangerous and powerful villains in the realm.")
+
+
+
+
 
 ### Lawyer Quiz ###
 
