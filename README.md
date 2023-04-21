@@ -39,6 +39,12 @@ Next, run this command to make sure the database is properly created and migrate
 rails db:{create,migrate}
 ```
 After running that command, inspect `/db/schema` in the application to make sure the database was properly created. This is what the schema [should look like.](#database-and-schema)
+
+If you'd like to run the test suite for this repo, make sure you are connected to a server (either via the deployment on Heroku or localhost) and run this command:
+```
+bundle exec rspec spec
+```
+
 ## Endpoints
   ### Endpoint 1: *Endpoint for all the characters for a given quiz theme* 
   Example response using the `lawyer` quiz theme: 
