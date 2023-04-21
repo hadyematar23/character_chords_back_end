@@ -1,15 +1,32 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/116698937/232895368-56ae3086-3675-4ee1-a599-1435c6530b1e.png" width="600px" alt="centered image" />
+</p>
+
 # Character Chords (Back End)
-
-Introducing a new app that combines the fun of taking a personality test with the joy of music exploration. Discover new music that resonates with you and explore the fictional world of your favorite characters through music - and who knows, you might even uncover some real-life kindred spirits along the way!
-
+  Discover your perfect playlist with Character Chords, the app that combines the fun of taking a personality test with the joy of music exploration. Find new music that resonates with you, explore the fictional world of your favorite characters through music, and uncover real-life kindred spirits along the way. Let AI choose your next song for you based on your moral leanings, personality traits, and musical preferences!
 ## Table of Contents
+- [Directory](#directory) 
+- [Technical Details](#technical-details) 
 - [Getting Started](#getting-started) 
 - [Endpoints](#endpoints)
 - [Database and Schema](#database-and-schema)
 - [Photo Storage](#photo-rights-and-storage)
 - [Goals](#goals)
+    - [Learning Goals](#learning-goals)
+    - [Extension Ideas](#extension-ideas)
 - [Contributors](#contributors)
+## Directory
+  [Hosted Website](https://calm-bastion-20348.herokuapp.com/)
 
+  [Backend Service Site](https://frozen-savannah-58383.herokuapp.com/)
+## Technical Details
+  Character Chords is a full-stack Ruby on Rails app that uses a variety of technologies to provide a seamless and engaging music exploration experience. Here are some of the key technologies we use for the Back End service:
+  - **`Ruby:`** Character Chords is built with Ruby, a powerful and dynamic programming language that is well-suited to web development.
+  - **`Ruby on Rails:`** This application is also built with Ruby on Rails, a powerful web framework for easy web development with APIs and data storage options.
+  - **`PostgreSQL:`** We used PostgreSQL for robust web application data storage and management.
+  - **`CircleCI:`** We use CircleCI for our continuous integration and continuous deployment (CI/CD) pipeline, which automates the testing and deployment of new code changes.
+  - **`Amazon S3:`** We utilize Amazon S3 for cloud storage, which allows us to securely store and manage user-generated content like playlists and user data.
+  - **`External APIs:`** We consume external APIs from `Spotify` and `OpenAI` to provide personalized music recommendations based on user preferences and personality traits.
 ## Getting Started
 Character Chords is a full-stack Ruby on Rails app that requires you to clone and set up both the [frontend](https://github.com/sandfortw/character_chords_fe) and backend repositories. You will need to ensure all required gems are installed and that environment variables are properly configured in order to run the app locally. Additionally, this app establishes API endpoints for use with the [Character Chords Front End](https://github.com/sandfortw/character_chords_fe) repository.
 

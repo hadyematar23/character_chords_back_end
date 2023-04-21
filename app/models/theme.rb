@@ -4,6 +4,5 @@ class Theme < ApplicationRecord
 
   validates :name, presence: true
   validates :title, presence: true
-  validates :image_link, presence: true
   validates :s3_key, presence: true
 end
