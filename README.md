@@ -12,6 +12,8 @@
 - [Database and Schema](#database-and-schema)
 - [Photo Storage](#photo-rights-and-storage)
 - [Goals](#goals)
+    - [Learning Goals](#learning-goals)
+    - [Extension Ideas](#extension-ideas)
 - [Contributors](#contributors)
 ## Directory
   [Hosted Website](https://calm-bastion-20348.herokuapp.com/)
