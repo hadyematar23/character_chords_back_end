@@ -9,6 +9,10 @@
 - [Technical Details](#technical-details) 
 - [Getting Started](#getting-started) 
 - [Endpoints](#endpoints)
+  - [Endpoint for all the characters for a given quiz theme](#endpoint-1-endpoint-for-all-the-characters-for-a-given-quiz-theme)
+  - [Endpoint for a specific character for a given quiz theme](#endpoint-2-endpoint-for-a-specific-character-for-a-given-quiz-theme)
+  - [Endpoint for a given quiz themes' questions](#endpoint-3-endpoint-for-a-given-quiz-themes-questions)
+  - [Endpoint for all quiz themes](#endpoint-4-endpoint-for-all-quiz-themes)
 - [Database and Schema](#database-and-schema)
 - [Photo Storage](#photo-rights-and-storage)
 - [Goals](#goals)
@@ -39,6 +43,12 @@ Next, run this command to make sure the database is properly created and migrate
 rails db:{create,migrate}
 ```
 After running that command, inspect `/db/schema` in the application to make sure the database was properly created. This is what the schema [should look like.](#database-and-schema)
+
+If you'd like to run the test suite for this repo, make sure you are connected to a server (either via the deployment on Heroku or localhost) and run this command:
+```
+bundle exec rspec spec
+```
+
 ## Endpoints
   ### Endpoint 1: *Endpoint for all the characters for a given quiz theme* 
   Example response using the `lawyer` quiz theme: 
